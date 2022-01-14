@@ -1,6 +1,6 @@
 {
-  "name": "@backlight-dev/effin-design-system.bricks-kydmrk4c",
-  "version": "0.0.0",
+  "name": "effin-design-system",
+  "version": "0.0.1",
   "description": "",
   "license": "MIT",
   "type": "module",
