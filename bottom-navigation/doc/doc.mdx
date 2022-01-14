@@ -1,12 +1,12 @@
-import { BottomNavigation } from '~/bottom-navigation'
-import { SimpleBottomNavigation as SimpleBottomNavigation } from '../stories/SimpleBottomNavigation.stories'
-import { LabelBottomNavigation as LabelBottomNavigation } from '../stories/LabelBottomNavigation.stories'
-import { FixedBottomNavigation as FixedBottomNavigation } from '../stories/FixedBottomNavigation.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+import { BottomNavigation } from '~/bottom-navigation';
+import { SimpleBottomNavigation as SimpleBottomNavigation } from '../stories/SimpleBottomNavigation.stories';
+import { LabelBottomNavigation as LabelBottomNavigation } from '../stories/LabelBottomNavigation.stories';
+import { FixedBottomNavigation as FixedBottomNavigation } from '../stories/FixedBottomNavigation.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Bottom Navigation
 
@@ -26,7 +26,7 @@ When there are only **three** actions, display both icons and text labels at all
   showLabels
   value={value}
   onChange={(event, newValue) => {
-    setValue(newValue)
+    setValue(newValue);
   }}
 >
   <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { Badge } from '~/badge'
-import { Mail as MailIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { Badge } from '~/badge';
+import { Mail as MailIcon } from '@mui/icons-material';
 
 function BadgeMax_() {
   return (
@@ -16,7 +16,7 @@ function BadgeMax_() {
         <MailIcon />
       </Badge>
     </Stack>
-  )
+  );
 }
 
-export const BadgeMax = () => <BadgeMax_ />
+export const BadgeMax = () => <BadgeMax_ />;

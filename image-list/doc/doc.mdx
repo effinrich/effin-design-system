@@ -1,17 +1,17 @@
-import { ImageList, ImageListItem, ImageListItemBar } from '~/image-list'
-import { StandardImageList as StandardImageList } from '../stories/StandardImageList.stories'
-import { QuiltedImageList as QuiltedImageList } from '../stories/QuiltedImageList.stories'
-import { WovenImageList as WovenImageList } from '../stories/WovenImageList.stories'
-import { MasonryImageList as MasonryImageList } from '../stories/MasonryImageList.stories'
-import { TitlebarImageList as TitlebarImageList } from '../stories/TitlebarImageList.stories'
-import { TitlebarBelowImageList as TitlebarBelowImageList } from '../stories/TitlebarBelowImageList.stories'
-import { TitlebarBelowMasonryImageList as TitlebarBelowMasonryImageList } from '../stories/TitlebarBelowMasonryImageList.stories'
-import { CustomImageList as CustomImageList } from '../stories/CustomImageList.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+import { ImageList, ImageListItem, ImageListItemBar } from '~/image-list';
+import { StandardImageList as StandardImageList } from '../stories/StandardImageList.stories';
+import { QuiltedImageList as QuiltedImageList } from '../stories/QuiltedImageList.stories';
+import { WovenImageList as WovenImageList } from '../stories/WovenImageList.stories';
+import { MasonryImageList as MasonryImageList } from '../stories/MasonryImageList.stories';
+import { TitlebarImageList as TitlebarImageList } from '../stories/TitlebarImageList.stories';
+import { TitlebarBelowImageList as TitlebarBelowImageList } from '../stories/TitlebarBelowImageList.stories';
+import { TitlebarBelowMasonryImageList as TitlebarBelowMasonryImageList } from '../stories/TitlebarBelowMasonryImageList.stories';
+import { CustomImageList as CustomImageList } from '../stories/CustomImageList.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Image list
 
@@ -28,7 +28,7 @@ Standard image lists are best for items of equal importance. They have a uniform
 <StandardImageList />
 ```tsx
 <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
-  {itemData.map(item => (
+  {itemData.map((item) => (
     <ImageListItem key={item.img}>
       <img
         src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
@@ -53,7 +53,7 @@ Quilted image lists emphasize certain items over others in a collection. They cr
   cols={4}
   rowHeight={121}
 >
-  {itemData.map(item => (
+  {itemData.map((item) => (
     <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
       <img
         {...srcset(item.img, 121, item.rows, item.cols)}
@@ -72,7 +72,7 @@ Woven image lists use alternating container ratios to create a rhythmic layout. 
 <WovenImageList />
 ```tsx
 <ImageList sx={{ width: 500, height: 450 }} variant="woven" cols={3} gap={8}>
-  {itemData.map(item => (
+  {itemData.map((item) => (
     <ImageListItem key={item.img}>
       <img
         src={`${item.img}?w=161&fit=crop&auto=format`}
@@ -92,7 +92,7 @@ Masonry image lists use dynamically sized container heights that reflect the asp
 <MasonryImageList />
 ```tsx
 <ImageList variant="masonry" cols={3} gap={8}>
-  {itemData.map(item => (
+  {itemData.map((item) => (
     <ImageListItem key={item.img}>
       <img
         src={`${item.img}?w=248&fit=crop&auto=format`}
@@ -129,7 +129,7 @@ The title bar can be placed below the image.
 <TitlebarBelowMasonryImageList />
 ```tsx
 <ImageList variant="masonry" cols={3} gap={8}>
-  {itemData.map(item => (
+  {itemData.map((item) => (
     <ImageListItem key={item.img}>
       <img
         src={`${item.img}?w=248&fit=crop&auto=format`}

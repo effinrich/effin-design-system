@@ -1,46 +1,46 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { useTheme } from '@mui/material'
-import { MobileStepper } from '@mui/material'
-import { Paper } from '~/paper'
-import { Typography } from '~/typography'
-import { Button } from '~/button'
-import { KeyboardArrowLeft } from '@mui/icons-material'
-import { KeyboardArrowRight } from '@mui/icons-material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { useTheme } from '@mui/material';
+import { MobileStepper } from '@mui/material';
+import { Paper } from '~/paper';
+import { Typography } from '~/typography';
+import { Button } from '~/button';
+import { KeyboardArrowLeft } from '@mui/icons-material';
+import { KeyboardArrowRight } from '@mui/icons-material';
 
 const steps = [
   {
     label: 'Select campaign settings',
     description: `For each ad campaign that you create, you can control how much
               you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`
+              and geographical locations you want your ads to show on, and more.`,
   },
   {
     label: 'Create an ad group',
     description:
-      'An ad group contains one or more ads which target a shared set of keywords.'
+      'An ad group contains one or more ads which target a shared set of keywords.',
   },
   {
     label: 'Create an ad',
     description: `Try out different ad text to see what brings in the most customers,
               and learn how to enhance your ads using features like ad extensions.
               If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`
-  }
-]
+              they're running and how to resolve approval issues.`,
+  },
+];
 
 function TextMobileStepper_() {
-  const theme = useTheme()
-  const [activeStep, setActiveStep] = React.useState(0)
-  const maxSteps = steps.length
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = steps.length;
 
   const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1)
-  }
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
 
   const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1)
-  }
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
 
   return (
     <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
@@ -52,7 +52,7 @@ function TextMobileStepper_() {
           alignItems: 'center',
           height: 50,
           pl: 2,
-          bgcolor: 'background.default'
+          bgcolor: 'background.default',
         }}
       >
         <Typography>{steps[activeStep].label}</Typography>
@@ -91,7 +91,7 @@ function TextMobileStepper_() {
         }
       />
     </Box>
-  )
+  );
 }
 
-export const TextMobileStepper = () => <TextMobileStepper_ />
+export const TextMobileStepper = () => <TextMobileStepper_ />;

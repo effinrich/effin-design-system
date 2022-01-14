@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { AppBar } from '~/app-bar'
-import { Box } from '~/box'
-import { Toolbar } from '@mui/material'
-import { Typography } from '~/typography'
-import { IconButton } from '@mui/material'
-import { Menu as MenuIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { AppBar } from '~/app-bar';
+import { Box } from '~/box';
+import { Toolbar } from '@mui/material';
+import { Typography } from '~/typography';
+import { IconButton } from '@mui/material';
+import { Menu as MenuIcon } from '@mui/icons-material';
 
 function DenseAppBar_() {
   return (
@@ -25,7 +25,7 @@ function DenseAppBar_() {
         </Toolbar>
       </AppBar>
     </Box>
-  )
+  );
 }
 
-export const DenseAppBar = () => <DenseAppBar_ />
+export const DenseAppBar = () => <DenseAppBar_ />;

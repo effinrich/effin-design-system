@@ -1,19 +1,19 @@
-import { Stepper } from '~/stepper'
-import { HorizontalLinearStepper as HorizontalLinearStepper } from '../stories/HorizontalLinearStepper.stories'
-import { HorizontalNonLinearStepper as HorizontalNonLinearStepper } from '../stories/HorizontalNonLinearStepper.stories'
-import { HorizontalLabelPositionBelowStepper as HorizontalLinearAlternativeLabelStepper } from '../stories/HorizontalLinearAlternativeLabelStepper.stories'
-import { HorizontalStepperWithError as HorizontalStepperWithError } from '../stories/HorizontalStepperWithError.stories'
-import { CustomizedSteppers as CustomizedSteppers } from '../stories/CustomizedSteppers.stories'
-import { VerticalLinearStepper as VerticalLinearStepper } from '../stories/VerticalLinearStepper.stories'
-import { TextMobileStepper as TextMobileStepper } from '../stories/TextMobileStepper.stories'
-import { SwipeableTextMobileStepper as SwipeableTextMobileStepper } from '../stories/SwipeableTextMobileStepper.stories'
-import { DotsMobileStepper as DotsMobileStepper } from '../stories/DotsMobileStepper.stories'
-import { ProgressMobileStepper as ProgressMobileStepper } from '../stories/ProgressMobileStepper.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+import { Stepper } from '~/stepper';
+import { HorizontalLinearStepper as HorizontalLinearStepper } from '../stories/HorizontalLinearStepper.stories';
+import { HorizontalNonLinearStepper as HorizontalNonLinearStepper } from '../stories/HorizontalNonLinearStepper.stories';
+import { HorizontalLabelPositionBelowStepper as HorizontalLinearAlternativeLabelStepper } from '../stories/HorizontalLinearAlternativeLabelStepper.stories';
+import { HorizontalStepperWithError as HorizontalStepperWithError } from '../stories/HorizontalStepperWithError.stories';
+import { CustomizedSteppers as CustomizedSteppers } from '../stories/CustomizedSteppers.stories';
+import { VerticalLinearStepper as VerticalLinearStepper } from '../stories/VerticalLinearStepper.stories';
+import { TextMobileStepper as TextMobileStepper } from '../stories/TextMobileStepper.stories';
+import { SwipeableTextMobileStepper as SwipeableTextMobileStepper } from '../stories/SwipeableTextMobileStepper.stories';
+import { DotsMobileStepper as DotsMobileStepper } from '../stories/DotsMobileStepper.stories';
+import { ProgressMobileStepper as ProgressMobileStepper } from '../stories/ProgressMobileStepper.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Stepper
 
@@ -71,7 +71,7 @@ Labels can be placed below the step icon by setting the `alternativeLabel` prop 
 <HorizontalLinearAlternativeLabelStepper />
 ```tsx
 <Stepper activeStep={1} alternativeLabel>
-  {steps.map(label => (
+  {steps.map((label) => (
     <Step key={label}>
       <StepLabel>{label}</StepLabel>
     </Step>
@@ -94,14 +94,14 @@ You can learn more about this in the overrides documentation page.
 <CustomizedSteppers />
 ```tsx
 <Stepper alternativeLabel activeStep={1} connector={<QontoConnector />}>
-  {steps.map(label => (
+  {steps.map((label) => (
     <Step key={label}>
       <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
     </Step>
   ))}
 </Stepper>
 <Stepper alternativeLabel activeStep={1} connector={<ColorlibConnector />}>
-  {steps.map(label => (
+  {steps.map((label) => (
     <Step key={label}>
       <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
     </Step>

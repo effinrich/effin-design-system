@@ -1,1 +1,1 @@
-export { ImageList, ImageListItem, ImageListItemBar } from '@mui/material'
+export { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';

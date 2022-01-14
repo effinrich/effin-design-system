@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { InputLabel } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormHelperText } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
+import * as React from 'react';
+import { InputLabel } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormHelperText } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
 function SelectLabels_() {
-  const [age, setAge] = React.useState('')
+  const [age, setAge] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value)
-  }
+    setAge(event.target.value);
+  };
 
   return (
     <div>
@@ -50,7 +50,7 @@ function SelectLabels_() {
         <FormHelperText>Without label</FormHelperText>
       </FormControl>
     </div>
-  )
+  );
 }
 
-export const SelectLabels = () => <SelectLabels_ />
+export const SelectLabels = () => <SelectLabels_ />;

@@ -1,19 +1,19 @@
-import { Drawer } from '~/drawer'
-import { TemporaryDrawer as TemporaryDrawer } from '../stories/TemporaryDrawer.stories'
-import { SwipeableTemporaryDrawer as SwipeableTemporaryDrawer } from '../stories/SwipeableTemporaryDrawer.stories'
-import { SwipeableEdgeDrawer as SwipeableEdgeDrawer } from '../stories/SwipeableEdgeDrawer.stories'
-import { ResponsiveDrawer as ResponsiveDrawer } from '../stories/ResponsiveDrawer.stories'
-import { PersistentDrawerLeft as PersistentDrawerLeft } from '../stories/PersistentDrawerLeft.stories'
-import { PersistentDrawerRight as PersistentDrawerRight } from '../stories/PersistentDrawerRight.stories'
-import { MiniDrawer as MiniDrawer } from '../stories/MiniDrawer.stories'
-import { PermanentDrawerLeft as PermanentDrawerLeft } from '../stories/PermanentDrawerLeft.stories'
-import { PermanentDrawerRight as PermanentDrawerRight } from '../stories/PermanentDrawerRight.stories'
-import { ClippedDrawer as ClippedDrawer } from '../stories/ClippedDrawer.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+import { Drawer } from '~/drawer';
+import { TemporaryDrawer as TemporaryDrawer } from '../stories/TemporaryDrawer.stories';
+import { SwipeableTemporaryDrawer as SwipeableTemporaryDrawer } from '../stories/SwipeableTemporaryDrawer.stories';
+import { SwipeableEdgeDrawer as SwipeableEdgeDrawer } from '../stories/SwipeableEdgeDrawer.stories';
+import { ResponsiveDrawer as ResponsiveDrawer } from '../stories/ResponsiveDrawer.stories';
+import { PersistentDrawerLeft as PersistentDrawerLeft } from '../stories/PersistentDrawerLeft.stories';
+import { PersistentDrawerRight as PersistentDrawerRight } from '../stories/PersistentDrawerRight.stories';
+import { MiniDrawer as MiniDrawer } from '../stories/MiniDrawer.stories';
+import { PermanentDrawerLeft as PermanentDrawerLeft } from '../stories/PermanentDrawerLeft.stories';
+import { PermanentDrawerRight as PermanentDrawerRight } from '../stories/PermanentDrawerRight.stories';
+import { ClippedDrawer as ClippedDrawer } from '../stories/ClippedDrawer.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Drawer
 
@@ -51,6 +51,7 @@ It closes when an item is selected, handled by controlling the `open` prop.
 ))}
 ```
 
+
 ### Swipeable
 
 You can make the drawer swipeable with the `SwipeableDrawer` component.
@@ -77,6 +78,7 @@ You can use the `disableBackdropTransition` prop to help.
 ))}
 ```
 
+
 The following properties are used in this documentation website for optimal usability of the component:
 
 - iOS is hosted on high-end devices.
@@ -88,9 +90,9 @@ The following properties are used in this documentation website for optimal usab
 ```jsx
 const iOS =
   typeof navigator !== 'undefined' &&
-  /iPad|iPhone|iPod/.test(navigator.userAgent)
+  /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-;<SwipeableDrawer disableBackdropTransition={!iOS} disableDiscovery={iOS} />
+<SwipeableDrawer disableBackdropTransition={!iOS} disableDiscovery={iOS} />;
 ```
 
 ### Swipeable edge
@@ -115,7 +117,7 @@ To ensure a temporary drawer is not unmounted, specify the `ModalProps` prop lik
 <Drawer
   variant="temporary"
   ModalProps={{
-    keepMounted: true
+    keepMounted: true,
   }}
 />
 ```

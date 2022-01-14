@@ -1,1 +1,1 @@
-export { SpeedDial } from '@mui/material'
+export { SpeedDial } from '@mui/material';

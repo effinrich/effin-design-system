@@ -1,50 +1,50 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { ClickAwayListener } from '@mui/material'
-import { Grow } from '@mui/material'
-import { Paper } from '~/paper'
-import { Popper } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { MenuList } from '~/menu'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Button } from '~/button';
+import { ClickAwayListener } from '@mui/material';
+import { Grow } from '@mui/material';
+import { Paper } from '~/paper';
+import { Popper } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { MenuList } from '~/menu';
+import { Stack } from '~/stack';
 
 function MenuListComposition_() {
-  const [open, setOpen] = React.useState(false)
-  const anchorRef = React.useRef<HTMLButtonElement>(null)
+  const [open, setOpen] = React.useState(false);
+  const anchorRef = React.useRef<HTMLButtonElement>(null);
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen)
-  }
+    setOpen((prevOpen) => !prevOpen);
+  };
 
   const handleClose = (event: Event | React.SyntheticEvent) => {
     if (
       anchorRef.current &&
       anchorRef.current.contains(event.target as HTMLElement)
     ) {
-      return
+      return;
     }
 
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   function handleListKeyDown(event: React.KeyboardEvent) {
     if (event.key === 'Tab') {
-      event.preventDefault()
-      setOpen(false)
+      event.preventDefault();
+      setOpen(false);
     } else if (event.key === 'Escape') {
-      setOpen(false)
+      setOpen(false);
     }
   }
 
   // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open)
+  const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {
-      anchorRef.current!.focus()
+      anchorRef.current!.focus();
     }
 
-    prevOpen.current = open
-  }, [open])
+    prevOpen.current = open;
+  }, [open]);
 
   return (
     <Stack direction="row" spacing={2}>
@@ -79,7 +79,7 @@ function MenuListComposition_() {
               {...TransitionProps}
               style={{
                 transformOrigin:
-                  placement === 'bottom-start' ? 'left top' : 'left bottom'
+                  placement === 'bottom-start' ? 'left top' : 'left bottom',
               }}
             >
               <Paper>
@@ -101,7 +101,7 @@ function MenuListComposition_() {
         </Popper>
       </div>
     </Stack>
-  )
+  );
 }
 
-export const MenuListComposition = () => <MenuListComposition_ />
+export const MenuListComposition = () => <MenuListComposition_ />;

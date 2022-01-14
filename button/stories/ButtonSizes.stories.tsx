@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Button } from '~/button'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Button } from '~/button';
 
 function ButtonSizes_() {
   return (
@@ -33,7 +33,7 @@ function ButtonSizes_() {
         </Button>
       </div>
     </Box>
-  )
+  );
 }
 
-export const ButtonSizes = () => <ButtonSizes_ />
+export const ButtonSizes = () => <ButtonSizes_ />;

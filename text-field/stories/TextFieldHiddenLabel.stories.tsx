@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { TextField } from '~/text-field'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { TextField } from '~/text-field';
 
 function TextFieldHiddenLabel_() {
   return (
     <Stack
       component="form"
       sx={{
-        width: '25ch'
+        width: '25ch',
       }}
       spacing={2}
       noValidate
@@ -27,7 +27,7 @@ function TextFieldHiddenLabel_() {
         variant="filled"
       />
     </Stack>
-  )
+  );
 }
 
-export const TextFieldHiddenLabel = () => <TextFieldHiddenLabel_ />
+export const TextFieldHiddenLabel = () => <TextFieldHiddenLabel_ />;

@@ -1,16 +1,16 @@
-import * as React from 'react'
-import { styled, useTheme } from '@mui/material'
-import { Box } from '~/box'
-import { Typography } from '~/typography'
-import { Slider } from '~/slider'
-import { IconButton } from '@mui/material'
-import { Stack } from '~/stack'
-import { PauseRounded } from '@mui/icons-material'
-import { PlayArrowRounded } from '@mui/icons-material'
-import { FastForwardRounded } from '@mui/icons-material'
-import { FastRewindRounded } from '@mui/icons-material'
-import { VolumeUpRounded } from '@mui/icons-material'
-import { VolumeDownRounded } from '@mui/icons-material'
+import * as React from 'react';
+import { styled, useTheme } from '@mui/material';
+import { Box } from '~/box';
+import { Typography } from '~/typography';
+import { Slider } from '~/slider';
+import { IconButton } from '@mui/material';
+import { Stack } from '~/stack';
+import { PauseRounded } from '@mui/icons-material';
+import { PlayArrowRounded } from '@mui/icons-material';
+import { FastForwardRounded } from '@mui/icons-material';
+import { FastRewindRounded } from '@mui/icons-material';
+import { VolumeUpRounded } from '@mui/icons-material';
+import { VolumeDownRounded } from '@mui/icons-material';
 
 const WallPaper = styled('div')({
   position: 'absolute',
@@ -29,7 +29,7 @@ const WallPaper = styled('div')({
     top: '-40%',
     right: '-50%',
     background:
-      'radial-gradient(at center center, rgb(62, 79, 249) 0%, rgba(62, 79, 249, 0) 64%)'
+      'radial-gradient(at center center, rgb(62, 79, 249) 0%, rgba(62, 79, 249, 0) 64%)',
   },
   '&:after': {
     content: '""',
@@ -40,9 +40,9 @@ const WallPaper = styled('div')({
     left: '-30%',
     background:
       'radial-gradient(at center center, rgb(247, 237, 225) 0%, rgba(247, 237, 225, 0) 70%)',
-    transform: 'rotate(30deg)'
-  }
-})
+    transform: 'rotate(30deg)',
+  },
+});
 
 const Widget = styled('div')(({ theme }) => ({
   padding: 16,
@@ -54,8 +54,8 @@ const Widget = styled('div')(({ theme }) => ({
   zIndex: 1,
   backgroundColor:
     theme.palette.mode === 'dark' ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.4)',
-  backdropFilter: 'blur(40px)'
-}))
+  backdropFilter: 'blur(40px)',
+}));
 
 const CoverImage = styled('div')({
   width: 100,
@@ -66,37 +66,37 @@ const CoverImage = styled('div')({
   borderRadius: 8,
   backgroundColor: 'rgba(0,0,0,0.08)',
   '& > img': {
-    width: '100%'
-  }
-})
+    width: '100%',
+  },
+});
 
 const TinyText = styled(Typography)({
   fontSize: '0.75rem',
   opacity: 0.38,
   fontWeight: 500,
-  letterSpacing: 0.2
-})
+  letterSpacing: 0.2,
+});
 
 function MusicPlayerSlider_() {
-  const theme = useTheme()
-  const duration = 200 // seconds
-  const [position, setPosition] = React.useState(32)
-  const [paused, setPaused] = React.useState(false)
+  const theme = useTheme();
+  const duration = 200; // seconds
+  const [position, setPosition] = React.useState(32);
+  const [paused, setPaused] = React.useState(false);
   function formatDuration(value: number) {
-    const minute = Math.floor(value / 60)
-    const secondLeft = value - minute * 60
-    return `${minute}:${secondLeft < 9 ? `0${secondLeft}` : secondLeft}`
+    const minute = Math.floor(value / 60);
+    const secondLeft = value - minute * 60;
+    return `${minute}:${secondLeft < 9 ? `0${secondLeft}` : secondLeft}`;
   }
-  const mainIconColor = theme.palette.mode === 'dark' ? '#fff' : '#000'
+  const mainIconColor = theme.palette.mode === 'dark' ? '#fff' : '#000';
   const lightIconColor =
-    theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)'
+    theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)';
   return (
     <Box
       sx={{
         width: '100%',
         overflow: 'hidden',
         position: 'relative',
-        padding: '1rem'
+        padding: '1rem',
       }}
     >
       <Widget>
@@ -139,23 +139,23 @@ function MusicPlayerSlider_() {
               height: 8,
               transition: '0.3s cubic-bezier(.47,1.64,.41,.8)',
               '&:before': {
-                boxShadow: '0 2px 12px 0 rgba(0,0,0,0.4)'
+                boxShadow: '0 2px 12px 0 rgba(0,0,0,0.4)',
               },
               '&:hover, &.Mui-focusVisible': {
                 boxShadow: `0px 0px 0px 8px ${
                   theme.palette.mode === 'dark'
                     ? 'rgb(255 255 255 / 16%)'
                     : 'rgb(0 0 0 / 16%)'
-                }`
+                }`,
               },
               '&.Mui-active': {
                 width: 20,
-                height: 20
-              }
+                height: 20,
+              },
             },
             '& .MuiSlider-rail': {
-              opacity: 0.28
-            }
+              opacity: 0.28,
+            },
           }}
         />
         <Box
@@ -163,7 +163,7 @@ function MusicPlayerSlider_() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            mt: -2
+            mt: -2,
           }}
         >
           <TinyText>{formatDuration(position)}</TinyText>
@@ -174,7 +174,7 @@ function MusicPlayerSlider_() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            mt: -1
+            mt: -1,
           }}
         >
           <IconButton aria-label="previous song">
@@ -214,19 +214,19 @@ function MusicPlayerSlider_() {
               color:
                 theme.palette.mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.87)',
               '& .MuiSlider-track': {
-                border: 'none'
+                border: 'none',
               },
               '& .MuiSlider-thumb': {
                 width: 24,
                 height: 24,
                 backgroundColor: '#fff',
                 '&:before': {
-                  boxShadow: '0 4px 8px rgba(0,0,0,0.4)'
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.4)',
                 },
                 '&:hover, &.Mui-focusVisible, &.Mui-active': {
-                  boxShadow: 'none'
-                }
-              }
+                  boxShadow: 'none',
+                },
+              },
             }}
           />
           <VolumeUpRounded htmlColor={lightIconColor} />
@@ -234,7 +234,7 @@ function MusicPlayerSlider_() {
       </Widget>
       <WallPaper />
     </Box>
-  )
+  );
 }
 
-export const MusicPlayerSlider = () => <MusicPlayerSlider_ />
+export const MusicPlayerSlider = () => <MusicPlayerSlider_ />;

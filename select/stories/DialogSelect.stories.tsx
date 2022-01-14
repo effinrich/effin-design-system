@@ -1,37 +1,37 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Button } from '~/button'
-import { Dialog } from '~/dialog'
-import { DialogActions } from '@mui/material'
-import { DialogContent } from '@mui/material'
-import { DialogTitle } from '@mui/material'
-import { InputLabel } from '@mui/material'
-import { OutlinedInput } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormControl } from '@mui/material'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Button } from '~/button';
+import { Dialog } from '~/dialog';
+import { DialogActions } from '@mui/material';
+import { DialogContent } from '@mui/material';
+import { DialogTitle } from '@mui/material';
+import { InputLabel } from '@mui/material';
+import { OutlinedInput } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormControl } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
 function DialogSelect_() {
-  const [open, setOpen] = React.useState(false)
-  const [age, setAge] = React.useState<number | string>('')
+  const [open, setOpen] = React.useState(false);
+  const [age, setAge] = React.useState<number | string>('');
 
   const handleChange = (event: SelectChangeEvent<typeof age>) => {
-    setAge(Number(event.target.value) || '')
-  }
+    setAge(Number(event.target.value) || '');
+  };
 
   const handleClickOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleClose = (
     event: React.SyntheticEvent<unknown>,
     reason?: string
   ) => {
     if (reason !== 'backdropClick') {
-      setOpen(false)
+      setOpen(false);
     }
-  }
+  };
 
   return (
     <div>
@@ -79,7 +79,7 @@ function DialogSelect_() {
         </DialogActions>
       </Dialog>
     </div>
-  )
+  );
 }
 
-export const DialogSelect = () => <DialogSelect_ />
+export const DialogSelect = () => <DialogSelect_ />;

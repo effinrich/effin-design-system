@@ -1,1 +1,1 @@
-export { Skeleton } from '@mui/material'
+export { Skeleton } from '@mui/material';

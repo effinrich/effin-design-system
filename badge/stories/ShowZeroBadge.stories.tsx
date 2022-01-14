@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { Badge } from '~/badge'
-import { Mail as MailIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { Badge } from '~/badge';
+import { Mail as MailIcon } from '@mui/icons-material';
 
 function ShowZeroBadge_() {
   return (
@@ -13,7 +13,7 @@ function ShowZeroBadge_() {
         <MailIcon />
       </Badge>
     </Stack>
-  )
+  );
 }
 
-export const ShowZeroBadge = () => <ShowZeroBadge_ />
+export const ShowZeroBadge = () => <ShowZeroBadge_ />;

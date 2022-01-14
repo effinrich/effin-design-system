@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Paper } from '~/paper'
-import { Divider } from '~/divider'
-import { MenuList } from '~/menu'
-import { MenuItem } from '~/menu'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { Check } from '@mui/icons-material'
+import * as React from 'react';
+import { Paper } from '~/paper';
+import { Divider } from '~/divider';
+import { MenuList } from '~/menu';
+import { MenuItem } from '~/menu';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { Check } from '@mui/icons-material';
 
 function DenseMenu_() {
   return (
@@ -39,7 +39,7 @@ function DenseMenu_() {
         </MenuItem>
       </MenuList>
     </Paper>
-  )
+  );
 }
 
-export const DenseMenu = () => <DenseMenu_ />
+export const DenseMenu = () => <DenseMenu_ />;

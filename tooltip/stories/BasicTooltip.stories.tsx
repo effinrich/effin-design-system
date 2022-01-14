@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Delete as DeleteIcon } from '@mui/icons-material'
-import { IconButton } from '@mui/material'
-import { Tooltip } from '~/tooltip'
+import * as React from 'react';
+import { Delete as DeleteIcon } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
+import { Tooltip } from '~/tooltip';
 
 function BasicTooltip_() {
   return (
@@ -10,7 +10,7 @@ function BasicTooltip_() {
         <DeleteIcon />
       </IconButton>
     </Tooltip>
-  )
+  );
 }
 
-export const BasicTooltip = () => <BasicTooltip_ />
+export const BasicTooltip = () => <BasicTooltip_ />;

@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Tabs } from '~/tabs'
-import { Tab } from '@mui/material'
-import { Box } from '~/box'
+import * as React from 'react';
+import { Tabs } from '~/tabs';
+import { Tab } from '@mui/material';
+import { Box } from '~/box';
 
 function AccessibleTabs2_() {
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = React.useState(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -21,7 +21,7 @@ function AccessibleTabs2_() {
         <Tab label="Item Three" />
       </Tabs>
     </Box>
-  )
+  );
 }
 
-export const AccessibleTabs2 = () => <AccessibleTabs2_ />
+export const AccessibleTabs2 = () => <AccessibleTabs2_ />;

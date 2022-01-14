@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { ButtonGroup } from '~/button-group'
+import * as React from 'react';
+import { Button } from '~/button';
+import { ButtonGroup } from '~/button-group';
 
 function BasicButtonGroup_() {
   return (
@@ -9,7 +9,7 @@ function BasicButtonGroup_() {
       <Button>Two</Button>
       <Button>Three</Button>
     </ButtonGroup>
-  )
+  );
 }
 
-export const BasicButtonGroup = () => <BasicButtonGroup_ />
+export const BasicButtonGroup = () => <BasicButtonGroup_ />;

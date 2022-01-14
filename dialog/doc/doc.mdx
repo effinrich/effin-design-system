@@ -1,20 +1,20 @@
-import { Dialog } from '~/dialog'
-import { SimpleDialogDemo as SimpleDialog } from '../stories/SimpleDialog.stories'
-import { AlertDialog as AlertDialog } from '../stories/AlertDialog.stories'
-import { AlertDialogSlide as AlertDialogSlide } from '../stories/AlertDialogSlide.stories'
-import { FormDialog as FormDialog } from '../stories/FormDialog.stories'
-import { CustomizedDialogs as CustomizedDialogs } from '../stories/CustomizedDialogs.stories'
-import { FullScreenDialog as FullScreenDialog } from '../stories/FullScreenDialog.stories'
-import { MaxWidthDialog as MaxWidthDialog } from '../stories/MaxWidthDialog.stories'
-import { ResponsiveDialog as ResponsiveDialog } from '../stories/ResponsiveDialog.stories'
-import { ConfirmationDialog as ConfirmationDialog } from '../stories/ConfirmationDialog.stories'
-import { DraggableDialog as DraggableDialog } from '../stories/DraggableDialog.stories'
-import { ScrollDialog as ScrollDialog } from '../stories/ScrollDialog.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+import { Dialog } from '~/dialog';
+import { SimpleDialogDemo as SimpleDialog } from '../stories/SimpleDialog.stories';
+import { AlertDialog as AlertDialog } from '../stories/AlertDialog.stories';
+import { AlertDialogSlide as AlertDialogSlide } from '../stories/AlertDialogSlide.stories';
+import { FormDialog as FormDialog } from '../stories/FormDialog.stories';
+import { CustomizedDialogs as CustomizedDialogs } from '../stories/CustomizedDialogs.stories';
+import { FullScreenDialog as FullScreenDialog } from '../stories/FullScreenDialog.stories';
+import { MaxWidthDialog as MaxWidthDialog } from '../stories/MaxWidthDialog.stories';
+import { ResponsiveDialog as ResponsiveDialog } from '../stories/ResponsiveDialog.stories';
+import { ConfirmationDialog as ConfirmationDialog } from '../stories/ConfirmationDialog.stories';
+import { DraggableDialog as DraggableDialog } from '../stories/DraggableDialog.stories';
+import { ScrollDialog as ScrollDialog } from '../stories/ScrollDialog.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Dialog
 
@@ -125,13 +125,13 @@ When the `fullWidth` prop is true, the dialog will adapt based on the `maxWidth`
 You may make a dialog responsively full screen using `useMediaQuery`.
 
 ```jsx
-import useMediaQuery from '@mui/material/useMediaQuery'
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function MyComponent() {
-  const theme = useTheme()
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  return <Dialog fullScreen={fullScreen} />
+  return <Dialog fullScreen={fullScreen} />;
 }
 ```
 

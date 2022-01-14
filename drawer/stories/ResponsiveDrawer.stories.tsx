@@ -1,37 +1,37 @@
-import * as React from 'react'
-import { AppBar } from '~/app-bar'
-import { Box } from '~/box'
-import { CssBaseline } from '@mui/material'
-import { Divider } from '~/divider'
-import { Drawer } from '~/drawer'
-import { IconButton } from '@mui/material'
-import { MoveToInbox as InboxIcon } from '@mui/icons-material'
-import { List } from '~/list'
-import { ListItem } from '@mui/material'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { Mail as MailIcon } from '@mui/icons-material'
-import { Menu as MenuIcon } from '@mui/icons-material'
-import { Toolbar } from '@mui/material'
-import { Typography } from '~/typography'
+import * as React from 'react';
+import { AppBar } from '~/app-bar';
+import { Box } from '~/box';
+import { CssBaseline } from '@mui/material';
+import { Divider } from '~/divider';
+import { Drawer } from '~/drawer';
+import { IconButton } from '@mui/material';
+import { MoveToInbox as InboxIcon } from '@mui/icons-material';
+import { List } from '~/list';
+import { ListItem } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { Mail as MailIcon } from '@mui/icons-material';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import { Toolbar } from '@mui/material';
+import { Typography } from '~/typography';
 
-const drawerWidth = 240
+const drawerWidth = 240;
 
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window?: () => Window
+  window?: () => Window;
 }
 
 function ResponsiveDrawer_(props: Props) {
-  const { window } = props
-  const [mobileOpen, setMobileOpen] = React.useState(false)
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen)
-  }
+    setMobileOpen(!mobileOpen);
+  };
 
   const drawer = (
     <div>
@@ -59,10 +59,10 @@ function ResponsiveDrawer_(props: Props) {
         ))}
       </List>
     </div>
-  )
+  );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -71,7 +71,7 @@ function ResponsiveDrawer_(props: Props) {
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` }
+          ml: { sm: `${drawerWidth}px` },
         }}
       >
         <Toolbar>
@@ -101,14 +101,14 @@ function ResponsiveDrawer_(props: Props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true // Better open performance on mobile.
+            keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
-              width: drawerWidth
-            }
+              width: drawerWidth,
+            },
           }}
         >
           {drawer}
@@ -119,8 +119,8 @@ function ResponsiveDrawer_(props: Props) {
             display: { xs: 'none', sm: 'block' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
-              width: drawerWidth
-            }
+              width: drawerWidth,
+            },
           }}
           open
         >
@@ -132,7 +132,7 @@ function ResponsiveDrawer_(props: Props) {
         sx={{
           flexGrow: 1,
           p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` }
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
         <Toolbar />
@@ -167,7 +167,7 @@ function ResponsiveDrawer_(props: Props) {
         </Typography>
       </Box>
     </Box>
-  )
+  );
 }
 
-export const ResponsiveDrawer = () => <ResponsiveDrawer_ />
+export const ResponsiveDrawer = () => <ResponsiveDrawer_ />;

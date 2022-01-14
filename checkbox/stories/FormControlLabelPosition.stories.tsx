@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Checkbox } from '~/checkbox'
-import { FormGroup } from '@mui/material'
-import { FormControlLabel } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { FormLabel } from '@mui/material'
+import * as React from 'react';
+import { Checkbox } from '~/checkbox';
+import { FormGroup } from '@mui/material';
+import { FormControlLabel } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { FormLabel } from '@mui/material';
 
 function FormControlLabelPosition_() {
   return (
@@ -36,7 +36,7 @@ function FormControlLabelPosition_() {
         />
       </FormGroup>
     </FormControl>
-  )
+  );
 }
 
-export const FormControlLabelPosition = () => <FormControlLabelPosition_ />
+export const FormControlLabelPosition = () => <FormControlLabelPosition_ />;

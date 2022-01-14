@@ -1,12 +1,12 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { ListItem } from '@mui/material'
-import { ListItemButton } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { FixedSizeList, ListChildComponentProps } from 'react-window'
+import * as React from 'react';
+import { Box } from '~/box';
+import { ListItem } from '@mui/material';
+import { ListItemButton } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { FixedSizeList, ListChildComponentProps } from 'react-window';
 
 function renderRow(props: ListChildComponentProps) {
-  const { index, style } = props
+  const { index, style } = props;
 
   return (
     <ListItem style={style} key={index} component="div" disablePadding>
@@ -14,7 +14,7 @@ function renderRow(props: ListChildComponentProps) {
         <ListItemText primary={`Item ${index + 1}`} />
       </ListItemButton>
     </ListItem>
-  )
+  );
 }
 
 function VirtualizedList_() {
@@ -24,7 +24,7 @@ function VirtualizedList_() {
         width: '100%',
         height: 400,
         maxWidth: 360,
-        bgcolor: 'background.paper'
+        bgcolor: 'background.paper',
       }}
     >
       <FixedSizeList
@@ -37,7 +37,7 @@ function VirtualizedList_() {
         {renderRow}
       </FixedSizeList>
     </Box>
-  )
+  );
 }
 
-export const VirtualizedList = () => <VirtualizedList_ />
+export const VirtualizedList = () => <VirtualizedList_ />;

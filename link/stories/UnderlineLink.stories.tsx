@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react'
-import { Box } from '~/box'
-import { Link } from '~/link'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Link } from '~/link';
 
-const preventDefault = (event: React.SyntheticEvent) => event.preventDefault()
+const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
 function UnderlineLink_() {
   return (
@@ -14,8 +14,8 @@ function UnderlineLink_() {
         justifyContent: 'center',
         typography: 'body1',
         '& > :not(style) + :not(style)': {
-          ml: 2
-        }
+          ml: 2,
+        },
       }}
       onClick={preventDefault}
     >
@@ -29,7 +29,7 @@ function UnderlineLink_() {
         {'underline="always"'}
       </Link>
     </Box>
-  )
+  );
 }
 
-export const UnderlineLink = () => <UnderlineLink_ />
+export const UnderlineLink = () => <UnderlineLink_ />;

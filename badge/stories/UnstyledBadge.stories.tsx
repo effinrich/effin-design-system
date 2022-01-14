@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { styled, Box } from '@mui/system'
-import BadgeUnstyled from '@mui/base/BadgeUnstyled'
+import * as React from 'react';
+import { styled, Box } from '@mui/system';
+import BadgeUnstyled from '@mui/base/BadgeUnstyled';
 
 const StyledBadge = styled(BadgeUnstyled)`
   box-sizing: border-box;
@@ -52,7 +52,7 @@ const StyledBadge = styled(BadgeUnstyled)`
     transform: translate(50%, -50%);
     transform-origin: 100% 0;
   }
-`
+`;
 
 function BadgeContent() {
   return (
@@ -64,10 +64,10 @@ function BadgeContent() {
         borderRadius: '2px',
         background: '#eee',
         display: 'inline-block',
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
       }}
     />
-  )
+  );
 }
 
 function UnstyledBadge_() {
@@ -80,7 +80,7 @@ function UnstyledBadge_() {
         <BadgeContent />
       </StyledBadge>
     </Box>
-  )
+  );
 }
 
-export const UnstyledBadge = () => <UnstyledBadge_ />
+export const UnstyledBadge = () => <UnstyledBadge_ />;

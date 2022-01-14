@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Chip } from '~/chip'
-import { Button } from '~/button'
-import { Grid } from '~/grid'
-import { Stack } from '~/stack'
-import { Divider } from '~/divider'
-import { Typography } from '~/typography'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Chip } from '~/chip';
+import { Button } from '~/button';
+import { Grid } from '~/grid';
+import { Stack } from '~/stack';
+import { Divider } from '~/divider';
+import { Typography } from '~/typography';
 
 function MiddleDividers_() {
   return (
@@ -44,7 +44,7 @@ function MiddleDividers_() {
         <Button>Add to cart</Button>
       </Box>
     </Box>
-  )
+  );
 }
 
-export const MiddleDividers = () => <MiddleDividers_ />
+export const MiddleDividers = () => <MiddleDividers_ />;

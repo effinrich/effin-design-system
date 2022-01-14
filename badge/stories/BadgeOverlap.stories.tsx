@@ -1,14 +1,14 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Stack } from '~/stack'
-import { Badge } from '~/badge'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Stack } from '~/stack';
+import { Badge } from '~/badge';
 
-const shapeStyles = { bgcolor: 'primary.main', width: 40, height: 40 }
-const shapeCircleStyles = { borderRadius: '50%' }
-const rectangle = <Box component="span" sx={shapeStyles} />
+const shapeStyles = { bgcolor: 'primary.main', width: 40, height: 40 };
+const shapeCircleStyles = { borderRadius: '50%' };
+const rectangle = <Box component="span" sx={shapeStyles} />;
 const circle = (
   <Box component="span" sx={{ ...shapeStyles, ...shapeCircleStyles }} />
-)
+);
 
 function BadgeOverlap_() {
   return (
@@ -31,7 +31,7 @@ function BadgeOverlap_() {
         {circle}
       </Badge>
     </Stack>
-  )
+  );
 }
 
-export const BadgeOverlap = () => <BadgeOverlap_ />
+export const BadgeOverlap = () => <BadgeOverlap_ />;

@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { styled } from '@mui/material'
-import { Grid as MuiGrid } from '~/grid'
-import { Divider } from '~/divider'
+import * as React from 'react';
+import { styled } from '@mui/material';
+import { Grid as MuiGrid } from '~/grid';
+import { Divider } from '~/divider';
 
 const Grid = styled(MuiGrid)(({ theme }) => ({
   width: '100%',
   ...theme.typography.body2,
   '& [role="separator"]': {
-    margin: theme.spacing(0, 2)
-  }
-}))
+    margin: theme.spacing(0, 2),
+  },
+}));
 
 function VerticalDividerText_() {
   const content = (
@@ -18,7 +18,7 @@ function VerticalDividerText_() {
    Nulla ut facilisis ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus.
    Sed malesuada lobortis pretium.`}
     </div>
-  )
+  );
 
   return (
     <Grid container>
@@ -32,7 +32,7 @@ function VerticalDividerText_() {
         {content}
       </Grid>
     </Grid>
-  )
+  );
 }
 
-export const VerticalDividerText = () => <VerticalDividerText_ />
+export const VerticalDividerText = () => <VerticalDividerText_ />;

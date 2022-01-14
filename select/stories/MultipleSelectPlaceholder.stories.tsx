@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { Theme, useTheme } from '@mui/material'
-import { OutlinedInput } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormControl } from '@mui/material'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
+import * as React from 'react';
+import { Theme, useTheme } from '@mui/material';
+import { OutlinedInput } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormControl } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
-const ITEM_HEIGHT = 48
-const ITEM_PADDING_TOP = 8
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250
-    }
-  }
-}
+      width: 250,
+    },
+  },
+};
 
 const names = [
   'Oliver Hansen',
@@ -27,31 +27,31 @@ const names = [
   'Miriam Wagner',
   'Bradley Wilkerson',
   'Virginia Andrews',
-  'Kelly Snyder'
-]
+  'Kelly Snyder',
+];
 
 function getStyles(name: string, personName: readonly string[], theme: Theme) {
   return {
     fontWeight:
       personName.indexOf(name) === -1
         ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium
-  }
+        : theme.typography.fontWeightMedium,
+  };
 }
 
 function MultipleSelectPlaceholder_() {
-  const theme = useTheme()
-  const [personName, setPersonName] = React.useState<string[]>([])
+  const theme = useTheme();
+  const [personName, setPersonName] = React.useState<string[]>([]);
 
   const handleChange = (event: SelectChangeEvent<typeof personName>) => {
     const {
-      target: { value }
-    } = event
+      target: { value },
+    } = event;
     setPersonName(
       // On autofill we get a the stringified value.
       typeof value === 'string' ? value.split(',') : value
-    )
-  }
+    );
+  };
 
   return (
     <div>
@@ -62,12 +62,12 @@ function MultipleSelectPlaceholder_() {
           value={personName}
           onChange={handleChange}
           input={<OutlinedInput />}
-          renderValue={selected => {
+          renderValue={(selected) => {
             if (selected.length === 0) {
-              return <em>Placeholder</em>
+              return <em>Placeholder</em>;
             }
 
-            return selected.join(', ')
+            return selected.join(', ');
           }}
           MenuProps={MenuProps}
           inputProps={{ 'aria-label': 'Without label' }}
@@ -75,7 +75,7 @@ function MultipleSelectPlaceholder_() {
           <MenuItem disabled value="">
             <em>Placeholder</em>
           </MenuItem>
-          {names.map(name => (
+          {names.map((name) => (
             <MenuItem
               key={name}
               value={name}
@@ -87,7 +87,7 @@ function MultipleSelectPlaceholder_() {
         </Select>
       </FormControl>
     </div>
-  )
+  );
 }
 
-export const MultipleSelectPlaceholder = () => <MultipleSelectPlaceholder_ />
+export const MultipleSelectPlaceholder = () => <MultipleSelectPlaceholder_ />;

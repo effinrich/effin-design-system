@@ -1,52 +1,52 @@
-import * as React from 'react'
-import { styled } from '@mui/material'
-import { FormatAlignLeft as FormatAlignLeftIcon } from '@mui/icons-material'
-import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material'
-import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material'
-import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material'
-import { FormatBold as FormatBoldIcon } from '@mui/icons-material'
-import { FormatItalic as FormatItalicIcon } from '@mui/icons-material'
-import { FormatUnderlined as FormatUnderlinedIcon } from '@mui/icons-material'
-import { FormatColorFill as FormatColorFillIcon } from '@mui/icons-material'
-import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material'
-import { Divider } from '~/divider'
-import { Paper } from '~/paper'
-import { ToggleButton } from '~/toggle-button'
-import { ToggleButtonGroup } from '@mui/material'
+import * as React from 'react';
+import { styled } from '@mui/material';
+import { FormatAlignLeft as FormatAlignLeftIcon } from '@mui/icons-material';
+import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material';
+import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material';
+import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material';
+import { FormatBold as FormatBoldIcon } from '@mui/icons-material';
+import { FormatItalic as FormatItalicIcon } from '@mui/icons-material';
+import { FormatUnderlined as FormatUnderlinedIcon } from '@mui/icons-material';
+import { FormatColorFill as FormatColorFillIcon } from '@mui/icons-material';
+import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
+import { Divider } from '~/divider';
+import { Paper } from '~/paper';
+import { ToggleButton } from '~/toggle-button';
+import { ToggleButtonGroup } from '@mui/material';
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   '& .MuiToggleButtonGroup-grouped': {
     margin: theme.spacing(0.5),
     border: 0,
     '&.Mui-disabled': {
-      border: 0
+      border: 0,
     },
     '&:not(:first-of-type)': {
-      borderRadius: theme.shape.borderRadius
+      borderRadius: theme.shape.borderRadius,
     },
     '&:first-of-type': {
-      borderRadius: theme.shape.borderRadius
-    }
-  }
-}))
+      borderRadius: theme.shape.borderRadius,
+    },
+  },
+}));
 
 function CustomizedDividers_() {
-  const [alignment, setAlignment] = React.useState('left')
-  const [formats, setFormats] = React.useState(() => ['italic'])
+  const [alignment, setAlignment] = React.useState('left');
+  const [formats, setFormats] = React.useState(() => ['italic']);
 
   const handleFormat = (
     event: React.MouseEvent<HTMLElement>,
     newFormats: string[]
   ) => {
-    setFormats(newFormats)
-  }
+    setFormats(newFormats);
+  };
 
   const handleAlignment = (
     event: React.MouseEvent<HTMLElement>,
     newAlignment: string
   ) => {
-    setAlignment(newAlignment)
-  }
+    setAlignment(newAlignment);
+  };
 
   return (
     <div>
@@ -54,8 +54,8 @@ function CustomizedDividers_() {
         elevation={0}
         sx={{
           display: 'flex',
-          border: theme => `1px solid ${theme.palette.divider}`,
-          flexWrap: 'wrap'
+          border: (theme) => `1px solid ${theme.palette.divider}`,
+          flexWrap: 'wrap',
         }}
       >
         <StyledToggleButtonGroup
@@ -101,7 +101,7 @@ function CustomizedDividers_() {
         </StyledToggleButtonGroup>
       </Paper>
     </div>
-  )
+  );
 }
 
-export const CustomizedDividers = () => <CustomizedDividers_ />
+export const CustomizedDividers = () => <CustomizedDividers_ />;

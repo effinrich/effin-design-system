@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Avatar } from '~/avatar'
-import { AvatarGroup } from '@mui/material'
+import * as React from 'react';
+import { Avatar } from '~/avatar';
+import { AvatarGroup } from '@mui/material';
 
 function GroupAvatars_() {
   return (
@@ -26,7 +26,7 @@ function GroupAvatars_() {
         src="https://mui.com/static/images/avatar/5.jpg"
       />
     </AvatarGroup>
-  )
+  );
 }
 
-export const GroupAvatars = () => <GroupAvatars_ />
+export const GroupAvatars = () => <GroupAvatars_ />;

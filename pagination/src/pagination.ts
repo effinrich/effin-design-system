@@ -1,1 +1,1 @@
-export { Pagination, PaginationItem } from '@mui/material'
+export { Pagination, PaginationItem } from '@mui/material';

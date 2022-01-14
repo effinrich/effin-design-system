@@ -1,15 +1,15 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { Grid } from '~/grid'
-import { FormControl } from '@mui/material'
-import { FormLabel } from '@mui/material'
-import { FormControlLabel } from '@mui/material'
-import { RadioGroup } from '@mui/material'
-import { Radio } from '~/radio-button'
-import { Avatar } from '~/avatar'
-import { Chip } from '~/chip'
-import { Face as FaceIcon } from '@mui/icons-material'
-import { Done as DoneIcon } from '@mui/icons-material'
+import { Grid } from '~/grid';
+import { FormControl } from '@mui/material';
+import { FormLabel } from '@mui/material';
+import { FormControlLabel } from '@mui/material';
+import { RadioGroup } from '@mui/material';
+import { Radio } from '~/radio-button';
+import { Avatar } from '~/avatar';
+import { Chip } from '~/chip';
+import { Face as FaceIcon } from '@mui/icons-material';
+import { Done as DoneIcon } from '@mui/icons-material';
 
 function ChipsPlayground_() {
   const [state, setState] = React.useState({
@@ -18,85 +18,85 @@ function ChipsPlayground_() {
     avatar: 'none',
     icon: 'none',
     variant: 'filled',
-    size: 'medium'
-  })
-  const { color, onDelete, avatar, icon, variant, size } = state
+    size: 'medium',
+  });
+  const { color, onDelete, avatar, icon, variant, size } = state;
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setState({
       ...state,
-      [event.target.name]: event.target.value
-    })
-  }
+      [event.target.name]: event.target.value,
+    });
+  };
 
   const handleDeleteExample = () => {
-    console.info('You clicked the delete icon.')
-  }
+    console.info('You clicked the delete icon.');
+  };
 
-  const colorToCode = color !== 'default' ? `color="${color}" ` : ''
-  const sizeToCode = size === 'small' ? `size="small" ` : ''
-  const variantToCode = variant !== 'filled' ? `variant="${variant}" ` : ''
+  const colorToCode = color !== 'default' ? `color="${color}" ` : '';
+  const sizeToCode = size === 'small' ? `size="small" ` : '';
+  const variantToCode = variant !== 'filled' ? `variant="${variant}" ` : '';
 
-  let onDeleteToCode
+  let onDeleteToCode;
   switch (onDelete) {
     case 'none':
-      onDeleteToCode = ''
-      break
+      onDeleteToCode = '';
+      break;
     case 'custom':
-      onDeleteToCode = 'deleteIcon={<DoneIcon />} onDelete={handleDelete} '
-      break
+      onDeleteToCode = 'deleteIcon={<DoneIcon />} onDelete={handleDelete} ';
+      break;
     default:
-      onDeleteToCode = 'onDelete={handleDelete} '
-      break
+      onDeleteToCode = 'onDelete={handleDelete} ';
+      break;
   }
 
-  let iconToCode
-  let iconToPlayground
+  let iconToCode;
+  let iconToPlayground;
   switch (icon) {
     case 'none':
-      iconToCode = ''
-      break
+      iconToCode = '';
+      break;
     default:
-      iconToCode = 'icon={<FaceIcon />} '
-      iconToPlayground = <FaceIcon />
-      break
+      iconToCode = 'icon={<FaceIcon />} ';
+      iconToPlayground = <FaceIcon />;
+      break;
   }
 
-  let avatarToCode
-  let avatarToPlayground
+  let avatarToCode;
+  let avatarToPlayground;
   switch (avatar) {
     case 'none':
-      avatarToCode = ''
-      break
+      avatarToCode = '';
+      break;
     case 'img':
       avatarToCode =
-        'avatar={<Avatar src="https://mui.com/static/images/avatar/1.jpg" />} '
+        'avatar={<Avatar src="https://mui.com/static/images/avatar/1.jpg" />} ';
       avatarToPlayground = (
         <Avatar src="https://mui.com/static/images/avatar/1.jpg" />
-      )
-      break
+      );
+      break;
     case 'letter':
-      avatarToCode = 'avatar={<Avatar>F</Avatar>} '
-      avatarToPlayground = <Avatar>F</Avatar>
-      break
+      avatarToCode = 'avatar={<Avatar>F</Avatar>} ';
+      avatarToPlayground = <Avatar>F</Avatar>;
+      break;
     default:
-      break
+      break;
   }
 
   if (avatar !== 'none') {
-    iconToCode = ''
-    iconToPlayground = null
+    iconToCode = '';
+    iconToPlayground = null;
   }
 
   const jsx = `
 <Chip ${variantToCode}${colorToCode}${sizeToCode}${onDeleteToCode}${avatarToCode}${iconToCode}/>
-`
+`;
 
   return (
     <Grid container sx={{ flexGrow: 1 }}>
       <Grid item xs={12}>
         <Grid container justifyContent="center" alignItems="center">
-          <Grid item sx={{ height: theme => theme.spacing(10) }}>
+          <Grid item sx={{ height: (theme) => theme.spacing(10) }}>
             <Chip
               label="Chip Component"
               color={color}
@@ -285,7 +285,7 @@ function ChipsPlayground_() {
       </Grid>
       <Grid item xs={12}></Grid>
     </Grid>
-  )
+  );
 }
 
-export const ChipsPlayground = () => <ChipsPlayground_ />
+export const ChipsPlayground = () => <ChipsPlayground_ />;

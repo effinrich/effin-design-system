@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Drawer } from '~/drawer'
-import { AppBar } from '~/app-bar'
-import { CssBaseline } from '@mui/material'
-import { Toolbar } from '@mui/material'
-import { List } from '~/list'
-import { Typography } from '~/typography'
-import { Divider } from '~/divider'
-import { ListItem } from '@mui/material'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { MoveToInbox as InboxIcon } from '@mui/icons-material'
-import { Mail as MailIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Drawer } from '~/drawer';
+import { AppBar } from '~/app-bar';
+import { CssBaseline } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { List } from '~/list';
+import { Typography } from '~/typography';
+import { Divider } from '~/divider';
+import { ListItem } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { MoveToInbox as InboxIcon } from '@mui/icons-material';
+import { Mail as MailIcon } from '@mui/icons-material';
 
-const drawerWidth = 240
+const drawerWidth = 240;
 
 function ClippedDrawer_() {
   return (
@@ -21,7 +21,7 @@ function ClippedDrawer_() {
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}
+        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
@@ -36,8 +36,8 @@ function ClippedDrawer_() {
           flexShrink: 0,
           [`& .MuiDrawer-paper`]: {
             width: drawerWidth,
-            boxSizing: 'border-box'
-          }
+            boxSizing: 'border-box',
+          },
         }}
       >
         <Toolbar />
@@ -98,7 +98,7 @@ function ClippedDrawer_() {
         </Typography>
       </Box>
     </Box>
-  )
+  );
 }
 
-export const ClippedDrawer = () => <ClippedDrawer_ />
+export const ClippedDrawer = () => <ClippedDrawer_ />;

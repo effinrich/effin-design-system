@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { Menu } from '~/menu'
-import { MenuItem } from '~/menu'
+import * as React from 'react';
+import { Button } from '~/button';
+import { Menu } from '~/menu';
+import { MenuItem } from '~/menu';
 
 function BasicMenu_() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
   const handleClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
   return (
     <div>
@@ -30,7 +30,7 @@ function BasicMenu_() {
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          'aria-labelledby': 'basic-button'
+          'aria-labelledby': 'basic-button',
         }}
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
@@ -38,7 +38,7 @@ function BasicMenu_() {
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>
-  )
+  );
 }
 
-export const BasicMenu = () => <BasicMenu_ />
+export const BasicMenu = () => <BasicMenu_ />;

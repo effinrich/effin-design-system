@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Button } from '~/button';
+import { Stack } from '~/stack';
 
 function TextButtons_() {
   return (
@@ -9,7 +9,7 @@ function TextButtons_() {
       <Button disabled>Disabled</Button>
       <Button href="#text-buttons">Link</Button>
     </Stack>
-  )
+  );
 }
 
-export const TextButtons = () => <TextButtons_ />
+export const TextButtons = () => <TextButtons_ />;

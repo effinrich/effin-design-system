@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { ButtonGroup } from '~/button-group'
-import { Box } from '~/box'
+import * as React from 'react';
+import { Button } from '~/button';
+import { ButtonGroup } from '~/button-group';
+import { Box } from '~/box';
 
 const buttons = [
   <Button key="one">One</Button>,
   <Button key="two">Two</Button>,
-  <Button key="three">Three</Button>
-]
+  <Button key="three">Three</Button>,
+];
 
 function GroupOrientation_() {
   return (
@@ -15,8 +15,8 @@ function GroupOrientation_() {
       sx={{
         display: 'flex',
         '& > *': {
-          m: 1
-        }
+          m: 1,
+        },
       }}
     >
       <ButtonGroup
@@ -40,7 +40,7 @@ function GroupOrientation_() {
         {buttons}
       </ButtonGroup>
     </Box>
-  )
+  );
 }
 
-export const GroupOrientation = () => <GroupOrientation_ />
+export const GroupOrientation = () => <GroupOrientation_ />;

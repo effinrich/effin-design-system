@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { pink } from '@mui/material/colors'
-import { Checkbox } from '~/checkbox'
+import * as React from 'react';
+import { pink } from '@mui/material/colors';
+import { Checkbox } from '~/checkbox';
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } }
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 function ColorCheckboxes_() {
   return (
@@ -17,12 +17,12 @@ function ColorCheckboxes_() {
         sx={{
           color: pink[800],
           '&.Mui-checked': {
-            color: pink[600]
-          }
+            color: pink[600],
+          },
         }}
       />
     </div>
-  )
+  );
 }
 
-export const ColorCheckboxes = () => <ColorCheckboxes_ />
+export const ColorCheckboxes = () => <ColorCheckboxes_ />;

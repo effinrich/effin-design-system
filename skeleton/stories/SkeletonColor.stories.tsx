@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Skeleton } from '~/skeleton'
-import { Box } from '~/box'
+import * as React from 'react';
+import { Skeleton } from '~/skeleton';
+import { Box } from '~/box';
 
 function SkeletonColor_() {
   return (
@@ -10,7 +10,7 @@ function SkeletonColor_() {
         p: 8,
         width: '100%',
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
       }}
     >
       <Skeleton
@@ -20,7 +20,7 @@ function SkeletonColor_() {
         height={118}
       />
     </Box>
-  )
+  );
 }
 
-export const SkeletonColor = () => <SkeletonColor_ />
+export const SkeletonColor = () => <SkeletonColor_ />;

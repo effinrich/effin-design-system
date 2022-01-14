@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Slider } from '~/slider'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Slider } from '~/slider';
 
 function VerticalSlider_() {
   function preventHorizontalKeyboardNavigation(event: React.KeyboardEvent) {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-      event.preventDefault()
+      event.preventDefault();
     }
   }
 
@@ -14,8 +14,8 @@ function VerticalSlider_() {
       <Slider
         sx={{
           '& input[type="range"]': {
-            WebkitAppearance: 'slider-vertical'
-          }
+            WebkitAppearance: 'slider-vertical',
+          },
         }}
         orientation="vertical"
         defaultValue={30}
@@ -23,7 +23,7 @@ function VerticalSlider_() {
         onKeyDown={preventHorizontalKeyboardNavigation}
       />
     </Box>
-  )
+  );
 }
 
-export const VerticalSlider = () => <VerticalSlider_ />
+export const VerticalSlider = () => <VerticalSlider_ />;

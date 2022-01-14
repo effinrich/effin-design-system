@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { Grid } from '~/grid'
-import { Button } from '~/button'
-import { Tooltip } from '~/tooltip'
-import { ClickAwayListener } from '@mui/material'
+import * as React from 'react';
+import { Grid } from '~/grid';
+import { Button } from '~/button';
+import { Tooltip } from '~/tooltip';
+import { ClickAwayListener } from '@mui/material';
 
 function TriggersTooltips_() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   const handleTooltipClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   const handleTooltipOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   return (
     <div>
@@ -38,7 +38,7 @@ function TriggersTooltips_() {
             <div>
               <Tooltip
                 PopperProps={{
-                  disablePortal: true
+                  disablePortal: true,
                 }}
                 onClose={handleTooltipClose}
                 open={open}
@@ -54,7 +54,7 @@ function TriggersTooltips_() {
         </Grid>
       </Grid>
     </div>
-  )
+  );
 }
 
-export const TriggersTooltips = () => <TriggersTooltips_ />
+export const TriggersTooltips = () => <TriggersTooltips_ />;

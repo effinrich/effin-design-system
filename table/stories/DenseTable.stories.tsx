@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Table } from '~/table'
-import { TableBody } from '@mui/material'
-import { TableCell } from '@mui/material'
-import { TableContainer } from '@mui/material'
-import { TableHead } from '@mui/material'
-import { TableRow } from '@mui/material'
-import { Paper } from '~/paper'
+import * as React from 'react';
+import { Table } from '~/table';
+import { TableBody } from '@mui/material';
+import { TableCell } from '@mui/material';
+import { TableContainer } from '@mui/material';
+import { TableHead } from '@mui/material';
+import { TableRow } from '@mui/material';
+import { Paper } from '~/paper';
 
 function createData(
   name: string,
@@ -14,7 +14,7 @@ function createData(
   carbs: number,
   protein: number
 ) {
-  return { name, calories, fat, carbs, protein }
+  return { name, calories, fat, carbs, protein };
 }
 
 const rows = [
@@ -22,8 +22,8 @@ const rows = [
   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
   createData('Eclair', 262, 16.0, 24, 6.0),
   createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9)
-]
+  createData('Gingerbread', 356, 16.0, 49, 3.9),
+];
 
 function DenseTable_() {
   return (
@@ -39,7 +39,7 @@ function DenseTable_() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
+          {rows.map((row) => (
             <TableRow
               key={row.name}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -56,7 +56,7 @@ function DenseTable_() {
         </TableBody>
       </Table>
     </TableContainer>
-  )
+  );
 }
 
-export const DenseTable = () => <DenseTable_ />
+export const DenseTable = () => <DenseTable_ />;

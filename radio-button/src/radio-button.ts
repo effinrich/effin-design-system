@@ -1,1 +1,1 @@
-export { Radio } from '@mui/material'
+export { Radio } from '@mui/material';

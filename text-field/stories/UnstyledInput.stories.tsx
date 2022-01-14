@@ -1,6 +1,6 @@
-import * as React from 'react'
-import InputUnstyled, { InputUnstyledProps } from '@mui/base/InputUnstyled'
-import { styled } from '@mui/system'
+import * as React from 'react';
+import InputUnstyled, { InputUnstyledProps } from '@mui/base/InputUnstyled';
+import { styled } from '@mui/system';
 
 const StyledInputElement = styled('input')`
   width: 200px;
@@ -25,7 +25,7 @@ const StyledInputElement = styled('input')`
     width: 220px;
     transition: width 200ms ease-out;
   }
-`
+`;
 
 const CustomInput = React.forwardRef(function CustomInput(
   props: InputUnstyledProps,
@@ -37,11 +37,13 @@ const CustomInput = React.forwardRef(function CustomInput(
       {...props}
       ref={ref}
     />
-  )
-})
+  );
+});
 
 function UnstyledInput_() {
-  return <CustomInput aria-label="Demo input" placeholder="Type something..." />
+  return (
+    <CustomInput aria-label="Demo input" placeholder="Type something..." />
+  );
 }
 
-export const UnstyledInput = () => <UnstyledInput_ />
+export const UnstyledInput = () => <UnstyledInput_ />;

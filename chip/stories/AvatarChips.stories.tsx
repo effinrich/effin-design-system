@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Avatar } from '~/avatar'
-import { Chip } from '~/chip'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Avatar } from '~/avatar';
+import { Chip } from '~/chip';
+import { Stack } from '~/stack';
 
 function AvatarChips_() {
   return (
@@ -18,7 +18,7 @@ function AvatarChips_() {
         variant="outlined"
       />
     </Stack>
-  )
+  );
 }
 
-export const AvatarChips = () => <AvatarChips_ />
+export const AvatarChips = () => <AvatarChips_ />;

@@ -1,45 +1,45 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Button } from '~/button'
-import { Dialog } from '~/dialog'
-import { DialogProps } from '@mui/material'
-import { DialogActions } from '@mui/material'
-import { DialogContent } from '@mui/material'
-import { DialogContentText } from '@mui/material'
-import { DialogTitle } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { FormControlLabel } from '@mui/material'
-import { InputLabel } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
-import { Switch } from '~/switch'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Button } from '~/button';
+import { Dialog } from '~/dialog';
+import { DialogProps } from '@mui/material';
+import { DialogActions } from '@mui/material';
+import { DialogContent } from '@mui/material';
+import { DialogContentText } from '@mui/material';
+import { DialogTitle } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { FormControlLabel } from '@mui/material';
+import { InputLabel } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
+import { Switch } from '~/switch';
 
 function MaxWidthDialog_() {
-  const [open, setOpen] = React.useState(false)
-  const [fullWidth, setFullWidth] = React.useState(true)
-  const [maxWidth, setMaxWidth] = React.useState<DialogProps['maxWidth']>('sm')
+  const [open, setOpen] = React.useState(false);
+  const [fullWidth, setFullWidth] = React.useState(true);
+  const [maxWidth, setMaxWidth] = React.useState<DialogProps['maxWidth']>('sm');
 
   const handleClickOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   const handleMaxWidthChange = (event: SelectChangeEvent<typeof maxWidth>) => {
     setMaxWidth(
       // @ts-expect-error autofill of arbitrary value is not handled.
       event.target.value
-    )
-  }
+    );
+  };
 
   const handleFullWidthChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setFullWidth(event.target.checked)
-  }
+    setFullWidth(event.target.checked);
+  };
 
   return (
     <React.Fragment>
@@ -64,7 +64,7 @@ function MaxWidthDialog_() {
               display: 'flex',
               flexDirection: 'column',
               m: 'auto',
-              width: 'fit-content'
+              width: 'fit-content',
             }}
           >
             <FormControl sx={{ mt: 2, minWidth: 120 }}>
@@ -76,7 +76,7 @@ function MaxWidthDialog_() {
                 label="maxWidth"
                 inputProps={{
                   name: 'max-width',
-                  id: 'max-width'
+                  id: 'max-width',
                 }}
               >
                 <MenuItem value={false as any}>false</MenuItem>
@@ -101,7 +101,7 @@ function MaxWidthDialog_() {
         </DialogActions>
       </Dialog>
     </React.Fragment>
-  )
+  );
 }
 
-export const MaxWidthDialog = () => <MaxWidthDialog_ />
+export const MaxWidthDialog = () => <MaxWidthDialog_ />;

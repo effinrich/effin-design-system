@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Tabs } from '~/tabs'
-import { Tab } from '@mui/material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Tabs } from '~/tabs';
+import { Tab } from '@mui/material';
 
 interface LinkTabProps {
-  label?: string
-  href?: string
+  label?: string;
+  href?: string;
 }
 
 function LinkTab(props: LinkTabProps) {
@@ -13,19 +13,19 @@ function LinkTab(props: LinkTabProps) {
     <Tab
       component="a"
       onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        event.preventDefault()
+        event.preventDefault();
       }}
       {...props}
     />
-  )
+  );
 }
 
 function NavTabs_() {
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -35,7 +35,7 @@ function NavTabs_() {
         <LinkTab label="Page Three" href="/spam" />
       </Tabs>
     </Box>
-  )
+  );
 }
 
-export const NavTabs = () => <NavTabs_ />
+export const NavTabs = () => <NavTabs_ />;

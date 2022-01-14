@@ -1,1 +1,1 @@
-export { Tabs } from '@mui/material'
+export { Tabs } from '@mui/material';

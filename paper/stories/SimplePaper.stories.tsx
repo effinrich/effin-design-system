@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Paper } from '~/paper'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Paper } from '~/paper';
 
 function SimplePaper_() {
   return (
@@ -11,15 +11,15 @@ function SimplePaper_() {
         '& > :not(style)': {
           m: 1,
           width: 128,
-          height: 128
-        }
+          height: 128,
+        },
       }}
     >
       <Paper elevation={0} />
       <Paper />
       <Paper elevation={3} />
     </Box>
-  )
+  );
 }
 
-export const SimplePaper = () => <SimplePaper_ />
+export const SimplePaper = () => <SimplePaper_ />;

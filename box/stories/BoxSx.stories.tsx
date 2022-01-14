@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Box } from '~/box'
+import * as React from 'react';
+import { Box } from '~/box';
 
 function BoxSx_() {
   return (
@@ -10,11 +10,11 @@ function BoxSx_() {
         backgroundColor: 'primary.dark',
         '&:hover': {
           backgroundColor: 'primary.main',
-          opacity: [0.9, 0.8, 0.7]
-        }
+          opacity: [0.9, 0.8, 0.7],
+        },
       }}
     />
-  )
+  );
 }
 
-export const BoxSx = () => <BoxSx_ />
+export const BoxSx = () => <BoxSx_ />;

@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { IconButton } from '@mui/material'
-import { Stack } from '~/stack'
-import { Delete as DeleteIcon } from '@mui/icons-material'
-import { Alarm as AlarmIcon } from '@mui/icons-material'
-import { AddShoppingCart as AddShoppingCartIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { IconButton } from '@mui/material';
+import { Stack } from '~/stack';
+import { Delete as DeleteIcon } from '@mui/icons-material';
+import { Alarm as AlarmIcon } from '@mui/icons-material';
+import { AddShoppingCart as AddShoppingCartIcon } from '@mui/icons-material';
 
 function IconButtons_() {
   return (
@@ -21,7 +21,7 @@ function IconButtons_() {
         <AddShoppingCartIcon />
       </IconButton>
     </Stack>
-  )
+  );
 }
 
-export const IconButtons = () => <IconButtons_ />
+export const IconButtons = () => <IconButtons_ />;

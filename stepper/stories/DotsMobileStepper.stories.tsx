@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { useTheme } from '@mui/material'
-import { MobileStepper } from '@mui/material'
-import { Button } from '~/button'
-import { KeyboardArrowLeft } from '@mui/icons-material'
-import { KeyboardArrowRight } from '@mui/icons-material'
+import * as React from 'react';
+import { useTheme } from '@mui/material';
+import { MobileStepper } from '@mui/material';
+import { Button } from '~/button';
+import { KeyboardArrowLeft } from '@mui/icons-material';
+import { KeyboardArrowRight } from '@mui/icons-material';
 
 function DotsMobileStepper_() {
-  const theme = useTheme()
-  const [activeStep, setActiveStep] = React.useState(0)
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1)
-  }
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
 
   const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1)
-  }
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
 
   return (
     <MobileStepper
@@ -45,7 +45,7 @@ function DotsMobileStepper_() {
         </Button>
       }
     />
-  )
+  );
 }
 
-export const DotsMobileStepper = () => <DotsMobileStepper_ />
+export const DotsMobileStepper = () => <DotsMobileStepper_ />;

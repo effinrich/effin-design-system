@@ -1,36 +1,36 @@
-import * as React from 'react'
-import { alpha, styled } from '@mui/material'
-import { InputBase } from '@mui/material'
-import { Box } from '~/box'
-import { InputLabel } from '@mui/material'
-import { TextField } from '~/text-field'
-import { TextFieldProps } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { OutlinedInputProps } from '@mui/material'
+import * as React from 'react';
+import { alpha, styled } from '@mui/material';
+import { InputBase } from '@mui/material';
+import { Box } from '~/box';
+import { InputLabel } from '@mui/material';
+import { TextField } from '~/text-field';
+import { TextFieldProps } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { OutlinedInputProps } from '@mui/material';
 
 const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
-    color: 'green'
+    color: 'green',
   },
   '& .MuiInput-underline:after': {
-    borderBottomColor: 'green'
+    borderBottomColor: 'green',
   },
   '& .MuiOutlinedInput-root': {
     '& fieldset': {
-      borderColor: 'red'
+      borderColor: 'red',
     },
     '&:hover fieldset': {
-      borderColor: 'yellow'
+      borderColor: 'yellow',
     },
     '&.Mui-focused fieldset': {
-      borderColor: 'green'
-    }
-  }
-})
+      borderColor: 'green',
+    },
+  },
+});
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(3),
   },
   '& .MuiInputBase-input': {
     borderRadius: 4,
@@ -43,7 +43,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create([
       'border-color',
       'background-color',
-      'box-shadow'
+      'box-shadow',
     ]),
     // Use the system font instead of the default Roboto font.
     fontFamily: [
@@ -56,14 +56,14 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
       'sans-serif',
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"'
+      '"Segoe UI Symbol"',
     ].join(','),
     '&:focus': {
       boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 0.2rem`,
-      borderColor: theme.palette.primary.main
-    }
-  }
-}))
+      borderColor: theme.palette.primary.main,
+    },
+  },
+}));
 
 const RedditTextField = styled((props: TextFieldProps) => (
   <TextField
@@ -79,33 +79,33 @@ const RedditTextField = styled((props: TextFieldProps) => (
     transition: theme.transitions.create([
       'border-color',
       'background-color',
-      'box-shadow'
+      'box-shadow',
     ]),
     '&:hover': {
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
     },
     '&.Mui-focused': {
       backgroundColor: 'transparent',
       boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
-      borderColor: theme.palette.primary.main
-    }
-  }
-}))
+      borderColor: theme.palette.primary.main,
+    },
+  },
+}));
 
 const ValidationTextField = styled(TextField)({
   '& input:valid + fieldset': {
     borderColor: 'green',
-    borderWidth: 2
+    borderWidth: 2,
   },
   '& input:invalid + fieldset': {
     borderColor: 'red',
-    borderWidth: 2
+    borderWidth: 2,
   },
   '& input:valid:focus + fieldset': {
     borderLeftWidth: 6,
-    padding: '4px !important' // override inline-style
-  }
-})
+    padding: '4px !important', // override inline-style
+  },
+});
 
 function CustomizedInputs_() {
   return (
@@ -115,7 +115,7 @@ function CustomizedInputs_() {
       sx={{
         display: 'grid',
         gridTemplateColumns: { sm: '1fr 1fr' },
-        gap: 2
+        gap: 2,
       }}
     >
       <FormControl variant="standard">
@@ -140,7 +140,7 @@ function CustomizedInputs_() {
         id="validation-outlined-input"
       />
     </Box>
-  )
+  );
 }
 
-export const CustomizedInputs = () => <CustomizedInputs_ />
+export const CustomizedInputs = () => <CustomizedInputs_ />;

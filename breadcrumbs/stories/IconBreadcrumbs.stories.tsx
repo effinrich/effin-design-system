@@ -1,14 +1,14 @@
-import * as React from 'react'
-import { Typography } from '~/typography'
-import { Breadcrumbs } from '~/breadcrumbs'
-import { Link } from '~/link'
-import { Home as HomeIcon } from '@mui/icons-material'
-import { Whatshot as WhatshotIcon } from '@mui/icons-material'
-import { Grain as GrainIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Typography } from '~/typography';
+import { Breadcrumbs } from '~/breadcrumbs';
+import { Link } from '~/link';
+import { Home as HomeIcon } from '@mui/icons-material';
+import { Whatshot as WhatshotIcon } from '@mui/icons-material';
+import { Grain as GrainIcon } from '@mui/icons-material';
 
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-  event.preventDefault()
-  console.info('You clicked a breadcrumb.')
+  event.preventDefault();
+  console.info('You clicked a breadcrumb.');
 }
 
 function IconBreadcrumbs_() {
@@ -42,7 +42,7 @@ function IconBreadcrumbs_() {
         </Typography>
       </Breadcrumbs>
     </div>
-  )
+  );
 }
 
-export const IconBreadcrumbs = () => <IconBreadcrumbs_ />
+export const IconBreadcrumbs = () => <IconBreadcrumbs_ />;

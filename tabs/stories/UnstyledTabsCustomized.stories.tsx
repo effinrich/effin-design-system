@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { styled } from '@mui/system'
-import TabsUnstyled from '@mui/base/TabsUnstyled'
-import TabsListUnstyled from '@mui/base/TabsListUnstyled'
-import TabPanelUnstyled from '@mui/base/TabPanelUnstyled'
-import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled'
-import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled'
+import * as React from 'react';
+import { styled } from '@mui/system';
+import TabsUnstyled from '@mui/base/TabsUnstyled';
+import TabsListUnstyled from '@mui/base/TabsListUnstyled';
+import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
+import { buttonUnstyledClasses } from '@mui/base/ButtonUnstyled';
+import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 
 const primary = {
   50: '#F0F7FF',
@@ -16,8 +16,8 @@ const primary = {
   600: '#0072E5',
   700: '#0059B2',
   800: '#004C99',
-  900: '#003A75'
-}
+  900: '#003A75',
+};
 
 const Tab = styled(TabUnstyled)`
   color: ${primary[100]};
@@ -53,11 +53,11 @@ const Tab = styled(TabUnstyled)`
     cursor: not-allowed;
     box-shadow: 0 0 0 0 rgba(0, 127, 255, 0);
   }
-`
+`;
 
 const TabPanel = styled(TabPanelUnstyled)`
   width: 100%;
-`
+`;
 
 const TabsList = styled(TabsListUnstyled)`
   background-color: ${primary[500]};
@@ -67,7 +67,7 @@ const TabsList = styled(TabsListUnstyled)`
   margin-bottom: 10px;
   display: flex;
   align-content: space-between;
-`
+`;
 
 function UnstyledTabsCustomized_() {
   return (
@@ -81,7 +81,7 @@ function UnstyledTabsCustomized_() {
       <TabPanel value={1}>Second content</TabPanel>
       <TabPanel value={2}>Third content</TabPanel>
     </TabsUnstyled>
-  )
+  );
 }
 
-export const UnstyledTabsCustomized = () => <UnstyledTabsCustomized_ />
+export const UnstyledTabsCustomized = () => <UnstyledTabsCustomized_ />;

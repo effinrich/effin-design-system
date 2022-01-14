@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Tabs } from '~/tabs'
-import { Tab } from '@mui/material'
+import * as React from 'react';
+import { Tabs } from '~/tabs';
+import { Tab } from '@mui/material';
 
 function DisabledTabs_() {
-  const [value, setValue] = React.useState(2)
+  const [value, setValue] = React.useState(2);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
 
   return (
     <Tabs
@@ -19,7 +19,7 @@ function DisabledTabs_() {
       <Tab label="Disabled" disabled />
       <Tab label="Active" />
     </Tabs>
-  )
+  );
 }
 
-export const DisabledTabs = () => <DisabledTabs_ />
+export const DisabledTabs = () => <DisabledTabs_ />;

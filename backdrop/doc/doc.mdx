@@ -1,10 +1,10 @@
-import { Backdrop } from '~/backdrop'
-import { SimpleBackdrop as SimpleBackdrop } from '../stories/SimpleBackdrop.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+import { Backdrop } from '~/backdrop';
+import { SimpleBackdrop as SimpleBackdrop } from '../stories/SimpleBackdrop.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Backdrop
 
@@ -22,7 +22,7 @@ In its simplest form, the backdrop component will add a dimmed layer over your a
 ```tsx
 <Button onClick={handleToggle}>Show backdrop</Button>
 <Backdrop
-  sx={{ color: '#fff', zIndex: theme => theme.zIndex.drawer + 1 }}
+  sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
   open={open}
   onClick={handleClose}
 >
@@ -36,5 +36,5 @@ The backdrop also comes with the unstyled package.
 It's ideal for doing heavy customizations and minimizing bundle size.
 
 ```js
-import Backdrop from '@mui/base/Backdrop'
+import Backdrop from '@mui/base/Backdrop';
 ```

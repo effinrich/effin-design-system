@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Input } from '@mui/material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Input } from '@mui/material';
 
-const ariaLabel = { 'aria-label': 'description' }
+const ariaLabel = { 'aria-label': 'description' };
 
 function Inputs_() {
   return (
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1 }
+        '& > :not(style)': { m: 1 },
       }}
       noValidate
       autoComplete="off"
@@ -19,7 +19,7 @@ function Inputs_() {
       <Input disabled defaultValue="Disabled" inputProps={ariaLabel} />
       <Input defaultValue="Error" error inputProps={ariaLabel} />
     </Box>
-  )
+  );
 }
 
-export const Inputs = () => <Inputs_ />
+export const Inputs = () => <Inputs_ />;

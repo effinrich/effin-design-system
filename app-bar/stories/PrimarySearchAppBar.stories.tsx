@@ -1,36 +1,36 @@
-import * as React from 'react'
-import { styled, alpha } from '@mui/material'
-import { AppBar } from '~/app-bar'
-import { Box } from '~/box'
-import { Toolbar } from '@mui/material'
-import { IconButton } from '@mui/material'
-import { Typography } from '~/typography'
-import { InputBase } from '@mui/material'
-import { Badge } from '~/badge'
-import { MenuItem } from '~/menu'
-import { Menu } from '~/menu'
-import { Menu as MenuIcon } from '@mui/icons-material'
-import { Search as SearchIcon } from '@mui/icons-material'
-import { AccountCircle } from '@mui/icons-material'
-import { Mail as MailIcon } from '@mui/icons-material'
-import { Notifications as NotificationsIcon } from '@mui/icons-material'
-import { MoreVert as MoreIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { styled, alpha } from '@mui/material';
+import { AppBar } from '~/app-bar';
+import { Box } from '~/box';
+import { Toolbar } from '@mui/material';
+import { IconButton } from '@mui/material';
+import { Typography } from '~/typography';
+import { InputBase } from '@mui/material';
+import { Badge } from '~/badge';
+import { MenuItem } from '~/menu';
+import { Menu } from '~/menu';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import { Search as SearchIcon } from '@mui/icons-material';
+import { AccountCircle } from '@mui/icons-material';
+import { Mail as MailIcon } from '@mui/icons-material';
+import { Notifications as NotificationsIcon } from '@mui/icons-material';
+import { MoreVert as MoreIcon } from '@mui/icons-material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25)
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
-    width: 'auto'
-  }
-}))
+    width: 'auto',
+  },
+}));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
@@ -39,8 +39,8 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   pointerEvents: 'none',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
-}))
+  justifyContent: 'center',
+}));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
@@ -51,49 +51,49 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch'
-    }
-  }
-}))
+      width: '20ch',
+    },
+  },
+}));
 
 function PrimarySearchAppBar_() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
-    React.useState<null | HTMLElement>(null)
+    React.useState<null | HTMLElement>(null);
 
-  const isMenuOpen = Boolean(anchorEl)
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
 
   const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null)
-  }
+    setMobileMoreAnchorEl(null);
+  };
 
   const handleMenuClose = () => {
-    setAnchorEl(null)
-    handleMobileMenuClose()
-  }
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
 
   const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    setMobileMoreAnchorEl(event.currentTarget)
-  }
+    setMobileMoreAnchorEl(event.currentTarget);
+  };
 
-  const menuId = 'primary-search-account-menu'
+  const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
         vertical: 'top',
-        horizontal: 'right'
+        horizontal: 'right',
       }}
       id={menuId}
       keepMounted
       transformOrigin={{
         vertical: 'top',
-        horizontal: 'right'
+        horizontal: 'right',
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
@@ -101,21 +101,21 @@ function PrimarySearchAppBar_() {
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
-  )
+  );
 
-  const mobileMenuId = 'primary-search-account-menu-mobile'
+  const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{
         vertical: 'top',
-        horizontal: 'right'
+        horizontal: 'right',
       }}
       id={mobileMenuId}
       keepMounted
       transformOrigin={{
         vertical: 'top',
-        horizontal: 'right'
+        horizontal: 'right',
       }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
@@ -153,7 +153,7 @@ function PrimarySearchAppBar_() {
         <p>Profile</p>
       </MenuItem>
     </Menu>
-  )
+  );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -234,7 +234,7 @@ function PrimarySearchAppBar_() {
       {renderMobileMenu}
       {renderMenu}
     </Box>
-  )
+  );
 }
 
-export const PrimarySearchAppBar = () => <PrimarySearchAppBar_ />
+export const PrimarySearchAppBar = () => <PrimarySearchAppBar_ />;

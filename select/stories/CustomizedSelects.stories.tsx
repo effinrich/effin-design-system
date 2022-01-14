@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { styled } from '@mui/material'
-import { InputLabel } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormControl } from '@mui/material'
-import { Select } from '~/select'
-import { NativeSelect } from '@mui/material'
-import { InputBase } from '@mui/material'
+import * as React from 'react';
+import { styled } from '@mui/material';
+import { InputLabel } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormControl } from '@mui/material';
+import { Select } from '~/select';
+import { NativeSelect } from '@mui/material';
+import { InputBase } from '@mui/material';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(3),
   },
   '& .MuiInputBase-input': {
     borderRadius: 4,
@@ -30,21 +30,21 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
       'sans-serif',
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"'
+      '"Segoe UI Symbol"',
     ].join(','),
     '&:focus': {
       borderRadius: 4,
       borderColor: '#80bdff',
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)'
-    }
-  }
-}))
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+    },
+  },
+}));
 
 function CustomizedSelects_() {
-  const [age, setAge] = React.useState('')
+  const [age, setAge] = React.useState('');
   const handleChange = (event: { target: { value: string } }) => {
-    setAge(event.target.value)
-  }
+    setAge(event.target.value);
+  };
   return (
     <div>
       <FormControl sx={{ m: 1 }} variant="standard">
@@ -83,7 +83,7 @@ function CustomizedSelects_() {
         </NativeSelect>
       </FormControl>
     </div>
-  )
+  );
 }
 
-export const CustomizedSelects = () => <CustomizedSelects_ />
+export const CustomizedSelects = () => <CustomizedSelects_ />;

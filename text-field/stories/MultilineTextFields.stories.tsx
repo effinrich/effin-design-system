@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { TextField } from '~/text-field'
+import * as React from 'react';
+import { Box } from '~/box';
+import { TextField } from '~/text-field';
 
 function MultilineTextFields_() {
-  const [value, setValue] = React.useState('Controlled')
+  const [value, setValue] = React.useState('Controlled');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value)
-  }
+    setValue(event.target.value);
+  };
 
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' }
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
       }}
       noValidate
       autoComplete="off"
@@ -94,7 +94,7 @@ function MultilineTextFields_() {
         />
       </div>
     </Box>
-  )
+  );
 }
 
-export const MultilineTextFields = () => <MultilineTextFields_ />
+export const MultilineTextFields = () => <MultilineTextFields_ />;

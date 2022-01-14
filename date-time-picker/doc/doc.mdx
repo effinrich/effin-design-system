@@ -2,19 +2,19 @@ import {
   DateTimePicker,
   DesktopDateTimePicker,
   MobileDateTimePicker,
-  StaticDateTimePicker
-} from '~/date-time-picker'
-import { BasicDateTimePicker as BasicDateTimePicker } from '../stories/BasicDateTimePicker.stories'
-import { ResponsiveDateTimePickers as ResponsiveDateTimePickers } from '../stories/ResponsiveDateTimePickers.stories'
-import { FormPropsDateTimePickers as FormPropsDateTimePickers } from '../stories/FormPropsDateTimePickers.stories'
-import { DateTimeValidation as DateTimeValidation } from '../stories/DateTimeValidation.stories'
-import { StaticDateTimePickerDemo as StaticDateTimePickerDemo } from '../stories/StaticDateTimePickerDemo.stories'
-import { CustomDateTimePicker as CustomDateTimePicker } from '../stories/CustomDateTimePicker.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+  StaticDateTimePicker,
+} from '~/date-time-picker';
+import { BasicDateTimePicker as BasicDateTimePicker } from '../stories/BasicDateTimePicker.stories';
+import { ResponsiveDateTimePickers as ResponsiveDateTimePickers } from '../stories/ResponsiveDateTimePickers.stories';
+import { FormPropsDateTimePickers as FormPropsDateTimePickers } from '../stories/FormPropsDateTimePickers.stories';
+import { DateTimeValidation as DateTimeValidation } from '../stories/DateTimeValidation.stories';
+import { StaticDateTimePickerDemo as StaticDateTimePickerDemo } from '../stories/StaticDateTimePickerDemo.stories';
+import { CustomDateTimePicker as CustomDateTimePicker } from '../stories/CustomDateTimePicker.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Date Time Picker
 
@@ -33,15 +33,15 @@ Please install any of these libraries and set up the right date engine by wrappi
 
 ```jsx
 // or @mui/lab/Adapter{Dayjs,Luxon,Moment} or any valid date-io adapter
-import AdapterDateFns from '@mui/lab/AdapterDateFns'
-import LocalizationProvider from '@mui/lab/LocalizationProvider'
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 function App() {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       ...
     </LocalizationProvider>
-  )
+  );
 }
 ```
 
@@ -53,11 +53,11 @@ Allows choosing date then time. There are 4 steps available (year, date, hour an
 ```tsx
 <LocalizationProvider dateAdapter={AdapterDateFns}>
   <DateTimePicker
-    renderInput={props => <TextField {...props} />}
+    renderInput={(props) => <TextField {...props} />}
     label="DateTimePicker"
     value={value}
-    onChange={newValue => {
-      setValue(newValue)
+    onChange={(newValue) => {
+      setValue(newValue);
     }}
   />
 </LocalizationProvider>
@@ -110,10 +110,10 @@ It's possible to render any date & time picker inline. This will enable building
     displayStaticWrapperAs="desktop"
     openTo="year"
     value={value}
-    onChange={newValue => {
-      setValue(newValue)
+    onChange={(newValue) => {
+      setValue(newValue);
     }}
-    renderInput={params => <TextField {...params} />}
+    renderInput={(params) => <TextField {...params} />}
   />
 </LocalizationProvider>
 ```

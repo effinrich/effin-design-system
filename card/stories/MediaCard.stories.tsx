@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { Card } from '~/card'
-import { CardActions } from '@mui/material'
-import { CardContent } from '@mui/material'
-import { CardMedia } from '@mui/material'
-import { Button } from '~/button'
-import { Typography } from '~/typography'
+import * as React from 'react';
+import { Card } from '~/card';
+import { CardActions } from '@mui/material';
+import { CardContent } from '@mui/material';
+import { CardMedia } from '@mui/material';
+import { Button } from '~/button';
+import { Typography } from '~/typography';
 
 function MediaCard_() {
   return (
@@ -29,7 +29,7 @@ function MediaCard_() {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-  )
+  );
 }
 
-export const MediaCard = () => <MediaCard_ />
+export const MediaCard = () => <MediaCard_ />;

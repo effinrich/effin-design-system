@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { Breadcrumbs } from '~/breadcrumbs'
-import { Link } from '~/link'
+import * as React from 'react';
+import { Breadcrumbs } from '~/breadcrumbs';
+import { Link } from '~/link';
 
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-  event.preventDefault()
-  console.info('You clicked a breadcrumb.')
+  event.preventDefault();
+  console.info('You clicked a breadcrumb.');
 }
 
 function ActiveLastBreadcrumb_() {
@@ -31,7 +31,7 @@ function ActiveLastBreadcrumb_() {
         </Link>
       </Breadcrumbs>
     </div>
-  )
+  );
 }
 
-export const ActiveLastBreadcrumb = () => <ActiveLastBreadcrumb_ />
+export const ActiveLastBreadcrumb = () => <ActiveLastBreadcrumb_ />;

@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { FormatAlignLeft as FormatAlignLeftIcon } from '@mui/icons-material'
-import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material'
-import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material'
-import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material'
-import { Box } from '~/box'
-import { ToggleButton } from '~/toggle-button'
-import { ToggleButtonGroup } from '@mui/material'
+import * as React from 'react';
+import { FormatAlignLeft as FormatAlignLeftIcon } from '@mui/icons-material';
+import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material';
+import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material';
+import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material';
+import { Box } from '~/box';
+import { ToggleButton } from '~/toggle-button';
+import { ToggleButtonGroup } from '@mui/material';
 
 function ToggleButtonSizes_() {
-  const [alignment, setAlignment] = React.useState('left')
+  const [alignment, setAlignment] = React.useState('left');
 
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
     newAlignment: string
   ) => {
-    setAlignment(newAlignment)
-  }
+    setAlignment(newAlignment);
+  };
 
   const children = [
     <ToggleButton value="left" key="left">
@@ -29,14 +29,14 @@ function ToggleButtonSizes_() {
     </ToggleButton>,
     <ToggleButton value="justify" key="justify">
       <FormatAlignJustifyIcon />
-    </ToggleButton>
-  ]
+    </ToggleButton>,
+  ];
 
   const control = {
     value: alignment,
     onChange: handleChange,
-    exclusive: true
-  }
+    exclusive: true,
+  };
 
   return (
     <Box
@@ -45,7 +45,7 @@ function ToggleButtonSizes_() {
         flexDirection: 'column',
         alignItems: 'center',
         // TODO Replace with Stack
-        '& > :not(style) + :not(style)': { mt: 2 }
+        '& > :not(style) + :not(style)': { mt: 2 },
       }}
     >
       <ToggleButtonGroup size="small" {...control}>
@@ -56,7 +56,7 @@ function ToggleButtonSizes_() {
         {children}
       </ToggleButtonGroup>
     </Box>
-  )
+  );
 }
 
-export const ToggleButtonSizes = () => <ToggleButtonSizes_ />
+export const ToggleButtonSizes = () => <ToggleButtonSizes_ />;

@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { List } from '~/list'
-import { ListItem } from '@mui/material'
-import { Divider } from '~/divider'
-import { ListItemText } from '@mui/material'
-import { ListItemAvatar } from '@mui/material'
-import { Avatar } from '~/avatar'
-import { Typography } from '~/typography'
+import * as React from 'react';
+import { List } from '~/list';
+import { ListItem } from '@mui/material';
+import { Divider } from '~/divider';
+import { ListItemText } from '@mui/material';
+import { ListItemAvatar } from '@mui/material';
+import { Avatar } from '~/avatar';
+import { Typography } from '~/typography';
 
 function AlignItemsList_() {
   return (
@@ -85,7 +85,7 @@ function AlignItemsList_() {
         />
       </ListItem>
     </List>
-  )
+  );
 }
 
-export const AlignItemsList = () => <AlignItemsList_ />
+export const AlignItemsList = () => <AlignItemsList_ />;

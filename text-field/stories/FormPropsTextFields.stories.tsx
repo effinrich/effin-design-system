@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { TextField } from '~/text-field'
+import * as React from 'react';
+import { Box } from '~/box';
+import { TextField } from '~/text-field';
 
 function FormPropsTextFields_() {
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' }
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
       }}
       noValidate
       autoComplete="off"
@@ -36,7 +36,7 @@ function FormPropsTextFields_() {
           label="Read Only"
           defaultValue="Hello World"
           InputProps={{
-            readOnly: true
+            readOnly: true,
           }}
         />
         <TextField
@@ -44,7 +44,7 @@ function FormPropsTextFields_() {
           label="Number"
           type="number"
           InputLabelProps={{
-            shrink: true
+            shrink: true,
           }}
         />
         <TextField id="outlined-search" label="Search field" type="search" />
@@ -82,7 +82,7 @@ function FormPropsTextFields_() {
           label="Read Only"
           defaultValue="Hello World"
           InputProps={{
-            readOnly: true
+            readOnly: true,
           }}
           variant="filled"
         />
@@ -91,7 +91,7 @@ function FormPropsTextFields_() {
           label="Number"
           type="number"
           InputLabelProps={{
-            shrink: true
+            shrink: true,
           }}
           variant="filled"
         />
@@ -136,7 +136,7 @@ function FormPropsTextFields_() {
           label="Read Only"
           defaultValue="Hello World"
           InputProps={{
-            readOnly: true
+            readOnly: true,
           }}
           variant="standard"
         />
@@ -145,7 +145,7 @@ function FormPropsTextFields_() {
           label="Number"
           type="number"
           InputLabelProps={{
-            shrink: true
+            shrink: true,
           }}
           variant="standard"
         />
@@ -164,7 +164,7 @@ function FormPropsTextFields_() {
         />
       </div>
     </Box>
-  )
+  );
 }
 
-export const FormPropsTextFields = () => <FormPropsTextFields_ />
+export const FormPropsTextFields = () => <FormPropsTextFields_ />;

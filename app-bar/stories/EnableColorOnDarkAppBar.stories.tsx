@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { AppBar } from '~/app-bar'
-import { Stack } from '~/stack'
-import { Toolbar } from '@mui/material'
-import { Typography } from '~/typography'
-import { IconButton } from '@mui/material'
-import { Menu as MenuIcon } from '@mui/icons-material'
-import { ThemeProvider, createTheme } from '@mui/material'
+import * as React from 'react';
+import { AppBar } from '~/app-bar';
+import { Stack } from '~/stack';
+import { Toolbar } from '@mui/material';
+import { Typography } from '~/typography';
+import { IconButton } from '@mui/material';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import { ThemeProvider, createTheme } from '@mui/material';
 
 function appBarLabel(label: string) {
   return (
@@ -17,17 +17,17 @@ function appBarLabel(label: string) {
         {label}
       </Typography>
     </Toolbar>
-  )
+  );
 }
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#1976d2'
-    }
-  }
-})
+      main: '#1976d2',
+    },
+  },
+});
 
 function EnableColorOnDarkAppBar_() {
   return (
@@ -41,7 +41,7 @@ function EnableColorOnDarkAppBar_() {
         </AppBar>
       </ThemeProvider>
     </Stack>
-  )
+  );
 }
 
-export const EnableColorOnDarkAppBar = () => <EnableColorOnDarkAppBar_ />
+export const EnableColorOnDarkAppBar = () => <EnableColorOnDarkAppBar_ />;

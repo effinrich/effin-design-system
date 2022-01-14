@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Pagination } from '~/pagination'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Pagination } from '~/pagination';
+import { Stack } from '~/stack';
 
 function PaginationRounded_() {
   return (
@@ -8,7 +8,7 @@ function PaginationRounded_() {
       <Pagination count={10} shape="rounded" />
       <Pagination count={10} variant="outlined" shape="rounded" />
     </Stack>
-  )
+  );
 }
 
-export const PaginationRounded = () => <PaginationRounded_ />
+export const PaginationRounded = () => <PaginationRounded_ />;

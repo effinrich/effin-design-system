@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Stack } from '~/stack';
 import ButtonUnstyled, {
   ButtonUnstyledProps,
-  buttonUnstyledClasses
-} from '@mui/base/ButtonUnstyled'
-import { styled } from '@mui/system'
+  buttonUnstyledClasses,
+} from '@mui/base/ButtonUnstyled';
+import { styled } from '@mui/system';
 
 const CustomButtonRoot = styled('span')`
   background-color: #007fff;
@@ -38,10 +38,10 @@ const CustomButtonRoot = styled('span')`
     cursor: not-allowed;
     box-shadow: 0 0 0 0 rgba(0, 127, 255, 0);
   }
-`
+`;
 
 function CustomButton(props: ButtonUnstyledProps) {
-  return <ButtonUnstyled {...props} component={CustomButtonRoot} />
+  return <ButtonUnstyled {...props} component={CustomButtonRoot} />;
 }
 
 function UnstyledButtonsSpan_() {
@@ -50,7 +50,7 @@ function UnstyledButtonsSpan_() {
       <CustomButton>Button</CustomButton>
       <CustomButton disabled>Disabled</CustomButton>
     </Stack>
-  )
+  );
 }
 
-export const UnstyledButtonsSpan = () => <UnstyledButtonsSpan_ />
+export const UnstyledButtonsSpan = () => <UnstyledButtonsSpan_ />;

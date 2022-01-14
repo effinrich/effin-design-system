@@ -1,1 +1,1 @@
-export { Dialog } from '@mui/material'
+export { Dialog } from '@mui/material';

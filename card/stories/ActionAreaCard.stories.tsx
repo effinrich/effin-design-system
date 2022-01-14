@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Card } from '~/card'
-import { CardContent } from '@mui/material'
-import { CardMedia } from '@mui/material'
-import { Typography } from '~/typography'
-import { CardActionArea } from '@mui/material'
+import * as React from 'react';
+import { Card } from '~/card';
+import { CardContent } from '@mui/material';
+import { CardMedia } from '@mui/material';
+import { Typography } from '~/typography';
+import { CardActionArea } from '@mui/material';
 
 function ActionAreaCard_() {
   return (
@@ -26,7 +26,7 @@ function ActionAreaCard_() {
         </CardContent>
       </CardActionArea>
     </Card>
-  )
+  );
 }
 
-export const ActionAreaCard = () => <ActionAreaCard_ />
+export const ActionAreaCard = () => <ActionAreaCard_ />;

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { LoadingButton } from '@mui/lab'
-import { Save as SaveIcon } from '@mui/icons-material'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { LoadingButton } from '@mui/lab';
+import { Save as SaveIcon } from '@mui/icons-material';
+import { Stack } from '~/stack';
 
 function LoadingButtons_() {
   return (
@@ -21,7 +21,7 @@ function LoadingButtons_() {
         Save
       </LoadingButton>
     </Stack>
-  )
+  );
 }
 
-export const LoadingButtons = () => <LoadingButtons_ />
+export const LoadingButtons = () => <LoadingButtons_ />;

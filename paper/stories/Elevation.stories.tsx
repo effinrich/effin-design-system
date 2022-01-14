@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { Grid } from '~/grid'
-import { Paper } from '~/paper'
-import { Box } from '~/box'
-import { createTheme, ThemeProvider, styled } from '@mui/material'
+import * as React from 'react';
+import { Grid } from '~/grid';
+import { Paper } from '~/paper';
+import { Box } from '~/box';
+import { createTheme, ThemeProvider, styled } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   textAlign: 'center',
   color: theme.palette.text.secondary,
   height: 60,
-  lineHeight: '60px'
-}))
+  lineHeight: '60px',
+}));
 
-const darkTheme = createTheme({ palette: { mode: 'dark' } })
-const lightTheme = createTheme({ palette: { mode: 'light' } })
+const darkTheme = createTheme({ palette: { mode: 'dark' } });
+const lightTheme = createTheme({ palette: { mode: 'light' } });
 
 function Elevation_() {
   return (
@@ -27,10 +27,10 @@ function Elevation_() {
                 bgcolor: 'background.default',
                 display: 'grid',
                 gridTemplateColumns: { md: '1fr 1fr' },
-                gap: 2
+                gap: 2,
               }}
             >
-              {[0, 1, 2, 3, 4, 6, 8, 12, 16, 24].map(elevation => (
+              {[0, 1, 2, 3, 4, 6, 8, 12, 16, 24].map((elevation) => (
                 <Item key={elevation} elevation={elevation}>
                   {`elevation=${elevation}`}
                 </Item>
@@ -40,7 +40,7 @@ function Elevation_() {
         </Grid>
       ))}
     </Grid>
-  )
+  );
 }
 
-export const Elevation = () => <Elevation_ />
+export const Elevation = () => <Elevation_ />;

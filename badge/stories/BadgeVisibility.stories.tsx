@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Badge } from '~/badge'
-import { ButtonGroup } from '~/button-group'
-import { Button } from '~/button'
-import { Add as AddIcon } from '@mui/icons-material'
-import { Remove as RemoveIcon } from '@mui/icons-material'
-import { Mail as MailIcon } from '@mui/icons-material'
-import { Switch } from '~/switch'
-import { FormControlLabel } from '@mui/material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Badge } from '~/badge';
+import { ButtonGroup } from '~/button-group';
+import { Button } from '~/button';
+import { Add as AddIcon } from '@mui/icons-material';
+import { Remove as RemoveIcon } from '@mui/icons-material';
+import { Mail as MailIcon } from '@mui/icons-material';
+import { Switch } from '~/switch';
+import { FormControlLabel } from '@mui/material';
 
 function BadgeVisibility_() {
-  const [count, setCount] = React.useState(1)
-  const [invisible, setInvisible] = React.useState(false)
+  const [count, setCount] = React.useState(1);
+  const [invisible, setInvisible] = React.useState(false);
 
   const handleBadgeVisibility = () => {
-    setInvisible(!invisible)
-  }
+    setInvisible(!invisible);
+  };
 
   return (
     <Box
@@ -24,11 +24,11 @@ function BadgeVisibility_() {
         display: 'flex',
         flexDirection: 'column',
         '& > *': {
-          marginBottom: 2
+          marginBottom: 2,
         },
         '& .MuiBadge-root': {
-          marginRight: 4
-        }
+          marginRight: 4,
+        },
       }}
     >
       <div>
@@ -39,7 +39,7 @@ function BadgeVisibility_() {
           <Button
             aria-label="reduce"
             onClick={() => {
-              setCount(Math.max(count - 1, 0))
+              setCount(Math.max(count - 1, 0));
             }}
           >
             <RemoveIcon fontSize="small" />
@@ -47,7 +47,7 @@ function BadgeVisibility_() {
           <Button
             aria-label="increase"
             onClick={() => {
-              setCount(count + 1)
+              setCount(count + 1);
             }}
           >
             <AddIcon fontSize="small" />
@@ -67,7 +67,7 @@ function BadgeVisibility_() {
         />
       </div>
     </Box>
-  )
+  );
 }
 
-export const BadgeVisibility = () => <BadgeVisibility_ />
+export const BadgeVisibility = () => <BadgeVisibility_ />;
