@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Checkbox } from '~/checkbox';
-import { FormControlLabel } from '@mui/material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Checkbox } from '~/checkbox'
+import { FormControlLabel } from '@mui/material'
 
 function IndeterminateCheckbox_() {
-  const [checked, setChecked] = React.useState([true, false]);
+  const [checked, setChecked] = React.useState([true, false])
 
   const handleChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked([event.target.checked, event.target.checked]);
-  };
+    setChecked([event.target.checked, event.target.checked])
+  }
 
   const handleChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked([event.target.checked, checked[1]]);
-  };
+    setChecked([event.target.checked, checked[1]])
+  }
 
   const handleChange3 = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked([checked[0], event.target.checked]);
-  };
+    setChecked([checked[0], event.target.checked])
+  }
 
   const children = (
     <Box sx={{ display: 'flex', flexDirection: 'column', ml: 3 }}>
@@ -29,7 +29,7 @@ function IndeterminateCheckbox_() {
         control={<Checkbox checked={checked[1]} onChange={handleChange3} />}
       />
     </Box>
-  );
+  )
 
   return (
     <div>
@@ -45,7 +45,7 @@ function IndeterminateCheckbox_() {
       />
       {children}
     </div>
-  );
+  )
 }
 
-export const IndeterminateCheckbox = () => <IndeterminateCheckbox_ />;
+export const IndeterminateCheckbox = () => <IndeterminateCheckbox_ />

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Switch } from '~/switch';
+import * as React from 'react'
+import { Switch } from '~/switch'
 
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
+const label = { inputProps: { 'aria-label': 'Switch demo' } }
 
 function BasicSwitches_() {
   return (
@@ -11,7 +11,7 @@ function BasicSwitches_() {
       <Switch {...label} disabled defaultChecked />
       <Switch {...label} disabled />
     </div>
-  );
+  )
 }
 
-export const BasicSwitches = () => <BasicSwitches_ />;
+export const BasicSwitches = () => <BasicSwitches_ />

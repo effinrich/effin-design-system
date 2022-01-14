@@ -1,1 +1,1 @@
-export { Link } from '@mui/material';
+export { Link } from '@mui/material'

@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Button } from '~/button';
-import { IconButton } from '@mui/material';
-import { PhotoCamera } from '@mui/icons-material';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Button } from '~/button'
+import { IconButton } from '@mui/material'
+import { PhotoCamera } from '@mui/icons-material'
+import { Stack } from '~/stack'
 
 const Input = styled('input')({
-  display: 'none',
-});
+  display: 'none'
+})
 
 function UploadButtons_() {
   return (
@@ -34,7 +34,7 @@ function UploadButtons_() {
         </IconButton>
       </label>
     </Stack>
-  );
+  )
 }
 
-export const UploadButtons = () => <UploadButtons_ />;
+export const UploadButtons = () => <UploadButtons_ />

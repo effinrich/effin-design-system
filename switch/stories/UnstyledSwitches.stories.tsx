@@ -1,8 +1,6 @@
-import * as React from 'react';
-import { styled } from '@mui/system';
-import SwitchUnstyled, {
-  switchUnstyledClasses,
-} from '@mui/base/SwitchUnstyled';
+import * as React from 'react'
+import { styled } from '@mui/system'
+import SwitchUnstyled, { switchUnstyledClasses } from '@mui/base/SwitchUnstyled'
 
 const Root = styled('span')`
   font-size: 0;
@@ -67,10 +65,10 @@ const Root = styled('span')`
     z-index: 1;
     margin: 0;
   }
-`;
+`
 
 function UnstyledSwitches_() {
-  const label = { componentsProps: { input: { 'aria-label': 'Demo switch' } } };
+  const label = { componentsProps: { input: { 'aria-label': 'Demo switch' } } }
 
   return (
     <div>
@@ -79,7 +77,7 @@ function UnstyledSwitches_() {
       <SwitchUnstyled component={Root} {...label} defaultChecked disabled />
       <SwitchUnstyled component={Root} {...label} disabled />
     </div>
-  );
+  )
 }
 
-export const UnstyledSwitches = () => <UnstyledSwitches_ />;
+export const UnstyledSwitches = () => <UnstyledSwitches_ />

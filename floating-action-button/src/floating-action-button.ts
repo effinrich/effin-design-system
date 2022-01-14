@@ -1,1 +1,1 @@
-export { Fab } from '@mui/material';
+export { Fab } from '@mui/material'

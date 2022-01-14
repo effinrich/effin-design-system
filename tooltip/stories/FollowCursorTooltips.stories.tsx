@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Tooltip } from '~/tooltip';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Tooltip } from '~/tooltip'
 
 function FollowCursorTooltips_() {
   return (
@@ -9,7 +9,7 @@ function FollowCursorTooltips_() {
         Disabled Action
       </Box>
     </Tooltip>
-  );
+  )
 }
 
-export const FollowCursorTooltips = () => <FollowCursorTooltips_ />;
+export const FollowCursorTooltips = () => <FollowCursorTooltips_ />

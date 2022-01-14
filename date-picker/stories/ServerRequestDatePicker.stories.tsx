@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { Badge } from '~/badge';
-import { TextField } from '~/text-field';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import { LocalizationProvider } from '@mui/lab';
-import { PickersDay } from '@mui/lab';
-import { DatePicker } from '~/date-picker';
-import { CalendarPickerSkeleton } from '@mui/lab';
-import getDaysInMonth from 'date-fns/getDaysInMonth';
+import * as React from 'react'
+import { Badge } from '~/badge'
+import { TextField } from '~/text-field'
+import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import { LocalizationProvider } from '@mui/lab'
+import { PickersDay } from '@mui/lab'
+import { DatePicker } from '~/date-picker'
+import { CalendarPickerSkeleton } from '@mui/lab'
+import getDaysInMonth from 'date-fns/getDaysInMonth'
 
 function getRandomNumber(min: number, max: number) {
-  return Math.round(Math.random() * (max - min) + min);
+  return Math.round(Math.random() * (max - min) + min)
 }
 
 /**
@@ -19,81 +19,81 @@ function getRandomNumber(min: number, max: number) {
 function fakeFetch(date: Date, { signal }: { signal: AbortSignal }) {
   return new Promise<{ daysToHighlight: number[] }>((resolve, reject) => {
     const timeout = setTimeout(() => {
-      const daysInMonth = getDaysInMonth(date);
+      const daysInMonth = getDaysInMonth(date)
       const daysToHighlight = [1, 2, 3].map(() =>
         getRandomNumber(1, daysInMonth)
-      );
+      )
 
-      resolve({ daysToHighlight });
-    }, 500);
+      resolve({ daysToHighlight })
+    }, 500)
 
     signal.onabort = () => {
-      clearTimeout(timeout);
-      reject(new DOMException('aborted', 'AbortError'));
-    };
-  });
+      clearTimeout(timeout)
+      reject(new DOMException('aborted', 'AbortError'))
+    }
+  })
 }
 
-const initialValue = new Date();
+const initialValue = new Date()
 
 function ServerRequestDatePicker_() {
-  const requestAbortController = React.useRef<AbortController | null>(null);
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 15]);
-  const [value, setValue] = React.useState<Date | null>(initialValue);
+  const requestAbortController = React.useRef<AbortController | null>(null)
+  const [isLoading, setIsLoading] = React.useState(false)
+  const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 15])
+  const [value, setValue] = React.useState<Date | null>(initialValue)
 
   const fetchHighlightedDays = (date: Date) => {
-    const controller = new AbortController();
+    const controller = new AbortController()
     fakeFetch(date, {
-      signal: controller.signal,
+      signal: controller.signal
     })
       .then(({ daysToHighlight }) => {
-        setHighlightedDays(daysToHighlight);
-        setIsLoading(false);
+        setHighlightedDays(daysToHighlight)
+        setIsLoading(false)
       })
-      .catch((error) => {
+      .catch(error => {
         // ignore the error if it's caused by `controller.abort`
         if (error.name !== 'AbortError') {
-          throw error;
+          throw error
         }
-      });
+      })
 
-    requestAbortController.current = controller;
-  };
+    requestAbortController.current = controller
+  }
 
   React.useEffect(() => {
-    fetchHighlightedDays(initialValue);
+    fetchHighlightedDays(initialValue)
     // abort request on unmount
-    return () => requestAbortController.current?.abort();
-  }, []);
+    return () => requestAbortController.current?.abort()
+  }, [])
 
   const handleMonthChange = (date: Date) => {
     if (requestAbortController.current) {
       // make sure that you are aborting useless requests
       // because it is possible to switch between months pretty quickly
-      requestAbortController.current.abort();
+      requestAbortController.current.abort()
     }
 
-    setIsLoading(true);
-    setHighlightedDays([]);
-    fetchHighlightedDays(date);
-  };
+    setIsLoading(true)
+    setHighlightedDays([])
+    fetchHighlightedDays(date)
+  }
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <DatePicker
         value={value}
         loading={isLoading}
-        onChange={(newValue) => {
-          setValue(newValue);
+        onChange={newValue => {
+          setValue(newValue)
         }}
         onMonthChange={handleMonthChange}
-        renderInput={(params) => <TextField {...params} />}
+        renderInput={params => <TextField {...params} />}
         renderLoading={() => <CalendarPickerSkeleton />}
         renderDay={(day, _value, DayComponentProps) => {
           const isSelected =
             !DayComponentProps.outsideCurrentMonth &&
-            highlightedDays.indexOf(day.getDate()) > 0;
+            highlightedDays.indexOf(day.getDate()) > 0
 
           return (
             <Badge
@@ -103,11 +103,11 @@ function ServerRequestDatePicker_() {
             >
               <PickersDay {...DayComponentProps} />
             </Badge>
-          );
+          )
         }}
       />
     </LocalizationProvider>
-  );
+  )
 }
 
-export const ServerRequestDatePicker = () => <ServerRequestDatePicker_ />;
+export const ServerRequestDatePicker = () => <ServerRequestDatePicker_ />

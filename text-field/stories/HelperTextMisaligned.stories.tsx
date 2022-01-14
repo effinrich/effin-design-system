@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { TextField } from '~/text-field';
+import * as React from 'react'
+import { Box } from '~/box'
+import { TextField } from '~/text-field'
 
 function HelperTextMisaligned_() {
   return (
@@ -8,7 +8,7 @@ function HelperTextMisaligned_() {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        '& > :not(style)': { m: 1 },
+        '& > :not(style)': { m: 1 }
       }}
     >
       <TextField
@@ -18,7 +18,7 @@ function HelperTextMisaligned_() {
       />
       <TextField id="demo-helper-text-misaligned-no-helper" label="Name" />
     </Box>
-  );
+  )
 }
 
-export const HelperTextMisaligned = () => <HelperTextMisaligned_ />;
+export const HelperTextMisaligned = () => <HelperTextMisaligned_ />

@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { TextField } from '~/text-field';
+import * as React from 'react'
+import { Box } from '~/box'
+import { TextField } from '~/text-field'
 
 function TextFieldSizes_() {
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
+        '& .MuiTextField-root': { m: 1, width: '25ch' }
       }}
       noValidate
       autoComplete="off"
@@ -56,7 +56,7 @@ function TextFieldSizes_() {
         />
       </div>
     </Box>
-  );
+  )
 }
 
-export const TextFieldSizes = () => <TextFieldSizes_ />;
+export const TextFieldSizes = () => <TextFieldSizes_ />

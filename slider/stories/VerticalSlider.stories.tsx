@@ -1,29 +1,29 @@
-import * as React from 'react';
-import { Stack } from '~/stack';
-import { Slider } from '~/slider';
+import * as React from 'react'
+import { Stack } from '~/stack'
+import { Slider } from '~/slider'
 
 function valuetext(value: number) {
-  return `${value}°C`;
+  return `${value}°C`
 }
 
 const marks = [
   {
     value: 0,
-    label: '0°C',
+    label: '0°C'
   },
   {
     value: 20,
-    label: '20°C',
+    label: '20°C'
   },
   {
     value: 37,
-    label: '37°C',
+    label: '37°C'
   },
   {
     value: 100,
-    label: '100°C',
-  },
-];
+    label: '100°C'
+  }
+]
 
 function VerticalSlider_() {
   return (
@@ -48,7 +48,7 @@ function VerticalSlider_() {
         marks={marks}
       />
     </Stack>
-  );
+  )
 }
 
-export const VerticalSlider = () => <VerticalSlider_ />;
+export const VerticalSlider = () => <VerticalSlider_ />

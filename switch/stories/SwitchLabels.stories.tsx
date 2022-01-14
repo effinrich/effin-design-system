@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { FormGroup } from '@mui/material';
-import { FormControlLabel } from '@mui/material';
-import { Switch } from '~/switch';
+import * as React from 'react'
+import { FormGroup } from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import { Switch } from '~/switch'
 
 function SwitchLabels_() {
   return (
@@ -9,7 +9,7 @@ function SwitchLabels_() {
       <FormControlLabel control={<Switch defaultChecked />} label="Label" />
       <FormControlLabel disabled control={<Switch />} label="Disabled" />
     </FormGroup>
-  );
+  )
 }
 
-export const SwitchLabels = () => <SwitchLabels_ />;
+export const SwitchLabels = () => <SwitchLabels_ />

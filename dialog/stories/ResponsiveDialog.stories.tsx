@@ -1,25 +1,25 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { Dialog } from '~/dialog';
-import { DialogActions } from '@mui/material';
-import { DialogContent } from '@mui/material';
-import { DialogContentText } from '@mui/material';
-import { DialogTitle } from '@mui/material';
-import { useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material';
+import * as React from 'react'
+import { Button } from '~/button'
+import { Dialog } from '~/dialog'
+import { DialogActions } from '@mui/material'
+import { DialogContent } from '@mui/material'
+import { DialogContentText } from '@mui/material'
+import { DialogTitle } from '@mui/material'
+import { useMediaQuery } from '@mui/material'
+import { useTheme } from '@mui/material'
 
 function ResponsiveDialog_() {
-  const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const [open, setOpen] = React.useState(false)
+  const theme = useTheme()
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'))
 
   const handleClickOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div>
@@ -51,7 +51,7 @@ function ResponsiveDialog_() {
         </DialogActions>
       </Dialog>
     </div>
-  );
+  )
 }
 
-export const ResponsiveDialog = () => <ResponsiveDialog_ />;
+export const ResponsiveDialog = () => <ResponsiveDialog_ />

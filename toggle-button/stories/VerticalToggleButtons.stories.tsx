@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { ViewList as ViewListIcon } from '@mui/icons-material';
-import { ViewModule as ViewModuleIcon } from '@mui/icons-material';
-import { ViewQuilt as ViewQuiltIcon } from '@mui/icons-material';
-import { ToggleButton } from '~/toggle-button';
-import { ToggleButtonGroup } from '@mui/material';
+import * as React from 'react'
+import { ViewList as ViewListIcon } from '@mui/icons-material'
+import { ViewModule as ViewModuleIcon } from '@mui/icons-material'
+import { ViewQuilt as ViewQuiltIcon } from '@mui/icons-material'
+import { ToggleButton } from '~/toggle-button'
+import { ToggleButtonGroup } from '@mui/material'
 
 function VerticalToggleButtons_() {
-  const [view, setView] = React.useState('list');
+  const [view, setView] = React.useState('list')
 
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
     nextView: string
   ) => {
-    setView(nextView);
-  };
+    setView(nextView)
+  }
 
   return (
     <ToggleButtonGroup
@@ -32,7 +32,7 @@ function VerticalToggleButtons_() {
         <ViewQuiltIcon />
       </ToggleButton>
     </ToggleButtonGroup>
-  );
+  )
 }
 
-export const VerticalToggleButtons = () => <VerticalToggleButtons_ />;
+export const VerticalToggleButtons = () => <VerticalToggleButtons_ />

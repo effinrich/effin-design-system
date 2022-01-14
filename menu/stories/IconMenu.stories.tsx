@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { Divider } from '~/divider';
-import { Paper } from '~/paper';
-import { MenuList } from '~/menu';
-import { MenuItem } from '~/menu';
-import { ListItemText } from '@mui/material';
-import { ListItemIcon } from '@mui/material';
-import { Typography } from '~/typography';
-import { ContentCut } from '@mui/icons-material';
-import { ContentCopy } from '@mui/icons-material';
-import { ContentPaste } from '@mui/icons-material';
-import { Cloud } from '@mui/icons-material';
+import * as React from 'react'
+import { Divider } from '~/divider'
+import { Paper } from '~/paper'
+import { MenuList } from '~/menu'
+import { MenuItem } from '~/menu'
+import { ListItemText } from '@mui/material'
+import { ListItemIcon } from '@mui/material'
+import { Typography } from '~/typography'
+import { ContentCut } from '@mui/icons-material'
+import { ContentCopy } from '@mui/icons-material'
+import { ContentPaste } from '@mui/icons-material'
+import { Cloud } from '@mui/icons-material'
 
 function IconMenu_() {
   return (
@@ -51,7 +51,7 @@ function IconMenu_() {
         </MenuItem>
       </MenuList>
     </Paper>
-  );
+  )
 }
 
-export const IconMenu = () => <IconMenu_ />;
+export const IconMenu = () => <IconMenu_ />

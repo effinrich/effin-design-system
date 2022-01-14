@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { ToggleButton } from '~/toggle-button';
-import { ToggleButtonGroup } from '@mui/material';
+import * as React from 'react'
+import { ToggleButton } from '~/toggle-button'
+import { ToggleButtonGroup } from '@mui/material'
 
 function ColorToggleButton_() {
-  const [alignment, setAlignment] = React.useState('web');
+  const [alignment, setAlignment] = React.useState('web')
 
   const handleChange = (
     event: React.MouseEvent<HTMLElement>,
     newAlignment: string
   ) => {
-    setAlignment(newAlignment);
-  };
+    setAlignment(newAlignment)
+  }
 
   return (
     <ToggleButtonGroup
@@ -23,7 +23,7 @@ function ColorToggleButton_() {
       <ToggleButton value="android">Android</ToggleButton>
       <ToggleButton value="ios">iOS</ToggleButton>
     </ToggleButtonGroup>
-  );
+  )
 }
 
-export const ColorToggleButton = () => <ColorToggleButton_ />;
+export const ColorToggleButton = () => <ColorToggleButton_ />

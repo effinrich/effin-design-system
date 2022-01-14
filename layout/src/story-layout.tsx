@@ -1,12 +1,12 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export const StoryLayout = {
   decorators: [
-    (Story) => (
+    Story => (
       <div style={{ padding: '1rem' }}>
         <Story />
       </div>
-    ),
+    )
   ],
-  parameters: { layout: 'centered' },
-};
+  parameters: { layout: 'centered' }
+}

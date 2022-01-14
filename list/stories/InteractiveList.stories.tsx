@@ -1,36 +1,36 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Box } from '~/box';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemAvatar } from '@mui/material';
-import { ListItemIcon } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { Avatar } from '~/avatar';
-import { IconButton } from '@mui/material';
-import { FormGroup } from '@mui/material';
-import { FormControlLabel } from '@mui/material';
-import { Checkbox } from '~/checkbox';
-import { Grid } from '~/grid';
-import { Typography } from '~/typography';
-import { Folder as FolderIcon } from '@mui/icons-material';
-import { Delete as DeleteIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Box } from '~/box'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemAvatar } from '@mui/material'
+import { ListItemIcon } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { Avatar } from '~/avatar'
+import { IconButton } from '@mui/material'
+import { FormGroup } from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import { Checkbox } from '~/checkbox'
+import { Grid } from '~/grid'
+import { Typography } from '~/typography'
+import { Folder as FolderIcon } from '@mui/icons-material'
+import { Delete as DeleteIcon } from '@mui/icons-material'
 
 function generate(element: React.ReactElement) {
-  return [0, 1, 2].map((value) =>
+  return [0, 1, 2].map(value =>
     React.cloneElement(element, {
-      key: value,
+      key: value
     })
-  );
+  )
 }
 
 const Demo = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
-}));
+  backgroundColor: theme.palette.background.paper
+}))
 
 function InteractiveList_() {
-  const [dense, setDense] = React.useState(false);
-  const [secondary, setSecondary] = React.useState(false);
+  const [dense, setDense] = React.useState(false)
+  const [secondary, setSecondary] = React.useState(false)
 
   return (
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
@@ -39,7 +39,7 @@ function InteractiveList_() {
           control={
             <Checkbox
               checked={dense}
-              onChange={(event) => setDense(event.target.checked)}
+              onChange={event => setDense(event.target.checked)}
             />
           }
           label="Enable dense"
@@ -48,7 +48,7 @@ function InteractiveList_() {
           control={
             <Checkbox
               checked={secondary}
-              onChange={(event) => setSecondary(event.target.checked)}
+              onChange={event => setSecondary(event.target.checked)}
             />
           }
           label="Enable secondary text"
@@ -146,7 +146,7 @@ function InteractiveList_() {
         </Grid>
       </Grid>
     </Box>
-  );
+  )
 }
 
-export const InteractiveList = () => <InteractiveList_ />;
+export const InteractiveList = () => <InteractiveList_ />

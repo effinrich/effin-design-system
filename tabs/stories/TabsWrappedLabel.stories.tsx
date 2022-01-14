@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Tabs } from '~/tabs';
-import { Tab } from '@mui/material';
-import { Box } from '~/box';
+import * as React from 'react'
+import { Tabs } from '~/tabs'
+import { Tab } from '@mui/material'
+import { Box } from '~/box'
 
 function TabsWrappedLabel_() {
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = React.useState('one')
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -26,7 +26,7 @@ function TabsWrappedLabel_() {
         <Tab value="three" label="Item Three" />
       </Tabs>
     </Box>
-  );
+  )
 }
 
-export const TabsWrappedLabel = () => <TabsWrappedLabel_ />;
+export const TabsWrappedLabel = () => <TabsWrappedLabel_ />

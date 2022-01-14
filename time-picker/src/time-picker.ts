@@ -1,1 +1,1 @@
-export { TimePicker } from '@mui/lab';
+export { TimePicker } from '@mui/lab'

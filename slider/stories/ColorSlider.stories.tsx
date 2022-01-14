@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Slider } from '~/slider';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Slider } from '~/slider'
 
 function valuetext(value: number) {
-  return `${value}°C`;
+  return `${value}°C`
 }
 
 function ColorSlider_() {
@@ -16,7 +16,7 @@ function ColorSlider_() {
         color="secondary"
       />
     </Box>
-  );
+  )
 }
 
-export const ColorSlider = () => <ColorSlider_ />;
+export const ColorSlider = () => <ColorSlider_ />

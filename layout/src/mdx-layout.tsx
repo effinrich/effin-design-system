@@ -1,22 +1,22 @@
-import * as React from 'react';
+import * as React from 'react'
 import {
   CssLayout,
-  getInitialColorScheme,
-} from '@divriots/dockit-react/mdx-layout-css';
-import { Playground } from '@divriots/dockit-react/playground';
-import { createTheme } from '~/theme';
-import { ThemeProvider, PaletteMode } from '@mui/material';
-import { Box } from '~/box';
-import { Logo } from './Logo';
-import './layout.css';
+  getInitialColorScheme
+} from '@divriots/dockit-react/mdx-layout-css'
+import { Playground } from '@divriots/dockit-react/playground'
+import { createTheme } from '~/theme'
+import { ThemeProvider, PaletteMode } from '@mui/material'
+import { Box } from '~/box'
+import { Logo } from './Logo'
+import './layout.css'
 
-export const MdxLayout = (props) => {
+export const MdxLayout = props => {
   const [mode, setMode] = React.useState<PaletteMode>(
     getInitialColorScheme() as PaletteMode
-  );
+  )
 
   // Update the theme only if the mode changes
-  const theme = React.useMemo(() => createTheme(mode), [mode]);
+  const theme = React.useMemo(() => createTheme(mode), [mode])
 
   return (
     <ThemeProvider theme={theme}>
@@ -28,7 +28,7 @@ export const MdxLayout = (props) => {
             sx={{
               width: 120,
               color: ({ palette }) =>
-                `primary.${mode === 'dark' ? 'light' : 'dark'}`,
+                `primary.${mode === 'dark' ? 'light' : 'dark'}`
             }}
           >
             <Logo />
@@ -37,5 +37,5 @@ export const MdxLayout = (props) => {
         {...props}
       />
     </ThemeProvider>
-  );
-};
+  )
+}

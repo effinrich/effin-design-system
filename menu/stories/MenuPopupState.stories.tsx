@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { Menu } from '~/menu';
-import { MenuItem } from '~/menu';
-import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import * as React from 'react'
+import { Button } from '~/button'
+import { Menu } from '~/menu'
+import { MenuItem } from '~/menu'
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state'
 
 function MenuPopupState_() {
   return (
     <PopupState variant="popover" popupId="demo-popup-menu">
-      {(popupState) => (
+      {popupState => (
         <React.Fragment>
           <Button variant="contained" {...bindTrigger(popupState)}>
             Dashboard
@@ -20,7 +20,7 @@ function MenuPopupState_() {
         </React.Fragment>
       )}
     </PopupState>
-  );
+  )
 }
 
-export const MenuPopupState = () => <MenuPopupState_ />;
+export const MenuPopupState = () => <MenuPopupState_ />

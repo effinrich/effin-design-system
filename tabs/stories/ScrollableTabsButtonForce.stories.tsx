@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Tabs } from '~/tabs';
-import { Tab } from '@mui/material';
-import { Box } from '~/box';
+import * as React from 'react'
+import { Tabs } from '~/tabs'
+import { Tab } from '@mui/material'
+import { Box } from '~/box'
 
 function ScrollableTabsButtonForce_() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   return (
     <Box sx={{ maxWidth: 480, bgcolor: 'background.paper' }}>
@@ -29,7 +29,7 @@ function ScrollableTabsButtonForce_() {
         <Tab label="Item Seven" />
       </Tabs>
     </Box>
-  );
+  )
 }
 
-export const ScrollableTabsButtonForce = () => <ScrollableTabsButtonForce_ />;
+export const ScrollableTabsButtonForce = () => <ScrollableTabsButtonForce_ />

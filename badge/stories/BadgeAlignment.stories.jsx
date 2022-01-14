@@ -1,24 +1,24 @@
-import * as React from 'react';
-import { Badge } from '~/badge';
-import { FormControl } from '@mui/material';
-import { FormControlLabel } from '@mui/material';
-import { FormLabel } from '@mui/material';
-import { Radio } from '~/radio-button';
-import { RadioGroup } from '@mui/material';
-import { Box } from '~/box';
-import { Mail as MailIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Badge } from '~/badge'
+import { FormControl } from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import { FormLabel } from '@mui/material'
+import { Radio } from '~/radio-button'
+import { RadioGroup } from '@mui/material'
+import { Box } from '~/box'
+import { Mail as MailIcon } from '@mui/icons-material'
 
 function BadgeAlignment_() {
-  const [horizontal, setHorizontal] = React.useState('right');
-  const [vertical, setVertical] = React.useState('top');
+  const [horizontal, setHorizontal] = React.useState('right')
+  const [vertical, setVertical] = React.useState('top')
 
-  const handleHorizontalChange = (event) => {
-    setHorizontal(event.target.value);
-  };
+  const handleHorizontalChange = event => {
+    setHorizontal(event.target.value)
+  }
 
-  const handleVerticalChange = (event) => {
-    setVertical(event.target.value);
-  };
+  const handleVerticalChange = event => {
+    setVertical(event.target.value)
+  }
 
   const jsx = `
 <Badge
@@ -27,7 +27,7 @@ function BadgeAlignment_() {
     horizontal: '${horizontal}',
   }}
 >
-`;
+`
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -36,8 +36,8 @@ function BadgeAlignment_() {
           display: 'flex',
           justifyContent: 'center',
           '& fieldset': {
-            margin: 3,
-          },
+            margin: 3
+          }
         }}
       >
         <FormControl component="fieldset">
@@ -73,8 +73,8 @@ function BadgeAlignment_() {
           justifyContent: 'center',
           color: 'action.active',
           '& > *': {
-            margin: 2,
-          },
+            margin: 2
+          }
         }}
       >
         <Badge
@@ -83,7 +83,7 @@ function BadgeAlignment_() {
           badgeContent={1}
           anchorOrigin={{
             horizontal,
-            vertical,
+            vertical
           }}
         >
           <MailIcon />
@@ -93,7 +93,7 @@ function BadgeAlignment_() {
           badgeContent={1}
           anchorOrigin={{
             horizontal,
-            vertical,
+            vertical
           }}
         >
           <MailIcon />
@@ -103,7 +103,7 @@ function BadgeAlignment_() {
           badgeContent={12}
           anchorOrigin={{
             horizontal,
-            vertical,
+            vertical
           }}
         >
           <MailIcon />
@@ -113,7 +113,7 @@ function BadgeAlignment_() {
           badgeContent={123}
           anchorOrigin={{
             horizontal,
-            vertical,
+            vertical
           }}
         >
           <MailIcon />
@@ -124,14 +124,14 @@ function BadgeAlignment_() {
           badgeContent={1337}
           anchorOrigin={{
             horizontal,
-            vertical,
+            vertical
           }}
         >
           <MailIcon />
         </Badge>
       </Box>
     </Box>
-  );
+  )
 }
 
-export const BadgeAlignment = () => <BadgeAlignment_ />;
+export const BadgeAlignment = () => <BadgeAlignment_ />

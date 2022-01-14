@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Delete as DeleteIcon } from '@mui/icons-material';
-import { Button } from '~/button';
-import { IconButton } from '@mui/material';
-import { Tooltip } from '~/tooltip';
+import * as React from 'react'
+import { Delete as DeleteIcon } from '@mui/icons-material'
+import { Button } from '~/button'
+import { IconButton } from '@mui/material'
+import { Tooltip } from '~/tooltip'
 
 function AccessibilityTooltips_() {
   return (
@@ -16,7 +16,7 @@ function AccessibilityTooltips_() {
         <Button>Add</Button>
       </Tooltip>
     </div>
-  );
+  )
 }
 
-export const AccessibilityTooltips = () => <AccessibilityTooltips_ />;
+export const AccessibilityTooltips = () => <AccessibilityTooltips_ />

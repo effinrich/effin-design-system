@@ -1,1 +1,1 @@
-export { Alert } from '@mui/material';
+export { Alert } from '@mui/material'

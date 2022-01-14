@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
-import { Link } from '~/link';
+import * as React from 'react'
+import { Link } from '~/link'
 
 function ButtonLink_() {
   return (
@@ -8,12 +8,12 @@ function ButtonLink_() {
       component="button"
       variant="body2"
       onClick={() => {
-        console.info("I'm a button.");
+        console.info("I'm a button.")
       }}
     >
       Button Link
     </Link>
-  );
+  )
 }
 
-export const ButtonLink = () => <ButtonLink_ />;
+export const ButtonLink = () => <ButtonLink_ />

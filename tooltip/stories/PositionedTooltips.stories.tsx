@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Grid } from '~/grid';
-import { Button } from '~/button';
-import { Tooltip } from '~/tooltip';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Grid } from '~/grid'
+import { Button } from '~/button'
+import { Tooltip } from '~/tooltip'
 
 function PositionedTooltips_() {
   return (
@@ -66,7 +66,7 @@ function PositionedTooltips_() {
         </Grid>
       </Grid>
     </Box>
-  );
+  )
 }
 
-export const PositionedTooltips = () => <PositionedTooltips_ />;
+export const PositionedTooltips = () => <PositionedTooltips_ />

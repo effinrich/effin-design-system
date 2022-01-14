@@ -1,32 +1,32 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Slider } from '~/slider';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Slider } from '~/slider'
 
 const marks = [
   {
     value: 0,
-    label: '0°C',
+    label: '0°C'
   },
   {
     value: 20,
-    label: '20°C',
+    label: '20°C'
   },
   {
     value: 37,
-    label: '37°C',
+    label: '37°C'
   },
   {
     value: 100,
-    label: '100°C',
-  },
-];
+    label: '100°C'
+  }
+]
 
 function valuetext(value: number) {
-  return `${value}°C`;
+  return `${value}°C`
 }
 
 function valueLabelFormat(value: number) {
-  return marks.findIndex((mark) => mark.value === value) + 1;
+  return marks.findIndex(mark => mark.value === value) + 1
 }
 
 function DiscreteSliderValues_() {
@@ -42,7 +42,7 @@ function DiscreteSliderValues_() {
         marks={marks}
       />
     </Box>
-  );
+  )
 }
 
-export const DiscreteSliderValues = () => <DiscreteSliderValues_ />;
+export const DiscreteSliderValues = () => <DiscreteSliderValues_ />

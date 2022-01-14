@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { InputLabel } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { Select } from '~/select';
+import * as React from 'react'
+import { InputLabel } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { Select } from '~/select'
 
 const names = [
   'Oliver Hansen',
@@ -13,23 +13,23 @@ const names = [
   'Miriam Wagner',
   'Bradley Wilkerson',
   'Virginia Andrews',
-  'Kelly Snyder',
-];
+  'Kelly Snyder'
+]
 
 function MultipleSelectNative_() {
-  const [personName, setPersonName] = React.useState<string[]>([]);
+  const [personName, setPersonName] = React.useState<string[]>([])
   const handleChangeMultiple = (
     event: React.ChangeEvent<HTMLSelectElement>
   ) => {
-    const { options } = event.target;
-    const value: string[] = [];
+    const { options } = event.target
+    const value: string[] = []
     for (let i = 0, l = options.length; i < l; i += 1) {
       if (options[i].selected) {
-        value.push(options[i].value);
+        value.push(options[i].value)
       }
     }
-    setPersonName(value);
-  };
+    setPersonName(value)
+  }
 
   return (
     <div>
@@ -45,10 +45,10 @@ function MultipleSelectNative_() {
           onChange={handleChangeMultiple}
           label="Native"
           inputProps={{
-            id: 'select-multiple-native',
+            id: 'select-multiple-native'
           }}
         >
-          {names.map((name) => (
+          {names.map(name => (
             <option key={name} value={name}>
               {name}
             </option>
@@ -56,7 +56,7 @@ function MultipleSelectNative_() {
         </Select>
       </FormControl>
     </div>
-  );
+  )
 }
 
-export const MultipleSelectNative = () => <MultipleSelectNative_ />;
+export const MultipleSelectNative = () => <MultipleSelectNative_ />

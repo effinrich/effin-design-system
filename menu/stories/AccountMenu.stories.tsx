@@ -1,26 +1,26 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Avatar } from '~/avatar';
-import { Menu } from '~/menu';
-import { MenuItem } from '~/menu';
-import { ListItemIcon } from '@mui/material';
-import { Divider } from '~/divider';
-import { IconButton } from '@mui/material';
-import { Typography } from '~/typography';
-import { Tooltip } from '~/tooltip';
-import { PersonAdd } from '@mui/icons-material';
-import { Settings } from '@mui/icons-material';
-import { Logout } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Avatar } from '~/avatar'
+import { Menu } from '~/menu'
+import { MenuItem } from '~/menu'
+import { ListItemIcon } from '@mui/material'
+import { Divider } from '~/divider'
+import { IconButton } from '@mui/material'
+import { Typography } from '~/typography'
+import { Tooltip } from '~/tooltip'
+import { PersonAdd } from '@mui/icons-material'
+import { Settings } from '@mui/icons-material'
+import { Logout } from '@mui/icons-material'
 
 function AccountMenu_() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+  const open = Boolean(anchorEl)
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(event.currentTarget)
+  }
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -47,7 +47,7 @@ function AccountMenu_() {
               width: 32,
               height: 32,
               ml: -0.5,
-              mr: 1,
+              mr: 1
             },
             '&:before': {
               content: '""',
@@ -59,9 +59,9 @@ function AccountMenu_() {
               height: 10,
               bgcolor: 'background.paper',
               transform: 'translateY(-50%) rotate(45deg)',
-              zIndex: 0,
-            },
-          },
+              zIndex: 0
+            }
+          }
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
@@ -93,7 +93,7 @@ function AccountMenu_() {
         </MenuItem>
       </Menu>
     </React.Fragment>
-  );
+  )
 }
 
-export const AccountMenu = () => <AccountMenu_ />;
+export const AccountMenu = () => <AccountMenu_ />

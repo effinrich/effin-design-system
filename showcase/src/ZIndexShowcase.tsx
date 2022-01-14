@@ -1,6 +1,6 @@
-import React from 'react';
-import { Caption } from '@divriots/dockit-react/caption';
-import { useTheme } from '@mui/material/styles';
+import React from 'react'
+import { Caption } from '@divriots/dockit-react/caption'
+import { useTheme } from '@mui/material/styles'
 
 const Box = ({ caption, zIndex, index }) => (
   <div
@@ -17,15 +17,15 @@ const Box = ({ caption, zIndex, index }) => (
       borderRadius: '0.375rem',
       boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       backgroundColor: '#6366F1',
-      zIndex,
+      zIndex
     }}
   >
     <Caption text={`${caption}: ${zIndex}`} style={{ color: '#fff' }} />
   </div>
-);
+)
 
 export const ZIndexShowcase = () => {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return (
     <div
@@ -34,12 +34,12 @@ export const ZIndexShowcase = () => {
         flexDirection: 'column',
         alignItems: 'center',
         paddingTop: '6rem',
-        paddingBottom: '6rem',
+        paddingBottom: '6rem'
       }}
     >
       {Object.entries(theme.zIndex).map(([name, zIndex], i) => (
         <Box key={name} index={i} caption={name} zIndex={zIndex} />
       ))}
     </div>
-  );
-};
+  )
+}

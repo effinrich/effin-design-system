@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { Global } from '@emotion/react';
-import { styled } from '@mui/material';
-import { CssBaseline } from '@mui/material';
-import { grey } from '@mui/material/colors';
-import { Button } from '~/button';
-import { Box } from '~/box';
-import { Skeleton } from '~/skeleton';
-import { Typography } from '~/typography';
-import { SwipeableDrawer } from '@mui/material';
+import * as React from 'react'
+import { Global } from '@emotion/react'
+import { styled } from '@mui/material'
+import { CssBaseline } from '@mui/material'
+import { grey } from '@mui/material/colors'
+import { Button } from '~/button'
+import { Box } from '~/box'
+import { Skeleton } from '~/skeleton'
+import { Typography } from '~/typography'
+import { SwipeableDrawer } from '@mui/material'
 
-const drawerBleeding = 56;
+const drawerBleeding = 56
 
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window?: () => Window;
+  window?: () => Window
 }
 
 const Root = styled('div')(({ theme }) => ({
@@ -24,12 +24,12 @@ const Root = styled('div')(({ theme }) => ({
   backgroundColor:
     theme.palette.mode === 'light'
       ? grey[100]
-      : theme.palette.background.default,
-}));
+      : theme.palette.background.default
+}))
 
 const StyledBox = styled(Box)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
-}));
+  backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800]
+}))
 
 const Puller = styled(Box)(({ theme }) => ({
   width: 30,
@@ -38,20 +38,20 @@ const Puller = styled(Box)(({ theme }) => ({
   borderRadius: 3,
   position: 'absolute',
   top: 8,
-  left: 'calc(50% - 15px)',
-}));
+  left: 'calc(50% - 15px)'
+}))
 
 function SwipeableEdgeDrawer_(props: Props) {
-  const { window } = props;
-  const [open, setOpen] = React.useState(false);
+  const { window } = props
+  const [open, setOpen] = React.useState(false)
 
   const toggleDrawer = (newOpen: boolean) => () => {
-    setOpen(newOpen);
-  };
+    setOpen(newOpen)
+  }
 
   // This is used only for the example
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    window !== undefined ? () => window().document.body : undefined
 
   return (
     <Root>
@@ -60,8 +60,8 @@ function SwipeableEdgeDrawer_(props: Props) {
         styles={{
           '.MuiDrawer-root > .MuiPaper-root': {
             height: `calc(50% - ${drawerBleeding}px)`,
-            overflow: 'visible',
-          },
+            overflow: 'visible'
+          }
         }}
       />
       <Box sx={{ textAlign: 'center', pt: 1 }}>
@@ -76,7 +76,7 @@ function SwipeableEdgeDrawer_(props: Props) {
         swipeAreaWidth={drawerBleeding}
         disableSwipeToOpen={false}
         ModalProps={{
-          keepMounted: true,
+          keepMounted: true
         }}
       >
         <StyledBox
@@ -87,7 +87,7 @@ function SwipeableEdgeDrawer_(props: Props) {
             borderTopRightRadius: 8,
             visibility: 'visible',
             right: 0,
-            left: 0,
+            left: 0
           }}
         >
           <Puller />
@@ -100,14 +100,14 @@ function SwipeableEdgeDrawer_(props: Props) {
             px: 2,
             pb: 2,
             height: '100%',
-            overflow: 'auto',
+            overflow: 'auto'
           }}
         >
           <Skeleton variant="rectangular" height="100%" />
         </StyledBox>
       </SwipeableDrawer>
     </Root>
-  );
+  )
 }
 
-export const SwipeableEdgeDrawer = () => <SwipeableEdgeDrawer_ />;
+export const SwipeableEdgeDrawer = () => <SwipeableEdgeDrawer_ />

@@ -1,36 +1,36 @@
-import * as React from 'react';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { MenuItem } from '~/menu';
-import { Menu } from '~/menu';
+import * as React from 'react'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { MenuItem } from '~/menu'
+import { Menu } from '~/menu'
 
 const options = [
   'Show some love to MUI',
   'Show all notification content',
   'Hide sensitive notification content',
-  'Hide all notification content',
-];
+  'Hide all notification content'
+]
 
 function SimpleListMenu_() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
-  const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
+  const [selectedIndex, setSelectedIndex] = React.useState(1)
+  const open = Boolean(anchorEl)
   const handleClickListItem = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(event.currentTarget)
+  }
 
   const handleMenuItemClick = (
     event: React.MouseEvent<HTMLElement>,
     index: number
   ) => {
-    setSelectedIndex(index);
-    setAnchorEl(null);
-  };
+    setSelectedIndex(index)
+    setAnchorEl(null)
+  }
 
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
 
   return (
     <div>
@@ -61,7 +61,7 @@ function SimpleListMenu_() {
         onClose={handleClose}
         MenuListProps={{
           'aria-labelledby': 'lock-button',
-          role: 'listbox',
+          role: 'listbox'
         }}
       >
         {options.map((option, index) => (
@@ -69,14 +69,14 @@ function SimpleListMenu_() {
             key={option}
             disabled={index === 0}
             selected={index === selectedIndex}
-            onClick={(event) => handleMenuItemClick(event, index)}
+            onClick={event => handleMenuItemClick(event, index)}
           >
             {option}
           </MenuItem>
         ))}
       </Menu>
     </div>
-  );
+  )
 }
 
-export const SimpleListMenu = () => <SimpleListMenu_ />;
+export const SimpleListMenu = () => <SimpleListMenu_ />

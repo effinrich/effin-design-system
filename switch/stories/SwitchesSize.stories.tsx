@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Switch } from '~/switch';
+import * as React from 'react'
+import { Switch } from '~/switch'
 
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
+const label = { inputProps: { 'aria-label': 'Switch demo' } }
 
 function SwitchesSize_() {
   return (
@@ -9,7 +9,7 @@ function SwitchesSize_() {
       <Switch {...label} defaultChecked size="small" />
       <Switch {...label} defaultChecked />
     </div>
-  );
+  )
 }
 
-export const SwitchesSize = () => <SwitchesSize_ />;
+export const SwitchesSize = () => <SwitchesSize_ />

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Button } from '~/button';
-import { ButtonProps } from '@mui/material';
-import { Stack } from '~/stack';
-import { purple } from '@mui/material/colors';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Button } from '~/button'
+import { ButtonProps } from '@mui/material'
+import { Stack } from '~/stack'
+import { purple } from '@mui/material/colors'
 
 const BootstrapButton = styled(Button)({
   boxShadow: 'none',
@@ -24,30 +24,30 @@ const BootstrapButton = styled(Button)({
     'sans-serif',
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
+    '"Segoe UI Symbol"'
   ].join(','),
   '&:hover': {
     backgroundColor: '#0069d9',
     borderColor: '#0062cc',
-    boxShadow: 'none',
+    boxShadow: 'none'
   },
   '&:active': {
     boxShadow: 'none',
     backgroundColor: '#0062cc',
-    borderColor: '#005cbf',
+    borderColor: '#005cbf'
   },
   '&:focus': {
-    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-  },
-});
+    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)'
+  }
+})
 
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: theme.palette.getContrastText(purple[500]),
   backgroundColor: purple[500],
   '&:hover': {
-    backgroundColor: purple[700],
-  },
-}));
+    backgroundColor: purple[700]
+  }
+}))
 
 function CustomizedButtons_() {
   return (
@@ -57,7 +57,7 @@ function CustomizedButtons_() {
         Bootstrap
       </BootstrapButton>
     </Stack>
-  );
+  )
 }
 
-export const CustomizedButtons = () => <CustomizedButtons_ />;
+export const CustomizedButtons = () => <CustomizedButtons_ />

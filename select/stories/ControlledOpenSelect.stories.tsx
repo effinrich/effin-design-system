@@ -1,26 +1,26 @@
-import * as React from 'react';
-import { InputLabel } from '@mui/material';
-import { MenuItem } from '~/menu';
-import { FormControl } from '@mui/material';
-import { Select } from '~/select';
-import { SelectChangeEvent } from '@mui/material';
-import { Button } from '~/button';
+import * as React from 'react'
+import { InputLabel } from '@mui/material'
+import { MenuItem } from '~/menu'
+import { FormControl } from '@mui/material'
+import { Select } from '~/select'
+import { SelectChangeEvent } from '@mui/material'
+import { Button } from '~/button'
 
 function ControlledOpenSelect_() {
-  const [age, setAge] = React.useState<string | number>('');
-  const [open, setOpen] = React.useState(false);
+  const [age, setAge] = React.useState<string | number>('')
+  const [open, setOpen] = React.useState(false)
 
   const handleChange = (event: SelectChangeEvent<typeof age>) => {
-    setAge(event.target.value);
-  };
+    setAge(event.target.value)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   const handleOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   return (
     <div>
@@ -48,7 +48,7 @@ function ControlledOpenSelect_() {
         </Select>
       </FormControl>
     </div>
-  );
+  )
 }
 
-export const ControlledOpenSelect = () => <ControlledOpenSelect_ />;
+export const ControlledOpenSelect = () => <ControlledOpenSelect_ />

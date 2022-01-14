@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Button } from '~/button';
-import { Tooltip } from '~/tooltip';
-import { TooltipProps, tooltipClasses } from '@mui/material';
-import { Typography } from '~/typography';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Button } from '~/button'
+import { Tooltip } from '~/tooltip'
+import { TooltipProps, tooltipClasses } from '@mui/material'
+import { Typography } from '~/typography'
 
 const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -12,20 +12,20 @@ const LightTooltip = styled(({ className, ...props }: TooltipProps) => (
     backgroundColor: theme.palette.common.white,
     color: 'rgba(0, 0, 0, 0.87)',
     boxShadow: theme.shadows[1],
-    fontSize: 11,
-  },
-}));
+    fontSize: 11
+  }
+}))
 
 const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.arrow}`]: {
-    color: theme.palette.common.black,
+    color: theme.palette.common.black
   },
   [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: theme.palette.common.black,
-  },
-}));
+    backgroundColor: theme.palette.common.black
+  }
+}))
 
 const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -35,9 +35,9 @@ const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
     color: 'rgba(0, 0, 0, 0.87)',
     maxWidth: 220,
     fontSize: theme.typography.pxToRem(12),
-    border: '1px solid #dadde9',
-  },
-}));
+    border: '1px solid #dadde9'
+  }
+}))
 
 function CustomizedTooltips_() {
   return (
@@ -60,7 +60,7 @@ function CustomizedTooltips_() {
         <Button>HTML</Button>
       </HtmlTooltip>
     </div>
-  );
+  )
 }
 
-export const CustomizedTooltips = () => <CustomizedTooltips_ />;
+export const CustomizedTooltips = () => <CustomizedTooltips_ />

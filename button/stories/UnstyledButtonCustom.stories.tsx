@@ -1,15 +1,15 @@
-import * as React from 'react';
+import * as React from 'react'
 import ButtonUnstyled, {
   ButtonUnstyledProps,
-  buttonUnstyledClasses,
-} from '@mui/base/ButtonUnstyled';
-import { styled, Theme } from '@mui/system';
+  buttonUnstyledClasses
+} from '@mui/base/ButtonUnstyled'
+import { styled, Theme } from '@mui/system'
 
 const ButtonRoot = React.forwardRef(function ButtonRoot(
   props: React.PropsWithChildren<{}>,
   ref: React.ForwardedRef<any>
 ) {
-  const { children, ...other } = props;
+  const { children, ...other } = props
 
   return (
     <svg width="150" height="50" {...other} ref={ref}>
@@ -19,8 +19,8 @@ const ButtonRoot = React.forwardRef(function ButtonRoot(
         <div className="content">{children}</div>
       </foreignObject>
     </svg>
-  );
-});
+  )
+})
 
 const CustomButtonRoot = styled(ButtonRoot)(
   ({ theme }: { theme: Theme }) => `
@@ -103,17 +103,17 @@ const CustomButtonRoot = styled(ButtonRoot)(
       margin: 0 5px;
     }
   }`
-);
+)
 
 const SvgButton = React.forwardRef(function SvgButton(
   props: ButtonUnstyledProps,
   ref: React.ForwardedRef<any>
 ) {
-  return <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />;
-});
+  return <ButtonUnstyled {...props} component={CustomButtonRoot} ref={ref} />
+})
 
 function UnstyledButtonCustom_() {
-  return <SvgButton>Button</SvgButton>;
+  return <SvgButton>Button</SvgButton>
 }
 
-export const UnstyledButtonCustom = () => <UnstyledButtonCustom_ />;
+export const UnstyledButtonCustom = () => <UnstyledButtonCustom_ />

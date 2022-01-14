@@ -1,32 +1,32 @@
-import { TextField } from '~/text-field';
-import { BasicTextFields as BasicTextFields } from '../stories/BasicTextFields.stories';
-import { FormPropsTextFields as FormPropsTextFields } from '../stories/FormPropsTextFields.stories';
-import { ValidationTextFields as ValidationTextFields } from '../stories/ValidationTextFields.stories';
-import { MultilineTextFields as MultilineTextFields } from '../stories/MultilineTextFields.stories';
-import { SelectTextFields as SelectTextFields } from '../stories/SelectTextFields.stories';
-import { InputWithIcon as InputWithIcon } from '../stories/InputWithIcon.stories';
-import { InputAdornments as InputAdornments } from '../stories/InputAdornments.stories';
-import { TextFieldSizes as TextFieldSizes } from '../stories/TextFieldSizes.stories';
-import { TextFieldHiddenLabel as TextFieldHiddenLabel } from '../stories/TextFieldHiddenLabel.stories';
-import { LayoutTextFields as LayoutTextFields } from '../stories/LayoutTextFields.stories';
-import { FullWidthTextField as FullWidthTextField } from '../stories/FullWidthTextField.stories';
-import { StateTextFields as StateTextFields } from '../stories/StateTextFields.stories';
-import { ComposedTextField as ComposedTextField } from '../stories/ComposedTextField.stories';
-import { Inputs as Inputs } from '../stories/Inputs.stories';
-import { ColorTextFields as ColorTextFields } from '../stories/ColorTextFields.stories';
-import { CustomizedInputs as CustomizedInputs } from '../stories/CustomizedInputs.stories';
-import { CustomizedInputBase as CustomizedInputBase } from '../stories/CustomizedInputBase.stories';
-import { UseFormControl as UseFormControl } from '../stories/UseFormControl.stories';
-import { HelperTextMisaligned as HelperTextMisaligned } from '../stories/HelperTextMisaligned.stories';
-import { HelperTextAligned as HelperTextAligned } from '../stories/HelperTextAligned.stories';
-import { FormattedInputs as FormattedInputs } from '../stories/FormattedInputs.stories';
-import { UnstyledInput as UnstyledInput } from '../stories/UnstyledInput.stories';
-import { UseInput as UseInput } from '../stories/UseInput.stories';
-import { mdx } from '@mdx-js/react';
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
-import { DemoFrame } from '~/demo-frame';
-import { MdxLayout } from '~/layout';
-export default MdxLayout;
+import { TextField } from '~/text-field'
+import { BasicTextFields as BasicTextFields } from '../stories/BasicTextFields.stories'
+import { FormPropsTextFields as FormPropsTextFields } from '../stories/FormPropsTextFields.stories'
+import { ValidationTextFields as ValidationTextFields } from '../stories/ValidationTextFields.stories'
+import { MultilineTextFields as MultilineTextFields } from '../stories/MultilineTextFields.stories'
+import { SelectTextFields as SelectTextFields } from '../stories/SelectTextFields.stories'
+import { InputWithIcon as InputWithIcon } from '../stories/InputWithIcon.stories'
+import { InputAdornments as InputAdornments } from '../stories/InputAdornments.stories'
+import { TextFieldSizes as TextFieldSizes } from '../stories/TextFieldSizes.stories'
+import { TextFieldHiddenLabel as TextFieldHiddenLabel } from '../stories/TextFieldHiddenLabel.stories'
+import { LayoutTextFields as LayoutTextFields } from '../stories/LayoutTextFields.stories'
+import { FullWidthTextField as FullWidthTextField } from '../stories/FullWidthTextField.stories'
+import { StateTextFields as StateTextFields } from '../stories/StateTextFields.stories'
+import { ComposedTextField as ComposedTextField } from '../stories/ComposedTextField.stories'
+import { Inputs as Inputs } from '../stories/Inputs.stories'
+import { ColorTextFields as ColorTextFields } from '../stories/ColorTextFields.stories'
+import { CustomizedInputs as CustomizedInputs } from '../stories/CustomizedInputs.stories'
+import { CustomizedInputBase as CustomizedInputBase } from '../stories/CustomizedInputBase.stories'
+import { UseFormControl as UseFormControl } from '../stories/UseFormControl.stories'
+import { HelperTextMisaligned as HelperTextMisaligned } from '../stories/HelperTextMisaligned.stories'
+import { HelperTextAligned as HelperTextAligned } from '../stories/HelperTextAligned.stories'
+import { FormattedInputs as FormattedInputs } from '../stories/FormattedInputs.stories'
+import { UnstyledInput as UnstyledInput } from '../stories/UnstyledInput.stories'
+import { UseInput as UseInput } from '../stories/UseInput.stories'
+import { mdx } from '@mdx-js/react'
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
+import { DemoFrame } from '~/demo-frame'
+import { MdxLayout } from '~/layout'
+export default MdxLayout
 
 # Text Field
 
@@ -253,7 +253,7 @@ This hook returns the context value of the parent `FormControl` component.
 **API**
 
 ```jsx
-import { useFormControl } from '@mui/material/FormControl';
+import { useFormControl } from '@mui/material/FormControl'
 ```
 
 **Returns**
@@ -378,36 +378,36 @@ The provided input component should expose a ref with a value that implements th
 
 ```ts
 interface InputElement {
-  focus(): void;
-  value?: string;
+  focus(): void
+  value?: string
 }
 ```
 
 ```jsx
 const MyInputComponent = React.forwardRef((props, ref) => {
-  const { component: Component, ...other } = props;
+  const { component: Component, ...other } = props
 
   // implement `InputElement` interface
   React.useImperativeHandle(ref, () => ({
     focus: () => {
       // logic to focus the rendered component from 3rd party belongs here
-    },
+    }
     // hiding the value e.g. react-stripe-elements
-  }));
+  }))
 
   // `Component` will be your `SomeThirdPartyComponent` from below
-  return <Component {...other} />;
-});
+  return <Component {...other} />
+})
 
 // usage
-<TextField
+;<TextField
   InputProps={{
     inputComponent: MyInputComponent,
     inputProps: {
-      component: SomeThirdPartyComponent,
-    },
+      component: SomeThirdPartyComponent
+    }
   }}
-/>;
+/>
 ```
 
 ## Accessibility

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Avatar } from '~/avatar';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Avatar } from '~/avatar'
+import { Stack } from '~/stack'
 
 function ImageAvatars_() {
   return (
@@ -20,7 +20,7 @@ function ImageAvatars_() {
         sx={{ width: 56, height: 56 }}
       />
     </Stack>
-  );
+  )
 }
 
-export const ImageAvatars = () => <ImageAvatars_ />;
+export const ImageAvatars = () => <ImageAvatars_ />

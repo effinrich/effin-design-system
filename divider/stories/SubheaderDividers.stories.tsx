@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemAvatar } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { Avatar } from '~/avatar';
-import { BeachAccess as BeachAccessIcon } from '@mui/icons-material';
-import { Divider } from '~/divider';
-import { Typography } from '~/typography';
+import * as React from 'react'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemAvatar } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { Avatar } from '~/avatar'
+import { BeachAccess as BeachAccessIcon } from '@mui/icons-material'
+import { Divider } from '~/divider'
+import { Typography } from '~/typography'
 
 function SubheaderDividers_() {
   return (
@@ -14,7 +14,7 @@ function SubheaderDividers_() {
       sx={{
         width: '100%',
         maxWidth: 360,
-        bgcolor: 'background.paper',
+        bgcolor: 'background.paper'
       }}
     >
       <ListItem>
@@ -54,7 +54,7 @@ function SubheaderDividers_() {
         <ListItemText primary="Vacation" secondary="July 20, 2014" />
       </ListItem>
     </List>
-  );
+  )
 }
 
-export const SubheaderDividers = () => <SubheaderDividers_ />;
+export const SubheaderDividers = () => <SubheaderDividers_ />

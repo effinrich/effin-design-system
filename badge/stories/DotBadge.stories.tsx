@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Badge } from '~/badge';
-import { Mail as MailIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Badge } from '~/badge'
+import { Mail as MailIcon } from '@mui/icons-material'
 
 function DotBadge_() {
   return (
@@ -10,7 +10,7 @@ function DotBadge_() {
         <MailIcon />
       </Badge>
     </Box>
-  );
+  )
 }
 
-export const DotBadge = () => <DotBadge_ />;
+export const DotBadge = () => <DotBadge_ />

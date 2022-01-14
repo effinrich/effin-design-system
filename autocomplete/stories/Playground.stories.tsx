@@ -1,17 +1,17 @@
-import * as React from 'react';
-import { TextField } from '~/text-field';
-import { Autocomplete } from '~/autocomplete';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { TextField } from '~/text-field'
+import { Autocomplete } from '~/autocomplete'
+import { Stack } from '~/stack'
 
 function Playground_() {
   const defaultProps = {
     options: top100Films,
-    getOptionLabel: (option: FilmOptionType) => option.title,
-  };
+    getOptionLabel: (option: FilmOptionType) => option.title
+  }
   const flatProps = {
-    options: top100Films.map((option) => option.title),
-  };
-  const [value, setValue] = React.useState<FilmOptionType | null>(null);
+    options: top100Films.map(option => option.title)
+  }
+  const [value, setValue] = React.useState<FilmOptionType | null>(null)
 
   return (
     <Stack spacing={1} sx={{ width: 300 }}>
@@ -19,7 +19,7 @@ function Playground_() {
         {...defaultProps}
         id="disable-close-on-select"
         disableCloseOnSelect
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField
             {...params}
             label="disableCloseOnSelect"
@@ -31,7 +31,7 @@ function Playground_() {
         {...defaultProps}
         id="clear-on-escape"
         clearOnEscape
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="clearOnEscape" variant="standard" />
         )}
       />
@@ -39,7 +39,7 @@ function Playground_() {
         {...defaultProps}
         id="disable-clearable"
         disableClearable
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="disableClearable" variant="standard" />
         )}
       />
@@ -47,7 +47,7 @@ function Playground_() {
         {...defaultProps}
         id="include-input-in-list"
         includeInputInList
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField
             {...params}
             label="includeInputInList"
@@ -58,7 +58,7 @@ function Playground_() {
       <Autocomplete
         {...flatProps}
         id="flat-demo"
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="flat" variant="standard" />
         )}
       />
@@ -67,9 +67,9 @@ function Playground_() {
         id="controlled-demo"
         value={value}
         onChange={(event: any, newValue: FilmOptionType | null) => {
-          setValue(newValue);
+          setValue(newValue)
         }}
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="controlled" variant="standard" />
         )}
       />
@@ -78,7 +78,7 @@ function Playground_() {
         id="auto-complete"
         autoComplete
         includeInputInList
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="autoComplete" variant="standard" />
         )}
       />
@@ -86,7 +86,7 @@ function Playground_() {
         {...defaultProps}
         id="disable-list-wrap"
         disableListWrap
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="disableListWrap" variant="standard" />
         )}
       />
@@ -94,7 +94,7 @@ function Playground_() {
         {...defaultProps}
         id="open-on-focus"
         openOnFocus
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="openOnFocus" variant="standard" />
         )}
       />
@@ -102,7 +102,7 @@ function Playground_() {
         {...defaultProps}
         id="auto-highlight"
         autoHighlight
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="autoHighlight" variant="standard" />
         )}
       />
@@ -110,7 +110,7 @@ function Playground_() {
         {...defaultProps}
         id="auto-select"
         autoSelect
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="autoSelect" variant="standard" />
         )}
       />
@@ -118,7 +118,7 @@ function Playground_() {
         {...defaultProps}
         id="disabled"
         disabled
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="disabled" variant="standard" />
         )}
       />
@@ -126,7 +126,7 @@ function Playground_() {
         {...defaultProps}
         id="disable-portal"
         disablePortal
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="disablePortal" variant="standard" />
         )}
       />
@@ -134,7 +134,7 @@ function Playground_() {
         {...defaultProps}
         id="blur-on-select"
         blurOnSelect
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="blurOnSelect" variant="standard" />
         )}
       />
@@ -142,7 +142,7 @@ function Playground_() {
         {...defaultProps}
         id="clear-on-blur"
         clearOnBlur
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="clearOnBlur" variant="standard" />
         )}
       />
@@ -150,17 +150,17 @@ function Playground_() {
         {...defaultProps}
         id="select-on-focus"
         selectOnFocus
-        renderInput={(params) => (
+        renderInput={params => (
           <TextField {...params} label="selectOnFocus" variant="standard" />
         )}
       />
     </Stack>
-  );
+  )
 }
 
 interface FilmOptionType {
-  title: string;
-  year: number;
+  title: string
+  year: number
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
@@ -174,23 +174,23 @@ const top100Films = [
   { title: 'Pulp Fiction', year: 1994 },
   {
     title: 'The Lord of the Rings: The Return of the King',
-    year: 2003,
+    year: 2003
   },
   { title: 'The Good, the Bad and the Ugly', year: 1966 },
   { title: 'Fight Club', year: 1999 },
   {
     title: 'The Lord of the Rings: The Fellowship of the Ring',
-    year: 2001,
+    year: 2001
   },
   {
     title: 'Star Wars: Episode V - The Empire Strikes Back',
-    year: 1980,
+    year: 1980
   },
   { title: 'Forrest Gump', year: 1994 },
   { title: 'Inception', year: 2010 },
   {
     title: 'The Lord of the Rings: The Two Towers',
-    year: 2002,
+    year: 2002
   },
   { title: "One Flew Over the Cuckoo's Nest", year: 1975 },
   { title: 'Goodfellas', year: 1990 },
@@ -198,7 +198,7 @@ const top100Films = [
   { title: 'Seven Samurai', year: 1954 },
   {
     title: 'Star Wars: Episode IV - A New Hope',
-    year: 1977,
+    year: 1977
   },
   { title: 'City of God', year: 2002 },
   { title: 'Se7en', year: 1995 },
@@ -235,7 +235,7 @@ const top100Films = [
   {
     title:
       'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
-    year: 1964,
+    year: 1964
   },
   { title: 'The Great Dictator', year: 1940 },
   { title: 'Cinema Paradiso', year: 1988 },
@@ -258,7 +258,7 @@ const top100Films = [
   { title: 'Vertigo', year: 1958 },
   {
     title: 'Star Wars: Episode VI - Return of the Jedi',
-    year: 1983,
+    year: 1983
   },
   { title: 'Reservoir Dogs', year: 1992 },
   { title: 'Braveheart', year: 1995 },
@@ -272,7 +272,7 @@ const top100Films = [
   { title: 'Double Indemnity', year: 1944 },
   {
     title: 'Eternal Sunshine of the Spotless Mind',
-    year: 2004,
+    year: 2004
   },
   { title: 'Amadeus', year: 1984 },
   { title: 'To Kill a Mockingbird', year: 1962 },
@@ -289,7 +289,7 @@ const top100Films = [
   { title: 'Inglourious Basterds', year: 2009 },
   { title: 'Snatch', year: 2000 },
   { title: '3 Idiots', year: 2009 },
-  { title: 'Monty Python and the Holy Grail', year: 1975 },
-];
+  { title: 'Monty Python and the Holy Grail', year: 1975 }
+]
 
-export const Playground = () => <Playground_ />;
+export const Playground = () => <Playground_ />

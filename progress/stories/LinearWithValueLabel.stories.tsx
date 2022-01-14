@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { LinearProgress } from '~/progress';
-import { LinearProgressProps } from '@mui/material';
-import { Typography } from '~/typography';
-import { Box } from '~/box';
+import * as React from 'react'
+import { LinearProgress } from '~/progress'
+import { LinearProgressProps } from '@mui/material'
+import { Typography } from '~/typography'
+import { Box } from '~/box'
 
 function LinearProgressWithLabel(
   props: LinearProgressProps & { value: number }
@@ -18,28 +18,28 @@ function LinearProgressWithLabel(
         )}%`}</Typography>
       </Box>
     </Box>
-  );
+  )
 }
 
 function LinearWithValueLabel_() {
-  const [progress, setProgress] = React.useState(10);
+  const [progress, setProgress] = React.useState(10)
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) =>
+      setProgress(prevProgress =>
         prevProgress >= 100 ? 10 : prevProgress + 10
-      );
-    }, 800);
+      )
+    }, 800)
     return () => {
-      clearInterval(timer);
-    };
-  }, []);
+      clearInterval(timer)
+    }
+  }, [])
 
   return (
     <Box sx={{ width: '100%' }}>
       <LinearProgressWithLabel value={progress} />
     </Box>
-  );
+  )
 }
 
-export const LinearWithValueLabel = () => <LinearWithValueLabel_ />;
+export const LinearWithValueLabel = () => <LinearWithValueLabel_ />

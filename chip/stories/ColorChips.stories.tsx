@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Chip } from '~/chip';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Chip } from '~/chip'
+import { Stack } from '~/stack'
 
 function ColorChips_() {
   return (
@@ -14,7 +14,7 @@ function ColorChips_() {
         <Chip label="success" color="success" variant="outlined" />
       </Stack>
     </Stack>
-  );
+  )
 }
 
-export const ColorChips = () => <ColorChips_ />;
+export const ColorChips = () => <ColorChips_ />

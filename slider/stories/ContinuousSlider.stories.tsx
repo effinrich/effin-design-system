@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Stack } from '~/stack';
-import { Slider } from '~/slider';
-import { VolumeDown } from '@mui/icons-material';
-import { VolumeUp } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Stack } from '~/stack'
+import { Slider } from '~/slider'
+import { VolumeDown } from '@mui/icons-material'
+import { VolumeUp } from '@mui/icons-material'
 
 function ContinuousSlider_() {
-  const [value, setValue] = React.useState<number>(30);
+  const [value, setValue] = React.useState<number>(30)
 
   const handleChange = (event: Event, newValue: number | number[]) => {
-    setValue(newValue as number);
-  };
+    setValue(newValue as number)
+  }
 
   return (
     <Box sx={{ width: 200 }}>
@@ -21,7 +21,7 @@ function ContinuousSlider_() {
       </Stack>
       <Slider disabled defaultValue={30} aria-label="Disabled slider" />
     </Box>
-  );
+  )
 }
 
-export const ContinuousSlider = () => <ContinuousSlider_ />;
+export const ContinuousSlider = () => <ContinuousSlider_ />

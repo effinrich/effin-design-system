@@ -1,1 +1,1 @@
-export { Accordion } from '@mui/material';
+export { Accordion } from '@mui/material'

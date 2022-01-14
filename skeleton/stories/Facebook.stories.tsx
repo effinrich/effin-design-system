@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { Card } from '~/card';
-import { CardHeader } from '@mui/material';
-import { CardContent } from '@mui/material';
-import { CardMedia } from '@mui/material';
-import { Avatar } from '~/avatar';
-import { Typography } from '~/typography';
-import { IconButton } from '@mui/material';
-import { MoreVert as MoreVertIcon } from '@mui/icons-material';
-import { Skeleton } from '~/skeleton';
+import * as React from 'react'
+import { Card } from '~/card'
+import { CardHeader } from '@mui/material'
+import { CardContent } from '@mui/material'
+import { CardMedia } from '@mui/material'
+import { Avatar } from '~/avatar'
+import { Typography } from '~/typography'
+import { IconButton } from '@mui/material'
+import { MoreVert as MoreVertIcon } from '@mui/icons-material'
+import { Skeleton } from '~/skeleton'
 
 interface MediaProps {
-  loading?: boolean;
+  loading?: boolean
 }
 
 function Media(props: MediaProps) {
-  const { loading = false } = props;
+  const { loading = false } = props
 
   return (
     <Card sx={{ maxWidth: 345, m: 2 }}>
@@ -90,7 +90,7 @@ function Media(props: MediaProps) {
         )}
       </CardContent>
     </Card>
-  );
+  )
 }
 
 function Facebook_() {
@@ -99,7 +99,7 @@ function Facebook_() {
       <Media loading />
       <Media />
     </div>
-  );
+  )
 }
 
-export const Facebook = () => <Facebook_ />;
+export const Facebook = () => <Facebook_ />

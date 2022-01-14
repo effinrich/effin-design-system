@@ -1,11 +1,11 @@
-import { Typography } from '~/typography';
-import { Types as Types } from '../stories/Types.stories';
-import { TypographyTheme as TypographyTheme } from '../stories/TypographyTheme.stories';
-import { mdx } from '@mdx-js/react';
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
-import { DemoFrame } from '~/demo-frame';
-import { MdxLayout } from '~/layout';
-export default MdxLayout;
+import { Typography } from '~/typography'
+import { Types as Types } from '../stories/Types.stories'
+import { TypographyTheme as TypographyTheme } from '../stories/TypographyTheme.stories'
+import { mdx } from '@mdx-js/react'
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
+import { DemoFrame } from '~/demo-frame'
+import { MdxLayout } from '~/layout'
+export default MdxLayout
 
 # Typography
 
@@ -44,10 +44,10 @@ You can install it by typing the below command in your terminal:
 Then, you can import it in your entry-point.
 
 ```js
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
 ```
 
 For more info check out Fontsource.
@@ -85,9 +85,9 @@ It's important to realize that the style of a typography component is independen
 {
   /* There is already an h1 in the page, let's not duplicate it. */
 }
-<Typography variant="h1" component="h2">
+;<Typography variant="h1" component="h2">
   h1. Heading
-</Typography>;
+</Typography>
 ```
 
 - You can change the mapping globally using the theme:
@@ -107,12 +107,12 @@ const theme = createTheme({
           subtitle1: 'h2',
           subtitle2: 'h2',
           body1: 'span',
-          body2: 'span',
-        },
-      },
-    },
-  },
-});
+          body2: 'span'
+        }
+      }
+    }
+  }
+})
 ```
 
 ## Adding & disabling variants

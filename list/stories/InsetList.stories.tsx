@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemButton } from '@mui/material';
-import { ListItemIcon } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { Star as StarIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemButton } from '@mui/material'
+import { ListItemIcon } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { Star as StarIcon } from '@mui/icons-material'
 
 function InsetList_() {
   return (
@@ -26,7 +26,7 @@ function InsetList_() {
         </ListItemButton>
       </ListItem>
     </List>
-  );
+  )
 }
 
-export const InsetList = () => <InsetList_ />;
+export const InsetList = () => <InsetList_ />

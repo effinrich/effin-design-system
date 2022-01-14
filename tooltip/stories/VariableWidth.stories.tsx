@@ -1,30 +1,30 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Button } from '~/button';
-import { Tooltip } from '~/tooltip';
-import { TooltipProps, tooltipClasses } from '@mui/material';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Button } from '~/button'
+import { Tooltip } from '~/tooltip'
+import { TooltipProps, tooltipClasses } from '@mui/material'
 
 const CustomWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))({
   [`& .${tooltipClasses.tooltip}`]: {
-    maxWidth: 500,
-  },
-});
+    maxWidth: 500
+  }
+})
 
 const NoMaxWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} classes={{ popper: className }} />
 ))({
   [`& .${tooltipClasses.tooltip}`]: {
-    maxWidth: 'none',
-  },
-});
+    maxWidth: 'none'
+  }
+})
 
 const longText = `
 Aliquam eget finibus ante, non facilisis lectus. Sed vitae dignissim est, vel aliquam tellus.
 Praesent non nunc mollis, fermentum neque at, semper arcu.
 Nullam eget est sed sem iaculis gravida eget vitae justo.
-`;
+`
 
 function VariableWidth_() {
   return (
@@ -39,7 +39,7 @@ function VariableWidth_() {
         <Button sx={{ m: 1 }}>No wrapping</Button>
       </NoMaxWidthTooltip>
     </div>
-  );
+  )
 }
 
-export const VariableWidth = () => <VariableWidth_ />;
+export const VariableWidth = () => <VariableWidth_ />

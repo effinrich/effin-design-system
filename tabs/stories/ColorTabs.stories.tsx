@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Tabs } from '~/tabs';
-import { Tab } from '@mui/material';
-import { Box } from '~/box';
+import * as React from 'react'
+import { Tabs } from '~/tabs'
+import { Tab } from '@mui/material'
+import { Box } from '~/box'
 
 function ColorTabs_() {
-  const [value, setValue] = React.useState('one');
+  const [value, setValue] = React.useState('one')
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -24,7 +24,7 @@ function ColorTabs_() {
         <Tab value="three" label="Item Three" />
       </Tabs>
     </Box>
-  );
+  )
 }
 
-export const ColorTabs = () => <ColorTabs_ />;
+export const ColorTabs = () => <ColorTabs_ />

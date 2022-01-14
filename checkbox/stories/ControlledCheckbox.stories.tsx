@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Checkbox } from '~/checkbox';
+import * as React from 'react'
+import { Checkbox } from '~/checkbox'
 
 function ControlledCheckbox_() {
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(true)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(event.target.checked);
-  };
+    setChecked(event.target.checked)
+  }
 
   return (
     <Checkbox
@@ -14,7 +14,7 @@ function ControlledCheckbox_() {
       onChange={handleChange}
       inputProps={{ 'aria-label': 'controlled' }}
     />
-  );
+  )
 }
 
-export const ControlledCheckbox = () => <ControlledCheckbox_ />;
+export const ControlledCheckbox = () => <ControlledCheckbox_ />

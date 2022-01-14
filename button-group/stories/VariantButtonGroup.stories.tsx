@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { ButtonGroup } from '~/button-group';
-import { Box } from '~/box';
+import * as React from 'react'
+import { Button } from '~/button'
+import { ButtonGroup } from '~/button-group'
+import { Box } from '~/box'
 
 function VariantButtonGroup_() {
   return (
@@ -11,8 +11,8 @@ function VariantButtonGroup_() {
         flexDirection: 'column',
         alignItems: 'center',
         '& > *': {
-          m: 1,
-        },
+          m: 1
+        }
       }}
     >
       <ButtonGroup variant="outlined" aria-label="outlined button group">
@@ -26,7 +26,7 @@ function VariantButtonGroup_() {
         <Button>Three</Button>
       </ButtonGroup>
     </Box>
-  );
+  )
 }
 
-export const VariantButtonGroup = () => <VariantButtonGroup_ />;
+export const VariantButtonGroup = () => <VariantButtonGroup_ />

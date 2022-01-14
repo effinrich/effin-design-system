@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { Comment as CommentIcon } from '@mui/icons-material';
-import { IconButton } from '@mui/material';
+import * as React from 'react'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { Comment as CommentIcon } from '@mui/icons-material'
+import { IconButton } from '@mui/material'
 
 function GutterlessList_() {
   return (
     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      {[1, 2, 3].map((value) => (
+      {[1, 2, 3].map(value => (
         <ListItem
           key={value}
           disableGutters
@@ -22,7 +22,7 @@ function GutterlessList_() {
         </ListItem>
       ))}
     </List>
-  );
+  )
 }
 
-export const GutterlessList = () => <GutterlessList_ />;
+export const GutterlessList = () => <GutterlessList_ />

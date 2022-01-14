@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Radio } from '~/radio-button';
-import { RadioProps } from '@mui/material';
-import { RadioGroup } from '@mui/material';
-import { FormControlLabel } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { FormLabel } from '@mui/material';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Radio } from '~/radio-button'
+import { RadioProps } from '@mui/material'
+import { RadioGroup } from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { FormLabel } from '@mui/material'
 
 const BpIcon = styled('span')(({ theme }) => ({
   borderRadius: '50%',
@@ -22,19 +22,19 @@ const BpIcon = styled('span')(({ theme }) => ({
       : 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
   '.Mui-focusVisible &': {
     outline: '2px auto rgba(19,124,189,.6)',
-    outlineOffset: 2,
+    outlineOffset: 2
   },
   'input:hover ~ &': {
-    backgroundColor: theme.palette.mode === 'dark' ? '#30404d' : '#ebf1f5',
+    backgroundColor: theme.palette.mode === 'dark' ? '#30404d' : '#ebf1f5'
   },
   'input:disabled ~ &': {
     boxShadow: 'none',
     background:
       theme.palette.mode === 'dark'
         ? 'rgba(57,75,89,.5)'
-        : 'rgba(206,217,224,.5)',
-  },
-}));
+        : 'rgba(206,217,224,.5)'
+  }
+}))
 
 const BpCheckedIcon = styled(BpIcon)({
   backgroundColor: '#137cbd',
@@ -45,12 +45,12 @@ const BpCheckedIcon = styled(BpIcon)({
     width: 16,
     height: 16,
     backgroundImage: 'radial-gradient(#fff,#fff 28%,transparent 32%)',
-    content: '""',
+    content: '""'
   },
   'input:hover ~ &': {
-    backgroundColor: '#106ba3',
-  },
-});
+    backgroundColor: '#106ba3'
+  }
+})
 
 // Inspired by blueprintjs
 function BpRadio(props: RadioProps) {
@@ -58,8 +58,8 @@ function BpRadio(props: RadioProps) {
     <Radio
       sx={{
         '&:hover': {
-          bgcolor: 'transparent',
-        },
+          bgcolor: 'transparent'
+        }
       }}
       disableRipple
       color="default"
@@ -67,7 +67,7 @@ function BpRadio(props: RadioProps) {
       icon={<BpIcon />}
       {...props}
     />
-  );
+  )
 }
 
 function CustomizedRadios_() {
@@ -90,7 +90,7 @@ function CustomizedRadios_() {
         />
       </RadioGroup>
     </FormControl>
-  );
+  )
 }
 
-export const CustomizedRadios = () => <CustomizedRadios_ />;
+export const CustomizedRadios = () => <CustomizedRadios_ />

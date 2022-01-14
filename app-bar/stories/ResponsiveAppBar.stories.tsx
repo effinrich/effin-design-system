@@ -1,42 +1,40 @@
-import * as React from 'react';
-import { AppBar } from '~/app-bar';
-import { Box } from '~/box';
-import { Toolbar } from '@mui/material';
-import { IconButton } from '@mui/material';
-import { Typography } from '~/typography';
-import { Menu } from '~/menu';
-import { Menu as MenuIcon } from '@mui/icons-material';
-import { Container } from '~/container';
-import { Avatar } from '~/avatar';
-import { Button } from '~/button';
-import { Tooltip } from '~/tooltip';
-import { MenuItem } from '~/menu';
+import * as React from 'react'
+import { AppBar } from '~/app-bar'
+import { Box } from '~/box'
+import { Toolbar } from '@mui/material'
+import { IconButton } from '@mui/material'
+import { Typography } from '~/typography'
+import { Menu } from '~/menu'
+import { Menu as MenuIcon } from '@mui/icons-material'
+import { Container } from '~/container'
+import { Avatar } from '~/avatar'
+import { Button } from '~/button'
+import { Tooltip } from '~/tooltip'
+import { MenuItem } from '~/menu'
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Products', 'Pricing', 'Blog']
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 const ResponsiveAppBar_ = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
-  );
+  )
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
+    setAnchorElNav(event.currentTarget)
+  }
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
+    setAnchorElUser(event.currentTarget)
+  }
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+    setAnchorElNav(null)
+  }
 
   const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+    setAnchorElUser(null)
+  }
 
   return (
     <AppBar position="static">
@@ -67,20 +65,20 @@ const ResponsiveAppBar_ = () => {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'left',
+                horizontal: 'left'
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'left',
+                horizontal: 'left'
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none' }
               }}
             >
-              {pages.map((page) => (
+              {pages.map(page => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
@@ -96,7 +94,7 @@ const ResponsiveAppBar_ = () => {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map(page => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -122,17 +120,17 @@ const ResponsiveAppBar_ = () => {
               anchorEl={anchorElUser}
               anchorOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right'
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'right',
+                horizontal: 'right'
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+              {settings.map(setting => (
                 <MenuItem key={setting} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
@@ -142,7 +140,7 @@ const ResponsiveAppBar_ = () => {
         </Toolbar>
       </Container>
     </AppBar>
-  );
-};
+  )
+}
 
-export const ResponsiveAppBar = () => <ResponsiveAppBar_ />;
+export const ResponsiveAppBar = () => <ResponsiveAppBar_ />

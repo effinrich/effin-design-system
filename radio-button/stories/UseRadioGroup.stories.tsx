@@ -1,31 +1,31 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { RadioGroup, useRadioGroup } from '@mui/material';
-import { FormControlLabel, FormControlLabelProps } from '@mui/material';
-import { Radio } from '~/radio-button';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { RadioGroup, useRadioGroup } from '@mui/material'
+import { FormControlLabel, FormControlLabelProps } from '@mui/material'
+import { Radio } from '~/radio-button'
 
 interface StyledFormControlLabelProps extends FormControlLabelProps {
-  checked: boolean;
+  checked: boolean
 }
 
 const StyledFormControlLabel = styled((props: StyledFormControlLabelProps) => (
   <FormControlLabel {...props} />
 ))(({ theme, checked }) => ({
   '.MuiFormControlLabel-label': checked && {
-    color: theme.palette.primary.main,
-  },
-}));
+    color: theme.palette.primary.main
+  }
+}))
 
 function MyFormControlLabel(props: FormControlLabelProps) {
-  const radioGroup = useRadioGroup();
+  const radioGroup = useRadioGroup()
 
-  let checked = false;
+  let checked = false
 
   if (radioGroup) {
-    checked = radioGroup.value === props.value;
+    checked = radioGroup.value === props.value
   }
 
-  return <StyledFormControlLabel checked={checked} {...props} />;
+  return <StyledFormControlLabel checked={checked} {...props} />
 }
 
 function UseRadioGroup_() {
@@ -34,7 +34,7 @@ function UseRadioGroup_() {
       <MyFormControlLabel value="first" label="First" control={<Radio />} />
       <MyFormControlLabel value="second" label="Second" control={<Radio />} />
     </RadioGroup>
-  );
+  )
 }
 
-export const UseRadioGroup = () => <UseRadioGroup_ />;
+export const UseRadioGroup = () => <UseRadioGroup_ />

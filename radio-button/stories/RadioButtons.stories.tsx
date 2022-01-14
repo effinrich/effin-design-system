@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Radio } from '~/radio-button';
+import * as React from 'react'
+import { Radio } from '~/radio-button'
 
 function RadioButtons_() {
-  const [selectedValue, setSelectedValue] = React.useState('a');
+  const [selectedValue, setSelectedValue] = React.useState('a')
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value);
-  };
+    setSelectedValue(event.target.value)
+  }
 
   return (
     <div>
@@ -25,7 +25,7 @@ function RadioButtons_() {
         inputProps={{ 'aria-label': 'B' }}
       />
     </div>
-  );
+  )
 }
 
-export const RadioButtons = () => <RadioButtons_ />;
+export const RadioButtons = () => <RadioButtons_ />

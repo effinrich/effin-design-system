@@ -1,1 +1,1 @@
-export { Menu, MenuItem, MenuList } from '@mui/material';
+export { Menu, MenuItem, MenuList } from '@mui/material'

@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Card } from '~/card';
-import { CardActions } from '@mui/material';
-import { CardContent } from '@mui/material';
-import { Button } from '~/button';
-import { Typography } from '~/typography';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Card } from '~/card'
+import { CardActions } from '@mui/material'
+import { CardContent } from '@mui/material'
+import { Button } from '~/button'
+import { Typography } from '~/typography'
 
 const bull = (
   <Box
@@ -13,7 +13,7 @@ const bull = (
   >
     •
   </Box>
-);
+)
 
 function BasicCard_() {
   return (
@@ -38,7 +38,7 @@ function BasicCard_() {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-  );
+  )
 }
 
-export const BasicCard = () => <BasicCard_ />;
+export const BasicCard = () => <BasicCard_ />

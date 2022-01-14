@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { Delete as DeleteIcon } from '@mui/icons-material';
-import { Send as SendIcon } from '@mui/icons-material';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Button } from '~/button'
+import { Delete as DeleteIcon } from '@mui/icons-material'
+import { Send as SendIcon } from '@mui/icons-material'
+import { Stack } from '~/stack'
 
 function IconLabelButtons_() {
   return (
@@ -14,7 +14,7 @@ function IconLabelButtons_() {
         Send
       </Button>
     </Stack>
-  );
+  )
 }
 
-export const IconLabelButtons = () => <IconLabelButtons_ />;
+export const IconLabelButtons = () => <IconLabelButtons_ />

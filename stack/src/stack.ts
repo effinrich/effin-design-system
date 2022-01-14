@@ -1,1 +1,1 @@
-export { Stack } from '@mui/material';
+export { Stack } from '@mui/material'

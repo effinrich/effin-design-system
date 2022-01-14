@@ -1,26 +1,26 @@
-import * as React from 'react';
-import { IMaskInput } from 'react-imask';
-import NumberFormat from 'react-number-format';
-import { Box } from '~/box';
-import { Input } from '@mui/material';
-import { InputLabel } from '@mui/material';
-import { TextField } from '~/text-field';
-import { FormControl } from '@mui/material';
+import * as React from 'react'
+import { IMaskInput } from 'react-imask'
+import NumberFormat from 'react-number-format'
+import { Box } from '~/box'
+import { Input } from '@mui/material'
+import { InputLabel } from '@mui/material'
+import { TextField } from '~/text-field'
+import { FormControl } from '@mui/material'
 
 interface CustomProps {
-  onChange: (event: { target: { name: string; value: string } }) => void;
-  name: string;
+  onChange: (event: { target: { name: string; value: string } }) => void
+  name: string
 }
 
 const TextMaskCustom = React.forwardRef<HTMLElement, CustomProps>(
   function TextMaskCustom(props, ref) {
-    const { onChange, ...other } = props;
+    const { onChange, ...other } = props
     return (
       <IMaskInput
         {...other}
         mask="(#00) 000-0000"
         definitions={{
-          '#': /[1-9]/,
+          '#': /[1-9]/
         }}
         inputRef={ref}
         onAccept={(value: any) =>
@@ -28,58 +28,58 @@ const TextMaskCustom = React.forwardRef<HTMLElement, CustomProps>(
         }
         overwrite
       />
-    );
+    )
   }
-);
+)
 
 const NumberFormatCustom = React.forwardRef<NumberFormat, CustomProps>(
   function NumberFormatCustom(props, ref) {
-    const { onChange, ...other } = props;
+    const { onChange, ...other } = props
 
     return (
       <NumberFormat
         {...other}
         getInputRef={ref}
-        onValueChange={(values) => {
+        onValueChange={values => {
           onChange({
             target: {
               name: props.name,
-              value: values.value,
-            },
-          });
+              value: values.value
+            }
+          })
         }}
         thousandSeparator
         isNumericString
         prefix="$"
       />
-    );
+    )
   }
-);
+)
 
 interface State {
-  textmask: string;
-  numberformat: string;
+  textmask: string
+  numberformat: string
 }
 
 function FormattedInputs_() {
   const [values, setValues] = React.useState<State>({
     textmask: '(100) 000-0000',
-    numberformat: '1320',
-  });
+    numberformat: '1320'
+  })
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValues({
       ...values,
-      [event.target.name]: event.target.value,
-    });
-  };
+      [event.target.name]: event.target.value
+    })
+  }
 
   return (
     <Box
       sx={{
         '& > :not(style)': {
-          m: 1,
-        },
+          m: 1
+        }
       }}
     >
       <FormControl variant="standard">
@@ -99,12 +99,12 @@ function FormattedInputs_() {
         name="numberformat"
         id="formatted-numberformat-input"
         InputProps={{
-          inputComponent: NumberFormatCustom as any,
+          inputComponent: NumberFormatCustom as any
         }}
         variant="standard"
       />
     </Box>
-  );
+  )
 }
 
-export const FormattedInputs = () => <FormattedInputs_ />;
+export const FormattedInputs = () => <FormattedInputs_ />

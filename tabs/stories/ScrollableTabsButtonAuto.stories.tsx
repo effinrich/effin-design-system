@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Tabs } from '~/tabs';
-import { Tab } from '@mui/material';
-import { Box } from '~/box';
+import * as React from 'react'
+import { Tabs } from '~/tabs'
+import { Tab } from '@mui/material'
+import { Box } from '~/box'
 
 function ScrollableTabsButtonAuto_() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   return (
     <Box sx={{ maxWidth: 480, bgcolor: 'background.paper' }}>
@@ -28,7 +28,7 @@ function ScrollableTabsButtonAuto_() {
         <Tab label="Item Seven" />
       </Tabs>
     </Box>
-  );
+  )
 }
 
-export const ScrollableTabsButtonAuto = () => <ScrollableTabsButtonAuto_ />;
+export const ScrollableTabsButtonAuto = () => <ScrollableTabsButtonAuto_ />

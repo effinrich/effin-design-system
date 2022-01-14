@@ -1,24 +1,24 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { FilledInput } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { FormHelperText } from '@mui/material';
-import { Input } from '@mui/material';
-import { InputLabel } from '@mui/material';
-import { OutlinedInput } from '@mui/material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { FilledInput } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { FormHelperText } from '@mui/material'
+import { Input } from '@mui/material'
+import { InputLabel } from '@mui/material'
+import { OutlinedInput } from '@mui/material'
 
 function ComposedTextField_() {
-  const [name, setName] = React.useState('Composed TextField');
+  const [name, setName] = React.useState('Composed TextField')
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
-  };
+    setName(event.target.value)
+  }
 
   return (
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1 },
+        '& > :not(style)': { m: 1 }
       }}
       noValidate
       autoComplete="off"
@@ -72,7 +72,7 @@ function ComposedTextField_() {
         />
       </FormControl>
     </Box>
-  );
+  )
 }
 
-export const ComposedTextField = () => <ComposedTextField_ />;
+export const ComposedTextField = () => <ComposedTextField_ />

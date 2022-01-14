@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Rating } from '~/rating';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Rating } from '~/rating'
+import { Stack } from '~/stack'
 
 function HalfRating_() {
   return (
@@ -13,7 +13,7 @@ function HalfRating_() {
         readOnly
       />
     </Stack>
-  );
+  )
 }
 
-export const HalfRating = () => <HalfRating_ />;
+export const HalfRating = () => <HalfRating_ />

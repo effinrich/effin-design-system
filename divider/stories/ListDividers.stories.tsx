@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { Divider } from '~/divider';
+import * as React from 'react'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { Divider } from '~/divider'
 
 const style = {
   width: '100%',
   maxWidth: 360,
-  bgcolor: 'background.paper',
-};
+  bgcolor: 'background.paper'
+}
 
 function ListDividers_() {
   return (
@@ -28,7 +28,7 @@ function ListDividers_() {
         <ListItemText primary="Spam" />
       </ListItem>
     </List>
-  );
+  )
 }
 
-export const ListDividers = () => <ListDividers_ />;
+export const ListDividers = () => <ListDividers_ />

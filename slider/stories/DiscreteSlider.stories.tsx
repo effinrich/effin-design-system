@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Slider } from '~/slider';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Slider } from '~/slider'
 
 function valuetext(value: number) {
-  return `${value}°C`;
+  return `${value}°C`
 }
 
 function DiscreteSlider_() {
@@ -21,7 +21,7 @@ function DiscreteSlider_() {
       />
       <Slider defaultValue={30} step={10} marks min={10} max={110} disabled />
     </Box>
-  );
+  )
 }
 
-export const DiscreteSlider = () => <DiscreteSlider_ />;
+export const DiscreteSlider = () => <DiscreteSlider_ />

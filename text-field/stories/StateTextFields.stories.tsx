@@ -1,18 +1,18 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { TextField } from '~/text-field';
+import * as React from 'react'
+import { Box } from '~/box'
+import { TextField } from '~/text-field'
 
 function StateTextFields_() {
-  const [name, setName] = React.useState('Cat in the Hat');
+  const [name, setName] = React.useState('Cat in the Hat')
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value);
-  };
+    setName(event.target.value)
+  }
 
   return (
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
+        '& > :not(style)': { m: 1, width: '25ch' }
       }}
       noValidate
       autoComplete="off"
@@ -29,7 +29,7 @@ function StateTextFields_() {
         defaultValue="foo"
       />
     </Box>
-  );
+  )
 }
 
-export const StateTextFields = () => <StateTextFields_ />;
+export const StateTextFields = () => <StateTextFields_ />

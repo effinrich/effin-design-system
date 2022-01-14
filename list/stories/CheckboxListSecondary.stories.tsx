@@ -1,35 +1,35 @@
-import * as React from 'react';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemButton } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { ListItemAvatar } from '@mui/material';
-import { Checkbox } from '~/checkbox';
-import { Avatar } from '~/avatar';
+import * as React from 'react'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemButton } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { ListItemAvatar } from '@mui/material'
+import { Checkbox } from '~/checkbox'
+import { Avatar } from '~/avatar'
 
 function CheckboxListSecondary_() {
-  const [checked, setChecked] = React.useState([1]);
+  const [checked, setChecked] = React.useState([1])
 
   const handleToggle = (value: number) => () => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
+    const currentIndex = checked.indexOf(value)
+    const newChecked = [...checked]
 
     if (currentIndex === -1) {
-      newChecked.push(value);
+      newChecked.push(value)
     } else {
-      newChecked.splice(currentIndex, 1);
+      newChecked.splice(currentIndex, 1)
     }
 
-    setChecked(newChecked);
-  };
+    setChecked(newChecked)
+  }
 
   return (
     <List
       dense
       sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
     >
-      {[0, 1, 2, 3].map((value) => {
-        const labelId = `checkbox-list-secondary-label-${value}`;
+      {[0, 1, 2, 3].map(value => {
+        const labelId = `checkbox-list-secondary-label-${value}`
         return (
           <ListItem
             key={value}
@@ -53,10 +53,10 @@ function CheckboxListSecondary_() {
               <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
             </ListItemButton>
           </ListItem>
-        );
+        )
       })}
     </List>
-  );
+  )
 }
 
-export const CheckboxListSecondary = () => <CheckboxListSecondary_ />;
+export const CheckboxListSecondary = () => <CheckboxListSecondary_ />
