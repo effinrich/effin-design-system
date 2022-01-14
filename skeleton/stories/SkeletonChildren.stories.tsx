@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { styled } from '@mui/material'
-import { Box } from '~/box'
-import { Typography } from '~/typography'
-import { Avatar } from '~/avatar'
-import { Grid } from '~/grid'
-import { Skeleton } from '~/skeleton'
+import * as React from 'react';
+import { styled } from '@mui/material';
+import { Box } from '~/box';
+import { Typography } from '~/typography';
+import { Avatar } from '~/avatar';
+import { Grid } from '~/grid';
+import { Skeleton } from '~/skeleton';
 
 const Image = styled('img')({
-  width: '100%'
-})
+  width: '100%',
+});
 
 function SkeletonChildrenDemo(props: { loading?: boolean }) {
-  const { loading = false } = props
+  const { loading = false } = props;
 
   return (
     <div>
@@ -46,7 +46,7 @@ function SkeletonChildrenDemo(props: { loading?: boolean }) {
         />
       )}
     </div>
-  )
+  );
 }
 
 function SkeletonChildren_() {
@@ -59,7 +59,7 @@ function SkeletonChildren_() {
         <SkeletonChildrenDemo />
       </Grid>
     </Grid>
-  )
+  );
 }
 
-export const SkeletonChildren = () => <SkeletonChildren_ />
+export const SkeletonChildren = () => <SkeletonChildren_ />;

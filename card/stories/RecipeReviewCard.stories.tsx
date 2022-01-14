@@ -1,41 +1,41 @@
-import * as React from 'react'
-import { styled } from '@mui/material'
-import { Card } from '~/card'
-import { CardHeader } from '@mui/material'
-import { CardMedia } from '@mui/material'
-import { CardContent } from '@mui/material'
-import { CardActions } from '@mui/material'
-import { Collapse } from '@mui/material'
-import { Avatar } from '~/avatar'
-import { IconButton, IconButtonProps } from '@mui/material'
-import { Typography } from '~/typography'
-import { red } from '@mui/material/colors'
-import { Favorite as FavoriteIcon } from '@mui/icons-material'
-import { Share as ShareIcon } from '@mui/icons-material'
-import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material'
-import { MoreVert as MoreVertIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { styled } from '@mui/material';
+import { Card } from '~/card';
+import { CardHeader } from '@mui/material';
+import { CardMedia } from '@mui/material';
+import { CardContent } from '@mui/material';
+import { CardActions } from '@mui/material';
+import { Collapse } from '@mui/material';
+import { Avatar } from '~/avatar';
+import { IconButton, IconButtonProps } from '@mui/material';
+import { Typography } from '~/typography';
+import { red } from '@mui/material/colors';
+import { Favorite as FavoriteIcon } from '@mui/icons-material';
+import { Share as ShareIcon } from '@mui/icons-material';
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
+import { MoreVert as MoreVertIcon } from '@mui/icons-material';
 
 interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean
+  expand: boolean;
 }
 
 const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props
-  return <IconButton {...other} />
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
 })(({ theme, expand }) => ({
   transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
   marginLeft: 'auto',
   transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest
-  })
-}))
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
 
 function RecipeReviewCard_() {
-  const [expanded, setExpanded] = React.useState(false)
+  const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
-    setExpanded(!expanded)
-  }
+    setExpanded(!expanded);
+  };
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -114,7 +114,7 @@ function RecipeReviewCard_() {
         </CardContent>
       </Collapse>
     </Card>
-  )
+  );
 }
 
-export const RecipeReviewCard = () => <RecipeReviewCard_ />
+export const RecipeReviewCard = () => <RecipeReviewCard_ />;

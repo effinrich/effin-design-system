@@ -1,19 +1,19 @@
-import { Radio } from '~/radio-button'
-import { RadioButtonsGroup as RadioButtonsGroup } from '../stories/RadioButtonsGroup.stories'
-import { RowRadioButtonsGroup as RowRadioButtonsGroup } from '../stories/RowRadioButtonsGroup.stories'
-import { ControlledRadioButtonsGroup as ControlledRadioButtonsGroup } from '../stories/ControlledRadioButtonsGroup.stories'
-import { RadioButtons as RadioButtons } from '../stories/RadioButtons.stories'
-import { SizeRadioButtons as SizeRadioButtons } from '../stories/SizeRadioButtons.stories'
-import { ColorRadioButtons as ColorRadioButtons } from '../stories/ColorRadioButtons.stories'
-import { FormControlLabelPlacement as FormControlLabelPlacement } from '../stories/FormControlLabelPlacement.stories'
-import { ErrorRadios as ErrorRadios } from '../stories/ErrorRadios.stories'
-import { CustomizedRadios as CustomizedRadios } from '../stories/CustomizedRadios.stories'
-import { UseRadioGroup as UseRadioGroup } from '../stories/UseRadioGroup.stories'
-import { mdx } from '@mdx-js/react'
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
-import { DemoFrame } from '~/demo-frame'
-import { MdxLayout } from '~/layout'
-export default MdxLayout
+import { Radio } from '~/radio-button';
+import { RadioButtonsGroup as RadioButtonsGroup } from '../stories/RadioButtonsGroup.stories';
+import { RowRadioButtonsGroup as RowRadioButtonsGroup } from '../stories/RowRadioButtonsGroup.stories';
+import { ControlledRadioButtonsGroup as ControlledRadioButtonsGroup } from '../stories/ControlledRadioButtonsGroup.stories';
+import { RadioButtons as RadioButtons } from '../stories/RadioButtons.stories';
+import { SizeRadioButtons as SizeRadioButtons } from '../stories/SizeRadioButtons.stories';
+import { ColorRadioButtons as ColorRadioButtons } from '../stories/ColorRadioButtons.stories';
+import { FormControlLabelPlacement as FormControlLabelPlacement } from '../stories/FormControlLabelPlacement.stories';
+import { ErrorRadios as ErrorRadios } from '../stories/ErrorRadios.stories';
+import { CustomizedRadios as CustomizedRadios } from '../stories/CustomizedRadios.stories';
+import { UseRadioGroup as UseRadioGroup } from '../stories/UseRadioGroup.stories';
+import { mdx } from '@mdx-js/react';
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
+import { DemoFrame } from '~/demo-frame';
+import { MdxLayout } from '~/layout';
+export default MdxLayout;
 
 # Radio
 
@@ -122,8 +122,8 @@ Use the `size` prop or customize the font size of the svg icons to change the si
   {...controlProps('c')}
   sx={{
     '& .MuiSvgIcon-root': {
-      fontSize: 28
-    }
+      fontSize: 28,
+    },
   }}
 />
 ```
@@ -141,8 +141,8 @@ Use the `size` prop or customize the font size of the svg icons to change the si
   sx={{
     color: pink[800],
     '&.Mui-checked': {
-      color: pink[600]
-    }
+      color: pink[600],
+    },
   }}
 />
 ```
@@ -201,7 +201,7 @@ The Radio component uses this hook internally.
 ### API
 
 ```jsx
-import { useRadioGroup } from '@mui/material/RadioGroup'
+import { useRadioGroup } from '@mui/material/RadioGroup';
 ```
 
 #### Returns
@@ -238,7 +238,7 @@ import { useRadioGroup } from '@mui/material/RadioGroup'
 <Radio
   value="radioA"
   inputProps={{
-    'aria-label': 'Radio A'
+    'aria-label': 'Radio A',
   }}
 />
 ```

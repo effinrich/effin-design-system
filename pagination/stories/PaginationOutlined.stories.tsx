@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Pagination } from '~/pagination'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Pagination } from '~/pagination';
+import { Stack } from '~/stack';
 
 function PaginationOutlined_() {
   return (
@@ -10,7 +10,7 @@ function PaginationOutlined_() {
       <Pagination count={10} variant="outlined" color="secondary" />
       <Pagination count={10} variant="outlined" disabled />
     </Stack>
-  )
+  );
 }
 
-export const PaginationOutlined = () => <PaginationOutlined_ />
+export const PaginationOutlined = () => <PaginationOutlined_ />;

@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { IconButton } from '@mui/material'
-import { Fingerprint } from '@mui/icons-material'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { IconButton } from '@mui/material';
+import { Fingerprint } from '@mui/icons-material';
 
 function IconButtonColors_() {
   return (
@@ -13,7 +13,7 @@ function IconButtonColors_() {
         <Fingerprint />
       </IconButton>
     </Stack>
-  )
+  );
 }
 
-export const IconButtonColors = () => <IconButtonColors_ />
+export const IconButtonColors = () => <IconButtonColors_ />;

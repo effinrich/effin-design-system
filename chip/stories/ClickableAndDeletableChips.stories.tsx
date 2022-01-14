@@ -1,15 +1,15 @@
-import * as React from 'react'
-import { Chip } from '~/chip'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Chip } from '~/chip';
+import { Stack } from '~/stack';
 
 function ClickableAndDeletableChips_() {
   const handleClick = () => {
-    console.info('You clicked the Chip.')
-  }
+    console.info('You clicked the Chip.');
+  };
 
   const handleDelete = () => {
-    console.info('You clicked the delete icon.')
-  }
+    console.info('You clicked the delete icon.');
+  };
 
   return (
     <Stack direction="row" spacing={1}>
@@ -25,7 +25,7 @@ function ClickableAndDeletableChips_() {
         onDelete={handleDelete}
       />
     </Stack>
-  )
+  );
 }
 
-export const ClickableAndDeletableChips = () => <ClickableAndDeletableChips_ />
+export const ClickableAndDeletableChips = () => <ClickableAndDeletableChips_ />;

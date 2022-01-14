@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Chip } from '~/chip'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Chip } from '~/chip';
+import { Stack } from '~/stack';
 
 function ClickableLinkChips_() {
   return (
@@ -14,7 +14,7 @@ function ClickableLinkChips_() {
         clickable
       />
     </Stack>
-  )
+  );
 }
 
-export const ClickableLinkChips = () => <ClickableLinkChips_ />
+export const ClickableLinkChips = () => <ClickableLinkChips_ />;

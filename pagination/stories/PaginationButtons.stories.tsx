@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Pagination } from '~/pagination'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Pagination } from '~/pagination';
+import { Stack } from '~/stack';
 
 function PaginationButtons_() {
   return (
@@ -8,7 +8,7 @@ function PaginationButtons_() {
       <Pagination count={10} showFirstButton showLastButton />
       <Pagination count={10} hidePrevButton hideNextButton />
     </Stack>
-  )
+  );
 }
 
-export const PaginationButtons = () => <PaginationButtons_ />
+export const PaginationButtons = () => <PaginationButtons_ />;

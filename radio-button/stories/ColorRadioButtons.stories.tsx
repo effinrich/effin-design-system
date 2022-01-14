@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { pink } from '@mui/material/colors'
-import { Radio } from '~/radio-button'
+import * as React from 'react';
+import { pink } from '@mui/material/colors';
+import { Radio } from '~/radio-button';
 
 function ColorRadioButtons_() {
-  const [selectedValue, setSelectedValue] = React.useState('a')
+  const [selectedValue, setSelectedValue] = React.useState('a');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedValue(event.target.value)
-  }
+    setSelectedValue(event.target.value);
+  };
 
   const controlProps = (item: string) => ({
     checked: selectedValue === item,
     onChange: handleChange,
     value: item,
     name: 'color-radio-button-demo',
-    inputProps: { 'aria-label': item }
-  })
+    inputProps: { 'aria-label': item },
+  });
 
   return (
     <div>
@@ -28,12 +28,12 @@ function ColorRadioButtons_() {
         sx={{
           color: pink[800],
           '&.Mui-checked': {
-            color: pink[600]
-          }
+            color: pink[600],
+          },
         }}
       />
     </div>
-  )
+  );
 }
 
-export const ColorRadioButtons = () => <ColorRadioButtons_ />
+export const ColorRadioButtons = () => <ColorRadioButtons_ />;

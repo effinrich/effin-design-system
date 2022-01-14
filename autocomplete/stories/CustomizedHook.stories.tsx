@@ -1,11 +1,11 @@
-import * as React from 'react'
+import * as React from 'react';
 import {
   useAutocomplete,
-  AutocompleteGetTagProps
-} from '@mui/base/AutocompleteUnstyled'
-import { Check as CheckIcon } from '@mui/icons-material'
-import { Close as CloseIcon } from '@mui/icons-material'
-import { styled } from '@mui/material'
+  AutocompleteGetTagProps,
+} from '@mui/base/AutocompleteUnstyled';
+import { Check as CheckIcon } from '@mui/icons-material';
+import { Close as CloseIcon } from '@mui/icons-material';
+import { styled } from '@mui/material';
 
 const Root = styled('div')(
   ({ theme }) => `
@@ -14,13 +14,13 @@ const Root = styled('div')(
   };
   font-size: 14px;
 `
-)
+);
 
 const Label = styled('label')`
   padding: 0 0 4px;
   line-height: 1.5;
   display: block;
-`
+`;
 
 const InputWrapper = styled('div')(
   ({ theme }) => `
@@ -59,20 +59,20 @@ const InputWrapper = styled('div')(
     outline: 0;
   }
 `
-)
+);
 
 interface TagProps extends ReturnType<AutocompleteGetTagProps> {
-  label: string
+  label: string;
 }
 
 function Tag(props: TagProps) {
-  const { label, onDelete, ...other } = props
+  const { label, onDelete, ...other } = props;
   return (
     <div {...other}>
       <span>{label}</span>
       <CloseIcon onClick={onDelete} />
     </div>
-  )
+  );
 }
 
 const StyledTag = styled(Tag)<TagProps>(
@@ -109,7 +109,7 @@ const StyledTag = styled(Tag)<TagProps>(
     padding: 4px;
   }
 `
-)
+);
 
 const Listbox = styled('ul')(
   ({ theme }) => `
@@ -156,7 +156,7 @@ const Listbox = styled('ul')(
     }
   }
 `
-)
+);
 
 function CustomizedHook_() {
   const {
@@ -169,14 +169,14 @@ function CustomizedHook_() {
     groupedOptions,
     value,
     focused,
-    setAnchorEl
+    setAnchorEl,
   } = useAutocomplete({
     id: 'customized-hook-demo',
     defaultValue: [top100Films[1]],
     multiple: true,
     options: top100Films,
-    getOptionLabel: option => option.title
-  })
+    getOptionLabel: (option) => option.title,
+  });
 
   return (
     <Root>
@@ -200,12 +200,12 @@ function CustomizedHook_() {
         </Listbox>
       ) : null}
     </Root>
-  )
+  );
 }
 
 interface FilmOptionType {
-  title: string
-  year: number
+  title: string;
+  year: number;
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
@@ -219,23 +219,23 @@ const top100Films = [
   { title: 'Pulp Fiction', year: 1994 },
   {
     title: 'The Lord of the Rings: The Return of the King',
-    year: 2003
+    year: 2003,
   },
   { title: 'The Good, the Bad and the Ugly', year: 1966 },
   { title: 'Fight Club', year: 1999 },
   {
     title: 'The Lord of the Rings: The Fellowship of the Ring',
-    year: 2001
+    year: 2001,
   },
   {
     title: 'Star Wars: Episode V - The Empire Strikes Back',
-    year: 1980
+    year: 1980,
   },
   { title: 'Forrest Gump', year: 1994 },
   { title: 'Inception', year: 2010 },
   {
     title: 'The Lord of the Rings: The Two Towers',
-    year: 2002
+    year: 2002,
   },
   { title: "One Flew Over the Cuckoo's Nest", year: 1975 },
   { title: 'Goodfellas', year: 1990 },
@@ -243,7 +243,7 @@ const top100Films = [
   { title: 'Seven Samurai', year: 1954 },
   {
     title: 'Star Wars: Episode IV - A New Hope',
-    year: 1977
+    year: 1977,
   },
   { title: 'City of God', year: 2002 },
   { title: 'Se7en', year: 1995 },
@@ -280,7 +280,7 @@ const top100Films = [
   {
     title:
       'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
-    year: 1964
+    year: 1964,
   },
   { title: 'The Great Dictator', year: 1940 },
   { title: 'Cinema Paradiso', year: 1988 },
@@ -303,7 +303,7 @@ const top100Films = [
   { title: 'Vertigo', year: 1958 },
   {
     title: 'Star Wars: Episode VI - Return of the Jedi',
-    year: 1983
+    year: 1983,
   },
   { title: 'Reservoir Dogs', year: 1992 },
   { title: 'Braveheart', year: 1995 },
@@ -317,7 +317,7 @@ const top100Films = [
   { title: 'Double Indemnity', year: 1944 },
   {
     title: 'Eternal Sunshine of the Spotless Mind',
-    year: 2004
+    year: 2004,
   },
   { title: 'Amadeus', year: 1984 },
   { title: 'To Kill a Mockingbird', year: 1962 },
@@ -334,7 +334,7 @@ const top100Films = [
   { title: 'Inglourious Basterds', year: 2009 },
   { title: 'Snatch', year: 2000 },
   { title: '3 Idiots', year: 2009 },
-  { title: 'Monty Python and the Holy Grail', year: 1975 }
-]
+  { title: 'Monty Python and the Holy Grail', year: 1975 },
+];
 
-export const CustomizedHook = () => <CustomizedHook_ />
+export const CustomizedHook = () => <CustomizedHook_ />;

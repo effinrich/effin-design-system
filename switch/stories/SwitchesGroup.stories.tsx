@@ -1,24 +1,24 @@
-import * as React from 'react'
-import { FormLabel } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { FormGroup } from '@mui/material'
-import { FormControlLabel } from '@mui/material'
-import { FormHelperText } from '@mui/material'
-import { Switch } from '~/switch'
+import * as React from 'react';
+import { FormLabel } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { FormGroup } from '@mui/material';
+import { FormControlLabel } from '@mui/material';
+import { FormHelperText } from '@mui/material';
+import { Switch } from '~/switch';
 
 function SwitchesGroup_() {
   const [state, setState] = React.useState({
     gilad: true,
     jason: false,
-    antoine: true
-  })
+    antoine: true,
+  });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setState({
       ...state,
-      [event.target.name]: event.target.checked
-    })
-  }
+      [event.target.name]: event.target.checked,
+    });
+  };
 
   return (
     <FormControl component="fieldset" variant="standard">
@@ -57,7 +57,7 @@ function SwitchesGroup_() {
       </FormGroup>
       <FormHelperText>Be careful</FormHelperText>
     </FormControl>
-  )
+  );
 }
 
-export const SwitchesGroup = () => <SwitchesGroup_ />
+export const SwitchesGroup = () => <SwitchesGroup_ />;

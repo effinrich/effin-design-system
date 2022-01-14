@@ -1,20 +1,20 @@
-import * as React from 'react'
-import { Typography } from '~/typography'
-import { Pagination } from '~/pagination'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Typography } from '~/typography';
+import { Pagination } from '~/pagination';
+import { Stack } from '~/stack';
 
 function PaginationControlled_() {
-  const [page, setPage] = React.useState(1)
+  const [page, setPage] = React.useState(1);
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    setPage(value)
-  }
+    setPage(value);
+  };
 
   return (
     <Stack spacing={2}>
       <Typography>Page: {page}</Typography>
       <Pagination count={10} page={page} onChange={handleChange} />
     </Stack>
-  )
+  );
 }
 
-export const PaginationControlled = () => <PaginationControlled_ />
+export const PaginationControlled = () => <PaginationControlled_ />;

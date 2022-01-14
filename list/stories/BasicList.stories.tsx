@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { List } from '~/list'
-import { ListItem } from '@mui/material'
-import { ListItemButton } from '@mui/material'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { Divider } from '~/divider'
-import { Inbox as InboxIcon } from '@mui/icons-material'
-import { Drafts as DraftsIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { List } from '~/list';
+import { ListItem } from '@mui/material';
+import { ListItemButton } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { Divider } from '~/divider';
+import { Inbox as InboxIcon } from '@mui/icons-material';
+import { Drafts as DraftsIcon } from '@mui/icons-material';
 
 function BasicList_() {
   return (
@@ -48,7 +48,7 @@ function BasicList_() {
         </List>
       </nav>
     </Box>
-  )
+  );
 }
 
-export const BasicList = () => <BasicList_ />
+export const BasicList = () => <BasicList_ />;

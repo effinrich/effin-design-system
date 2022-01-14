@@ -6,8 +6,7 @@
   "type": "module",
   "homepage": "{{ homepage }}",
   "scripts": {
-    "serve": "npx backlight@latest serve 3ekDBovxH09957LsX1ed --open",
-    "format": "prettier ./ --write"
+    "serve": "npx backlight@latest serve 3ekDBovxH09957LsX1ed --open"
   },
   "dependencies": {
     "@date-io/date-fns-jalali": "^2.11.0",

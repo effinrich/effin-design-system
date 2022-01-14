@@ -1,8 +1,8 @@
-import * as React from 'react'
-import TabsUnstyled from '@mui/base/TabsUnstyled'
-import TabsListUnstyled from '@mui/base/TabsListUnstyled'
-import TabPanelUnstyled from '@mui/base/TabPanelUnstyled'
-import TabUnstyled from '@mui/base/TabUnstyled'
+import * as React from 'react';
+import TabsUnstyled from '@mui/base/TabsUnstyled';
+import TabsListUnstyled from '@mui/base/TabsListUnstyled';
+import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
+import TabUnstyled from '@mui/base/TabUnstyled';
 
 function UnstyledTabsBasic_() {
   return (
@@ -16,7 +16,7 @@ function UnstyledTabsBasic_() {
       <TabPanelUnstyled value={1}>Second content</TabPanelUnstyled>
       <TabPanelUnstyled value={2}>Third content</TabPanelUnstyled>
     </TabsUnstyled>
-  )
+  );
 }
 
-export const UnstyledTabsBasic = () => <UnstyledTabsBasic_ />
+export const UnstyledTabsBasic = () => <UnstyledTabsBasic_ />;

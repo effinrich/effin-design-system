@@ -1,1 +1,1 @@
-export { Rating } from '@mui/material'
+export { Rating } from '@mui/material';

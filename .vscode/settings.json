@@ -1,5 +1,7 @@
 {
-  "cSpell.words": ["Boop"],
+  "cSpell.words": [
+    "Boop"
+  ],
   "workbench.colorCustomizations": {
     "statusBar.noFolderBackground": "#222225",
     "statusBar.debuggingBackground": "#511f1f",

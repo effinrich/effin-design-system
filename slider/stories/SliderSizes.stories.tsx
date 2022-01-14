@@ -1,7 +1,7 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import { Box } from '~/box'
-import { Slider } from '~/slider'
+import { Box } from '~/box';
+import { Slider } from '~/slider';
 
 function SliderSizes_() {
   return (
@@ -14,7 +14,7 @@ function SliderSizes_() {
       />
       <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
     </Box>
-  )
+  );
 }
 
-export const SliderSizes = () => <SliderSizes_ />
+export const SliderSizes = () => <SliderSizes_ />;

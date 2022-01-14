@@ -1,28 +1,28 @@
-import * as React from 'react'
-import SwipeableViews from 'react-swipeable-views'
-import { useTheme } from '@mui/material'
-import { AppBar } from '~/app-bar'
-import { Tabs } from '~/tabs'
-import { Tab } from '@mui/material'
-import { Typography } from '~/typography'
-import { Zoom } from '@mui/material'
-import { Fab } from '~/floating-action-button'
-import { Add as AddIcon } from '@mui/icons-material'
-import { Edit as EditIcon } from '@mui/icons-material'
-import { KeyboardArrowUp as UpIcon } from '@mui/icons-material'
-import { green } from '@mui/material/colors'
-import { Box } from '~/box'
-import { SxProps } from '@mui/system'
+import * as React from 'react';
+import SwipeableViews from 'react-swipeable-views';
+import { useTheme } from '@mui/material';
+import { AppBar } from '~/app-bar';
+import { Tabs } from '~/tabs';
+import { Tab } from '@mui/material';
+import { Typography } from '~/typography';
+import { Zoom } from '@mui/material';
+import { Fab } from '~/floating-action-button';
+import { Add as AddIcon } from '@mui/icons-material';
+import { Edit as EditIcon } from '@mui/icons-material';
+import { KeyboardArrowUp as UpIcon } from '@mui/icons-material';
+import { green } from '@mui/material/colors';
+import { Box } from '~/box';
+import { SxProps } from '@mui/system';
 
 interface TabPanelProps {
-  children?: React.ReactNode
-  dir?: string
-  index: number
-  value: number
+  children?: React.ReactNode;
+  dir?: string;
+  index: number;
+  value: number;
 }
 
 function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props
+  const { children, value, index, ...other } = props;
 
   return (
     <Typography
@@ -35,67 +35,67 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </Typography>
-  )
+  );
 }
 
 function a11yProps(index: any) {
   return {
     id: `action-tab-${index}`,
-    'aria-controls': `action-tabpanel-${index}`
-  }
+    'aria-controls': `action-tabpanel-${index}`,
+  };
 }
 
 const fabStyle = {
   position: 'absolute',
   bottom: 16,
-  right: 16
-}
+  right: 16,
+};
 
 const fabGreenStyle = {
   color: 'common.white',
   bgcolor: green[500],
   '&:hover': {
-    bgcolor: green[600]
-  }
-}
+    bgcolor: green[600],
+  },
+};
 
 function FloatingActionButtonZoom_() {
-  const theme = useTheme()
-  const [value, setValue] = React.useState(0)
+  const theme = useTheme();
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event: unknown, newValue: number) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
 
   const handleChangeIndex = (index: number) => {
-    setValue(index)
-  }
+    setValue(index);
+  };
 
   const transitionDuration = {
     enter: theme.transitions.duration.enteringScreen,
-    exit: theme.transitions.duration.leavingScreen
-  }
+    exit: theme.transitions.duration.leavingScreen,
+  };
 
   const fabs = [
     {
       color: 'primary' as 'primary',
       sx: fabStyle as SxProps,
       icon: <AddIcon />,
-      label: 'Add'
+      label: 'Add',
     },
     {
       color: 'secondary' as 'secondary',
       sx: fabStyle as SxProps,
       icon: <EditIcon />,
-      label: 'Edit'
+      label: 'Edit',
     },
     {
       color: 'inherit' as 'inherit',
       sx: { ...fabStyle, ...fabGreenStyle } as SxProps,
       icon: <UpIcon />,
-      label: 'Expand'
-    }
-  ]
+      label: 'Expand',
+    },
+  ];
 
   return (
     <Box
@@ -103,7 +103,7 @@ function FloatingActionButtonZoom_() {
         bgcolor: 'background.paper',
         width: 500,
         position: 'relative',
-        minHeight: 200
+        minHeight: 200,
       }}
     >
       <AppBar position="static" color="default">
@@ -143,7 +143,7 @@ function FloatingActionButtonZoom_() {
           style={{
             transitionDelay: `${
               value === index ? transitionDuration.exit : 0
-            }ms`
+            }ms`,
           }}
           unmountOnExit
         >
@@ -153,7 +153,7 @@ function FloatingActionButtonZoom_() {
         </Zoom>
       ))}
     </Box>
-  )
+  );
 }
 
-export const FloatingActionButtonZoom = () => <FloatingActionButtonZoom_ />
+export const FloatingActionButtonZoom = () => <FloatingActionButtonZoom_ />;

@@ -1,19 +1,21 @@
-import * as React from 'react'
-import { TextField } from '~/text-field'
-import { Autocomplete } from '~/autocomplete'
+import * as React from 'react';
+import { TextField } from '~/text-field';
+import { Autocomplete } from '~/autocomplete';
 
 function DisabledOptions_() {
   return (
     <Autocomplete
       id="disabled-options-demo"
       options={timeSlots}
-      getOptionDisabled={option =>
+      getOptionDisabled={(option) =>
         option === timeSlots[0] || option === timeSlots[2]
       }
       sx={{ width: 300 }}
-      renderInput={params => <TextField {...params} label="Disabled options" />}
+      renderInput={(params) => (
+        <TextField {...params} label="Disabled options" />
+      )}
     />
-  )
+  );
 }
 
 // One time slot every 30 minutes.
@@ -22,6 +24,6 @@ const timeSlots = Array.from(new Array(24 * 2)).map(
     `${index < 20 ? '0' : ''}${Math.floor(index / 2)}:${
       index % 2 === 0 ? '00' : '30'
     }`
-)
+);
 
-export const DisabledOptions = () => <DisabledOptions_ />
+export const DisabledOptions = () => <DisabledOptions_ />;

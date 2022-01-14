@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Skeleton } from '~/skeleton'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Skeleton } from '~/skeleton';
+import { Stack } from '~/stack';
 
 function Variants_() {
   return (
@@ -9,7 +9,7 @@ function Variants_() {
       <Skeleton variant="circular" width={40} height={40} />
       <Skeleton variant="rectangular" width={210} height={118} />
     </Stack>
-  )
+  );
 }
 
-export const Variants = () => <Variants_ />
+export const Variants = () => <Variants_ />;

@@ -1,12 +1,12 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Paper } from '~/paper'
-import { Grid } from '~/grid'
-import { Avatar } from '~/avatar'
-import { Typography } from '~/typography'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Paper } from '~/paper';
+import { Grid } from '~/grid';
+import { Avatar } from '~/avatar';
+import { Typography } from '~/typography';
 
 const message = `Truncation should be conditionally applicable on this long line of text
- as this is a much longer line than what the container can support. `
+ as this is a much longer line than what the container can support. `;
 
 function AutoGridNoWrap_() {
   return (
@@ -42,7 +42,7 @@ function AutoGridNoWrap_() {
         </Grid>
       </Paper>
     </Box>
-  )
+  );
 }
 
-export const AutoGridNoWrap = () => <AutoGridNoWrap_ />
+export const AutoGridNoWrap = () => <AutoGridNoWrap_ />;

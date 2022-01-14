@@ -1,41 +1,41 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Fade } from '@mui/material'
-import { Button } from '~/button'
-import { CircularProgress } from '~/progress'
-import { Typography } from '~/typography'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Fade } from '@mui/material';
+import { Button } from '~/button';
+import { CircularProgress } from '~/progress';
+import { Typography } from '~/typography';
 
 function DelayingAppearance_() {
-  const [loading, setLoading] = React.useState(false)
-  const [query, setQuery] = React.useState('idle')
-  const timerRef = React.useRef<number>()
+  const [loading, setLoading] = React.useState(false);
+  const [query, setQuery] = React.useState('idle');
+  const timerRef = React.useRef<number>();
 
   React.useEffect(
     () => () => {
-      clearTimeout(timerRef.current)
+      clearTimeout(timerRef.current);
     },
     []
-  )
+  );
 
   const handleClickLoading = () => {
-    setLoading(prevLoading => !prevLoading)
-  }
+    setLoading((prevLoading) => !prevLoading);
+  };
 
   const handleClickQuery = () => {
     if (timerRef.current) {
-      clearTimeout(timerRef.current)
+      clearTimeout(timerRef.current);
     }
 
     if (query !== 'idle') {
-      setQuery('idle')
-      return
+      setQuery('idle');
+      return;
     }
 
-    setQuery('progress')
+    setQuery('progress');
     timerRef.current = window.setTimeout(() => {
-      setQuery('success')
-    }, 2000)
-  }
+      setQuery('success');
+    }, 2000);
+  };
 
   return (
     <Box
@@ -45,7 +45,7 @@ function DelayingAppearance_() {
         <Fade
           in={loading}
           style={{
-            transitionDelay: loading ? '800ms' : '0ms'
+            transitionDelay: loading ? '800ms' : '0ms',
           }}
           unmountOnExit
         >
@@ -62,7 +62,7 @@ function DelayingAppearance_() {
           <Fade
             in={query === 'progress'}
             style={{
-              transitionDelay: query === 'progress' ? '800ms' : '0ms'
+              transitionDelay: query === 'progress' ? '800ms' : '0ms',
             }}
             unmountOnExit
           >
@@ -74,7 +74,7 @@ function DelayingAppearance_() {
         {query !== 'idle' ? 'Reset' : 'Simulate a load'}
       </Button>
     </Box>
-  )
+  );
 }
 
-export const DelayingAppearance = () => <DelayingAppearance_ />
+export const DelayingAppearance = () => <DelayingAppearance_ />;

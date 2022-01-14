@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Radio } from '~/radio-button'
-import { RadioGroup } from '@mui/material'
-import { FormControlLabel } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { FormLabel } from '@mui/material'
+import * as React from 'react';
+import { Radio } from '~/radio-button';
+import { RadioGroup } from '@mui/material';
+import { FormControlLabel } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { FormLabel } from '@mui/material';
 
 function RowRadioButtonsGroup_() {
   return (
@@ -21,7 +21,7 @@ function RowRadioButtonsGroup_() {
         />
       </RadioGroup>
     </FormControl>
-  )
+  );
 }
 
-export const RowRadioButtonsGroup = () => <RowRadioButtonsGroup_ />
+export const RowRadioButtonsGroup = () => <RowRadioButtonsGroup_ />;

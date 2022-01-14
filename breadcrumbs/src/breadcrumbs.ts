@@ -1,1 +1,1 @@
-export { Breadcrumbs } from '@mui/material'
+export { Breadcrumbs } from '@mui/material';

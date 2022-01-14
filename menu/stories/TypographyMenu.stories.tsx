@@ -1,12 +1,12 @@
-import * as React from 'react'
-import { MenuList } from '~/menu'
-import { MenuItem } from '~/menu'
-import { Paper } from '~/paper'
-import { ListItemIcon } from '@mui/material'
-import { Typography } from '~/typography'
-import { Drafts as DraftsIcon } from '@mui/icons-material'
-import { Send as SendIcon } from '@mui/icons-material'
-import { PriorityHigh as PriorityHighIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { MenuList } from '~/menu';
+import { MenuItem } from '~/menu';
+import { Paper } from '~/paper';
+import { ListItemIcon } from '@mui/material';
+import { Typography } from '~/typography';
+import { Drafts as DraftsIcon } from '@mui/icons-material';
+import { Send as SendIcon } from '@mui/icons-material';
+import { PriorityHigh as PriorityHighIcon } from '@mui/icons-material';
 
 function TypographyMenu_() {
   return (
@@ -36,7 +36,7 @@ function TypographyMenu_() {
         </MenuItem>
       </MenuList>
     </Paper>
-  )
+  );
 }
 
-export const TypographyMenu = () => <TypographyMenu_ />
+export const TypographyMenu = () => <TypographyMenu_ />;

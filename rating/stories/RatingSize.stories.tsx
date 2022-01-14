@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Rating } from '~/rating'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Rating } from '~/rating';
+import { Stack } from '~/stack';
 
 function RatingSIze_() {
   return (
@@ -9,7 +9,7 @@ function RatingSIze_() {
       <Rating name="size-medium" defaultValue={2} />
       <Rating name="size-large" defaultValue={2} size="large" />
     </Stack>
-  )
+  );
 }
 
-export const RatingSIze = () => <RatingSIze_ />
+export const RatingSIze = () => <RatingSIze_ />;

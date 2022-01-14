@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Collapse } from '@mui/material'
-import { IconButton } from '@mui/material'
-import { Table } from '~/table'
-import { TableBody } from '@mui/material'
-import { TableCell } from '@mui/material'
-import { TableContainer } from '@mui/material'
-import { TableHead } from '@mui/material'
-import { TableRow } from '@mui/material'
-import { Typography } from '~/typography'
-import { Paper } from '~/paper'
-import { KeyboardArrowDown as KeyboardArrowDownIcon } from '@mui/icons-material'
-import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Collapse } from '@mui/material';
+import { IconButton } from '@mui/material';
+import { Table } from '~/table';
+import { TableBody } from '@mui/material';
+import { TableCell } from '@mui/material';
+import { TableContainer } from '@mui/material';
+import { TableHead } from '@mui/material';
+import { TableRow } from '@mui/material';
+import { Typography } from '~/typography';
+import { Paper } from '~/paper';
+import { KeyboardArrowDown as KeyboardArrowDownIcon } from '@mui/icons-material';
+import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material';
 
 function createData(
   name: string,
@@ -32,20 +32,20 @@ function createData(
       {
         date: '2020-01-05',
         customerId: '11091700',
-        amount: 3
+        amount: 3,
       },
       {
         date: '2020-01-02',
         customerId: 'Anonymous',
-        amount: 1
-      }
-    ]
-  }
+        amount: 1,
+      },
+    ],
+  };
 }
 
 function Row(props: { row: ReturnType<typeof createData> }) {
-  const { row } = props
-  const [open, setOpen] = React.useState(false)
+  const { row } = props;
+  const [open, setOpen] = React.useState(false);
 
   return (
     <React.Fragment>
@@ -84,7 +84,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {row.history.map(historyRow => (
+                  {row.history.map((historyRow) => (
                     <TableRow key={historyRow.date}>
                       <TableCell component="th" scope="row">
                         {historyRow.date}
@@ -103,7 +103,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         </TableCell>
       </TableRow>
     </React.Fragment>
-  )
+  );
 }
 
 const rows = [
@@ -111,8 +111,8 @@ const rows = [
   createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
   createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
   createData('Cupcake', 305, 3.7, 67, 4.3, 2.5),
-  createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5)
-]
+  createData('Gingerbread', 356, 16.0, 49, 3.9, 1.5),
+];
 
 function CollapsibleTable_() {
   return (
@@ -129,13 +129,13 @@ function CollapsibleTable_() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
+          {rows.map((row) => (
             <Row key={row.name} row={row} />
           ))}
         </TableBody>
       </Table>
     </TableContainer>
-  )
+  );
 }
 
-export const CollapsibleTable = () => <CollapsibleTable_ />
+export const CollapsibleTable = () => <CollapsibleTable_ />;

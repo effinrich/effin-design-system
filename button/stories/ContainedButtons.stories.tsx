@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Button } from '~/button';
+import { Stack } from '~/stack';
 
 function ContainedButtons_() {
   return (
@@ -13,7 +13,7 @@ function ContainedButtons_() {
         Link
       </Button>
     </Stack>
-  )
+  );
 }
 
-export const ContainedButtons = () => <ContainedButtons_ />
+export const ContainedButtons = () => <ContainedButtons_ />;

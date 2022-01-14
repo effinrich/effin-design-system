@@ -1,19 +1,21 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { CircularProgress } from '~/progress'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { CircularProgress } from '~/progress';
 
 function CircularDeterminate_() {
-  const [progress, setProgress] = React.useState(0)
+  const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress(prevProgress => (prevProgress >= 100 ? 0 : prevProgress + 10))
-    }, 800)
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 10
+      );
+    }, 800);
 
     return () => {
-      clearInterval(timer)
-    }
-  }, [])
+      clearInterval(timer);
+    };
+  }, []);
 
   return (
     <Stack spacing={2} direction="row">
@@ -23,7 +25,7 @@ function CircularDeterminate_() {
       <CircularProgress variant="determinate" value={100} />
       <CircularProgress variant="determinate" value={progress} />
     </Stack>
-  )
+  );
 }
 
-export const CircularDeterminate = () => <CircularDeterminate_ />
+export const CircularDeterminate = () => <CircularDeterminate_ />;

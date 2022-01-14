@@ -1,47 +1,47 @@
-import * as React from 'react'
-import { Table } from '~/table'
-import { TableBody } from '@mui/material'
-import { TableCell } from '@mui/material'
-import { TableContainer } from '@mui/material'
-import { TableHead } from '@mui/material'
-import { TableRow } from '@mui/material'
-import { Paper } from '~/paper'
+import * as React from 'react';
+import { Table } from '~/table';
+import { TableBody } from '@mui/material';
+import { TableCell } from '@mui/material';
+import { TableContainer } from '@mui/material';
+import { TableHead } from '@mui/material';
+import { TableRow } from '@mui/material';
+import { Paper } from '~/paper';
 
-const TAX_RATE = 0.07
+const TAX_RATE = 0.07;
 
 function ccyFormat(num: number) {
-  return `${num.toFixed(2)}`
+  return `${num.toFixed(2)}`;
 }
 
 function priceRow(qty: number, unit: number) {
-  return qty * unit
+  return qty * unit;
 }
 
 function createRow(desc: string, qty: number, unit: number) {
-  const price = priceRow(qty, unit)
-  return { desc, qty, unit, price }
+  const price = priceRow(qty, unit);
+  return { desc, qty, unit, price };
 }
 
 interface Row {
-  desc: string
-  qty: number
-  unit: number
-  price: number
+  desc: string;
+  qty: number;
+  unit: number;
+  price: number;
 }
 
 function subtotal(items: readonly Row[]) {
-  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0)
+  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
 const rows = [
   createRow('Paperclips (Box)', 100, 1.15),
   createRow('Paper (Case)', 10, 45.99),
-  createRow('Waste Basket', 2, 17.99)
-]
+  createRow('Waste Basket', 2, 17.99),
+];
 
-const invoiceSubtotal = subtotal(rows)
-const invoiceTaxes = TAX_RATE * invoiceSubtotal
-const invoiceTotal = invoiceTaxes + invoiceSubtotal
+const invoiceSubtotal = subtotal(rows);
+const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+const invoiceTotal = invoiceTaxes + invoiceSubtotal;
 
 function SpanningTable_() {
   return (
@@ -62,7 +62,7 @@ function SpanningTable_() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map(row => (
+          {rows.map((row) => (
             <TableRow key={row.desc}>
               <TableCell>{row.desc}</TableCell>
               <TableCell align="right">{row.qty}</TableCell>
@@ -89,7 +89,7 @@ function SpanningTable_() {
         </TableBody>
       </Table>
     </TableContainer>
-  )
+  );
 }
 
-export const SpanningTable = () => <SpanningTable_ />
+export const SpanningTable = () => <SpanningTable_ />;

@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Alert } from '~/alert'
-import { Check as CheckIcon } from '@mui/icons-material'
-import { CheckCircleOutline as CheckCircleOutlineIcon } from '@mui/icons-material'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Alert } from '~/alert';
+import { Check as CheckIcon } from '@mui/icons-material';
+import { CheckCircleOutline as CheckCircleOutlineIcon } from '@mui/icons-material';
+import { Stack } from '~/stack';
 
 function IconAlerts_() {
   return (
@@ -12,7 +12,7 @@ function IconAlerts_() {
       </Alert>
       <Alert
         iconMapping={{
-          success: <CheckCircleOutlineIcon fontSize="inherit" />
+          success: <CheckCircleOutlineIcon fontSize="inherit" />,
         }}
       >
         This is a success alert — check it out!
@@ -21,7 +21,7 @@ function IconAlerts_() {
         This is a success alert — check it out!
       </Alert>
     </Stack>
-  )
+  );
 }
 
-export const IconAlerts = () => <IconAlerts_ />
+export const IconAlerts = () => <IconAlerts_ />;

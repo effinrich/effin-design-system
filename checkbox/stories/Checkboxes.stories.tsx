@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Checkbox } from '~/checkbox'
+import * as React from 'react';
+import { Checkbox } from '~/checkbox';
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } }
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 function Checkboxes_() {
   return (
@@ -11,7 +11,7 @@ function Checkboxes_() {
       <Checkbox {...label} disabled />
       <Checkbox {...label} disabled checked />
     </div>
-  )
+  );
 }
 
-export const Checkboxes = () => <Checkboxes_ />
+export const Checkboxes = () => <Checkboxes_ />;

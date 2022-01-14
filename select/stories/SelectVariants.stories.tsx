@@ -1,16 +1,16 @@
-import * as React from 'react'
-import { InputLabel } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormControl } from '@mui/material'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
+import * as React from 'react';
+import { InputLabel } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormControl } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
 function SelectVariants_() {
-  const [age, setAge] = React.useState('')
+  const [age, setAge] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value)
-  }
+    setAge(event.target.value);
+  };
 
   return (
     <div>
@@ -48,7 +48,7 @@ function SelectVariants_() {
         </Select>
       </FormControl>
     </div>
-  )
+  );
 }
 
-export const SelectVariants = () => <SelectVariants_ />
+export const SelectVariants = () => <SelectVariants_ />;

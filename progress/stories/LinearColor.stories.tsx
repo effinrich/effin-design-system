@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { LinearProgress } from '~/progress'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { LinearProgress } from '~/progress';
 
 function LinearColor_() {
   return (
@@ -9,7 +9,7 @@ function LinearColor_() {
       <LinearProgress color="success" />
       <LinearProgress color="inherit" />
     </Stack>
-  )
+  );
 }
 
-export const LinearColor = () => <LinearColor_ />
+export const LinearColor = () => <LinearColor_ />;

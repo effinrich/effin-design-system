@@ -1,16 +1,16 @@
-import * as React from 'react'
-import { IconButton } from '@mui/material'
-import { Badge } from '~/badge'
-import { Mail as MailIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { IconButton } from '@mui/material';
+import { Badge } from '~/badge';
+import { Mail as MailIcon } from '@mui/icons-material';
 
 function notificationsLabel(count: number) {
   if (count === 0) {
-    return 'no notifications'
+    return 'no notifications';
   }
   if (count > 99) {
-    return 'more than 99 notifications'
+    return 'more than 99 notifications';
   }
-  return `${count} notifications`
+  return `${count} notifications`;
 }
 
 function AccessibleBadges_() {
@@ -20,7 +20,7 @@ function AccessibleBadges_() {
         <MailIcon />
       </Badge>
     </IconButton>
-  )
+  );
 }
 
-export const AccessibleBadges = () => <AccessibleBadges_ />
+export const AccessibleBadges = () => <AccessibleBadges_ />;

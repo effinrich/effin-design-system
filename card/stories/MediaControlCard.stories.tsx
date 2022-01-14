@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { useTheme } from '@mui/material'
-import { Box } from '~/box'
-import { Card } from '~/card'
-import { CardContent } from '@mui/material'
-import { CardMedia } from '@mui/material'
-import { IconButton } from '@mui/material'
-import { Typography } from '~/typography'
-import { SkipPrevious as SkipPreviousIcon } from '@mui/icons-material'
-import { PlayArrow as PlayArrowIcon } from '@mui/icons-material'
-import { SkipNext as SkipNextIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { useTheme } from '@mui/material';
+import { Box } from '~/box';
+import { Card } from '~/card';
+import { CardContent } from '@mui/material';
+import { CardMedia } from '@mui/material';
+import { IconButton } from '@mui/material';
+import { Typography } from '~/typography';
+import { SkipPrevious as SkipPreviousIcon } from '@mui/icons-material';
+import { PlayArrow as PlayArrowIcon } from '@mui/icons-material';
+import { SkipNext as SkipNextIcon } from '@mui/icons-material';
 
 function MediaControlCard_() {
-  const theme = useTheme()
+  const theme = useTheme();
 
   return (
     <Card sx={{ display: 'flex' }}>
@@ -55,7 +55,7 @@ function MediaControlCard_() {
         alt="Live from space album cover"
       />
     </Card>
-  )
+  );
 }
 
-export const MediaControlCard = () => <MediaControlCard_ />
+export const MediaControlCard = () => <MediaControlCard_ />;

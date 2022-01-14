@@ -1,24 +1,24 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Drawer } from '~/drawer'
-import { Button } from '~/button'
-import { List } from '~/list'
-import { Divider } from '~/divider'
-import { ListItem } from '@mui/material'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { MoveToInbox as InboxIcon } from '@mui/icons-material'
-import { Mail as MailIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Drawer } from '~/drawer';
+import { Button } from '~/button';
+import { List } from '~/list';
+import { Divider } from '~/divider';
+import { ListItem } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { MoveToInbox as InboxIcon } from '@mui/icons-material';
+import { Mail as MailIcon } from '@mui/icons-material';
 
-type Anchor = 'top' | 'left' | 'bottom' | 'right'
+type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 function TemporaryDrawer_() {
   const [state, setState] = React.useState({
     top: false,
     left: false,
     bottom: false,
-    right: false
-  })
+    right: false,
+  });
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -28,11 +28,11 @@ function TemporaryDrawer_() {
         ((event as React.KeyboardEvent).key === 'Tab' ||
           (event as React.KeyboardEvent).key === 'Shift')
       ) {
-        return
+        return;
       }
 
-      setState({ ...state, [anchor]: open })
-    }
+      setState({ ...state, [anchor]: open });
+    };
 
   const list = (anchor: Anchor) => (
     <Box
@@ -63,11 +63,11 @@ function TemporaryDrawer_() {
         ))}
       </List>
     </Box>
-  )
+  );
 
   return (
     <div>
-      {(['left', 'right', 'top', 'bottom'] as const).map(anchor => (
+      {(['left', 'right', 'top', 'bottom'] as const).map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer
@@ -80,7 +80,7 @@ function TemporaryDrawer_() {
         </React.Fragment>
       ))}
     </div>
-  )
+  );
 }
 
-export const TemporaryDrawer = () => <TemporaryDrawer_ />
+export const TemporaryDrawer = () => <TemporaryDrawer_ />;

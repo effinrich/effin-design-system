@@ -1,16 +1,16 @@
-import * as React from 'react'
-import { InputLabel } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormControl } from '@mui/material'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
+import * as React from 'react';
+import { InputLabel } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormControl } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
 function SelectAutoWidth_() {
-  const [age, setAge] = React.useState('')
+  const [age, setAge] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value)
-  }
+    setAge(event.target.value);
+  };
 
   return (
     <div>
@@ -33,7 +33,7 @@ function SelectAutoWidth_() {
         </Select>
       </FormControl>
     </div>
-  )
+  );
 }
 
-export const SelectAutoWidth = () => <SelectAutoWidth_ />
+export const SelectAutoWidth = () => <SelectAutoWidth_ />;

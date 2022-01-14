@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { IconButton } from '@mui/material'
-import { Menu } from '~/menu'
-import { MenuItem } from '~/menu'
-import { MoreVert as MoreVertIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { IconButton } from '@mui/material';
+import { Menu } from '~/menu';
+import { MenuItem } from '~/menu';
+import { MoreVert as MoreVertIcon } from '@mui/icons-material';
 
 const options = [
   'None',
@@ -18,20 +18,20 @@ const options = [
   'Sedna',
   'Titania',
   'Triton',
-  'Umbriel'
-]
+  'Umbriel',
+];
 
-const ITEM_HEIGHT = 48
+const ITEM_HEIGHT = 48;
 
 function LongMenu_() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
   const handleClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
   return (
     <div>
@@ -48,7 +48,7 @@ function LongMenu_() {
       <Menu
         id="long-menu"
         MenuListProps={{
-          'aria-labelledby': 'long-button'
+          'aria-labelledby': 'long-button',
         }}
         anchorEl={anchorEl}
         open={open}
@@ -56,11 +56,11 @@ function LongMenu_() {
         PaperProps={{
           style: {
             maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch'
-          }
+            width: '20ch',
+          },
         }}
       >
-        {options.map(option => (
+        {options.map((option) => (
           <MenuItem
             key={option}
             selected={option === 'Pyxis'}
@@ -71,7 +71,7 @@ function LongMenu_() {
         ))}
       </Menu>
     </div>
-  )
+  );
 }
 
-export const LongMenu = () => <LongMenu_ />
+export const LongMenu = () => <LongMenu_ />;

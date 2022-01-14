@@ -1,1 +1,1 @@
-export { ToggleButton } from '@mui/material'
+export { ToggleButton } from '@mui/material';

@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { InputLabel } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormHelperText } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
+import * as React from 'react';
+import { InputLabel } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormHelperText } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
 
 function SelectOtherProps_() {
-  const [age, setAge] = React.useState('')
+  const [age, setAge] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value)
-  }
+    setAge(event.target.value);
+  };
 
   return (
     <div>
@@ -41,7 +41,7 @@ function SelectOtherProps_() {
           value={age}
           label="Age"
           onChange={handleChange}
-          renderValue={value => `⚠️  - ${value}`}
+          renderValue={(value) => `⚠️  - ${value}`}
         >
           <MenuItem value="">
             <em>None</em>
@@ -90,7 +90,7 @@ function SelectOtherProps_() {
         <FormHelperText>Required</FormHelperText>
       </FormControl>
     </div>
-  )
+  );
 }
 
-export const SelectOtherProps = () => <SelectOtherProps_ />
+export const SelectOtherProps = () => <SelectOtherProps_ />;

@@ -1,28 +1,28 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { FormLabel } from '@mui/material'
-import { FormControl } from '@mui/material'
-import { FormGroup } from '@mui/material'
-import { FormControlLabel } from '@mui/material'
-import { FormHelperText } from '@mui/material'
-import { Checkbox } from '~/checkbox'
+import * as React from 'react';
+import { Box } from '~/box';
+import { FormLabel } from '@mui/material';
+import { FormControl } from '@mui/material';
+import { FormGroup } from '@mui/material';
+import { FormControlLabel } from '@mui/material';
+import { FormHelperText } from '@mui/material';
+import { Checkbox } from '~/checkbox';
 
 function CheckboxesGroup_() {
   const [state, setState] = React.useState({
     gilad: true,
     jason: false,
-    antoine: false
-  })
+    antoine: false,
+  });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setState({
       ...state,
-      [event.target.name]: event.target.checked
-    })
-  }
+      [event.target.name]: event.target.checked,
+    });
+  };
 
-  const { gilad, jason, antoine } = state
-  const error = [gilad, jason, antoine].filter(v => v).length !== 2
+  const { gilad, jason, antoine } = state;
+  const error = [gilad, jason, antoine].filter((v) => v).length !== 2;
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -89,7 +89,7 @@ function CheckboxesGroup_() {
         <FormHelperText>You can display an error</FormHelperText>
       </FormControl>
     </Box>
-  )
+  );
 }
 
-export const CheckboxesGroup = () => <CheckboxesGroup_ />
+export const CheckboxesGroup = () => <CheckboxesGroup_ />;

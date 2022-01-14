@@ -1,1 +1,1 @@
-export { ButtonGroup } from '@mui/material'
+export { ButtonGroup } from '@mui/material';

@@ -1,26 +1,26 @@
-import * as React from 'react'
-import { styled, alpha } from '@mui/material'
-import { Button } from '~/button'
-import { Menu } from '~/menu'
-import { MenuProps } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { Edit as EditIcon } from '@mui/icons-material'
-import { Divider } from '~/divider'
-import { Archive as ArchiveIcon } from '@mui/icons-material'
-import { FileCopy as FileCopyIcon } from '@mui/icons-material'
-import { MoreHoriz as MoreHorizIcon } from '@mui/icons-material'
-import { KeyboardArrowDown as KeyboardArrowDownIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { styled, alpha } from '@mui/material';
+import { Button } from '~/button';
+import { Menu } from '~/menu';
+import { MenuProps } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { Edit as EditIcon } from '@mui/icons-material';
+import { Divider } from '~/divider';
+import { Archive as ArchiveIcon } from '@mui/icons-material';
+import { FileCopy as FileCopyIcon } from '@mui/icons-material';
+import { MoreHoriz as MoreHorizIcon } from '@mui/icons-material';
+import { KeyboardArrowDown as KeyboardArrowDownIcon } from '@mui/icons-material';
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
     elevation={0}
     anchorOrigin={{
       vertical: 'bottom',
-      horizontal: 'right'
+      horizontal: 'right',
     }}
     transformOrigin={{
       vertical: 'top',
-      horizontal: 'right'
+      horizontal: 'right',
     }}
     {...props}
   />
@@ -36,33 +36,33 @@ const StyledMenu = styled((props: MenuProps) => (
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     '& .MuiMenu-list': {
-      padding: '4px 0'
+      padding: '4px 0',
     },
     '& .MuiMenuItem-root': {
       '& .MuiSvgIcon-root': {
         fontSize: 18,
         color: theme.palette.text.secondary,
-        marginRight: theme.spacing(1.5)
+        marginRight: theme.spacing(1.5),
       },
       '&:active': {
         backgroundColor: alpha(
           theme.palette.primary.main,
           theme.palette.action.selectedOpacity
-        )
-      }
-    }
-  }
-}))
+        ),
+      },
+    },
+  },
+}));
 
 function CustomizedMenus_() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
   const handleClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
   return (
     <div>
@@ -81,7 +81,7 @@ function CustomizedMenus_() {
       <StyledMenu
         id="demo-customized-menu"
         MenuListProps={{
-          'aria-labelledby': 'demo-customized-button'
+          'aria-labelledby': 'demo-customized-button',
         }}
         anchorEl={anchorEl}
         open={open}
@@ -106,7 +106,7 @@ function CustomizedMenus_() {
         </MenuItem>
       </StyledMenu>
     </div>
-  )
+  );
 }
 
-export const CustomizedMenus = () => <CustomizedMenus_ />
+export const CustomizedMenus = () => <CustomizedMenus_ />;

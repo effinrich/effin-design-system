@@ -1,14 +1,14 @@
-import * as React from 'react'
-import { styled } from '@mui/material'
-import { Box } from '~/box'
-import { Paper } from '~/paper'
+import * as React from 'react';
+import { styled } from '@mui/material';
+import { Box } from '~/box';
+import { Paper } from '~/paper';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary
-}))
+  color: theme.palette.text.secondary,
+}));
 
 function CSSGrid_() {
   return (
@@ -28,7 +28,7 @@ function CSSGrid_() {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }
 
-export const CSSGrid = () => <CSSGrid_ />
+export const CSSGrid = () => <CSSGrid_ />;

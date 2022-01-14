@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { Accordion } from '~/accordion'
-import { AccordionDetails } from '@mui/material'
-import { AccordionSummary } from '@mui/material'
-import { Typography } from '~/typography'
-import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Accordion } from '~/accordion';
+import { AccordionDetails } from '@mui/material';
+import { AccordionSummary } from '@mui/material';
+import { Typography } from '~/typography';
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
 function ControlledAccordions_() {
-  const [expanded, setExpanded] = React.useState<string | false>(false)
+  const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : false)
-    }
+      setExpanded(isExpanded ? panel : false);
+    };
 
   return (
     <div>
@@ -104,7 +104,7 @@ function ControlledAccordions_() {
         </AccordionDetails>
       </Accordion>
     </div>
-  )
+  );
 }
 
-export const ControlledAccordions = () => <ControlledAccordions_ />
+export const ControlledAccordions = () => <ControlledAccordions_ />;

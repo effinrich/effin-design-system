@@ -1,12 +1,12 @@
-import * as React from 'react'
-import { Checkbox } from '~/checkbox'
-import { TextField } from '~/text-field'
-import { Autocomplete } from '~/autocomplete'
-import { CheckBoxOutlineBlank as CheckBoxOutlineBlankIcon } from '@mui/icons-material'
-import { CheckBox as CheckBoxIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Checkbox } from '~/checkbox';
+import { TextField } from '~/text-field';
+import { Autocomplete } from '~/autocomplete';
+import { CheckBoxOutlineBlank as CheckBoxOutlineBlankIcon } from '@mui/icons-material';
+import { CheckBox as CheckBoxIcon } from '@mui/icons-material';
 
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />
-const checkedIcon = <CheckBoxIcon fontSize="small" />
+const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
+const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
 function CheckboxesTags_() {
   return (
@@ -15,7 +15,7 @@ function CheckboxesTags_() {
       id="checkboxes-tags-demo"
       options={top100Films}
       disableCloseOnSelect
-      getOptionLabel={option => option.title}
+      getOptionLabel={(option) => option.title}
       renderOption={(props, option, { selected }) => (
         <li {...props}>
           <Checkbox
@@ -28,11 +28,11 @@ function CheckboxesTags_() {
         </li>
       )}
       style={{ width: 500 }}
-      renderInput={params => (
+      renderInput={(params) => (
         <TextField {...params} label="Checkboxes" placeholder="Favorites" />
       )}
     />
-  )
+  );
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
@@ -46,23 +46,23 @@ const top100Films = [
   { title: 'Pulp Fiction', year: 1994 },
   {
     title: 'The Lord of the Rings: The Return of the King',
-    year: 2003
+    year: 2003,
   },
   { title: 'The Good, the Bad and the Ugly', year: 1966 },
   { title: 'Fight Club', year: 1999 },
   {
     title: 'The Lord of the Rings: The Fellowship of the Ring',
-    year: 2001
+    year: 2001,
   },
   {
     title: 'Star Wars: Episode V - The Empire Strikes Back',
-    year: 1980
+    year: 1980,
   },
   { title: 'Forrest Gump', year: 1994 },
   { title: 'Inception', year: 2010 },
   {
     title: 'The Lord of the Rings: The Two Towers',
-    year: 2002
+    year: 2002,
   },
   { title: "One Flew Over the Cuckoo's Nest", year: 1975 },
   { title: 'Goodfellas', year: 1990 },
@@ -70,7 +70,7 @@ const top100Films = [
   { title: 'Seven Samurai', year: 1954 },
   {
     title: 'Star Wars: Episode IV - A New Hope',
-    year: 1977
+    year: 1977,
   },
   { title: 'City of God', year: 2002 },
   { title: 'Se7en', year: 1995 },
@@ -83,7 +83,7 @@ const top100Films = [
   { title: 'Saving Private Ryan', year: 1998 },
   { title: 'Once Upon a Time in the West', year: 1968 },
   { title: 'American History X', year: 1998 },
-  { title: 'Interstellar', year: 2014 }
-]
+  { title: 'Interstellar', year: 2014 },
+];
 
-export const CheckboxesTags = () => <CheckboxesTags_ />
+export const CheckboxesTags = () => <CheckboxesTags_ />;

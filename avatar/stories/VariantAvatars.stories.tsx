@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Avatar } from '~/avatar'
-import { Stack } from '~/stack'
-import { deepOrange, green } from '@mui/material/colors'
-import { Assignment as AssignmentIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Avatar } from '~/avatar';
+import { Stack } from '~/stack';
+import { deepOrange, green } from '@mui/material/colors';
+import { Assignment as AssignmentIcon } from '@mui/icons-material';
 
 function VariantAvatars_() {
   return (
@@ -14,7 +14,7 @@ function VariantAvatars_() {
         <AssignmentIcon />
       </Avatar>
     </Stack>
-  )
+  );
 }
 
-export const VariantAvatars = () => <VariantAvatars_ />
+export const VariantAvatars = () => <VariantAvatars_ />;

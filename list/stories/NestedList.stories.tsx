@@ -1,23 +1,23 @@
-import * as React from 'react'
-import { ListSubheader } from '@mui/material'
-import { List } from '~/list'
-import { ListItemButton } from '@mui/material'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { Collapse } from '@mui/material'
-import { MoveToInbox as InboxIcon } from '@mui/icons-material'
-import { Drafts as DraftsIcon } from '@mui/icons-material'
-import { Send as SendIcon } from '@mui/icons-material'
-import { ExpandLess } from '@mui/icons-material'
-import { ExpandMore } from '@mui/icons-material'
-import { StarBorder } from '@mui/icons-material'
+import * as React from 'react';
+import { ListSubheader } from '@mui/material';
+import { List } from '~/list';
+import { ListItemButton } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { Collapse } from '@mui/material';
+import { MoveToInbox as InboxIcon } from '@mui/icons-material';
+import { Drafts as DraftsIcon } from '@mui/icons-material';
+import { Send as SendIcon } from '@mui/icons-material';
+import { ExpandLess } from '@mui/icons-material';
+import { ExpandMore } from '@mui/icons-material';
+import { StarBorder } from '@mui/icons-material';
 
 function NestedList_() {
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(true);
 
   const handleClick = () => {
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   return (
     <List
@@ -60,7 +60,7 @@ function NestedList_() {
         </List>
       </Collapse>
     </List>
-  )
+  );
 }
 
-export const NestedList = () => <NestedList_ />
+export const NestedList = () => <NestedList_ />;

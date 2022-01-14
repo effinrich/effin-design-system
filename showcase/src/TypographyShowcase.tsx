@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { useTheme } from '@mui/material/styles'
-import { Caption } from '@divriots/dockit-react/caption'
+import * as React from 'react';
+import { useTheme } from '@mui/material/styles';
+import { Caption } from '@divriots/dockit-react/caption';
 
 const styles = {
   name: {
-    fontSize: '1rem'
+    fontSize: '1rem',
   },
   value: {
     fontFamily: 'monospace',
-    fontSize: '.875rem'
-  }
-}
+    fontSize: '.875rem',
+  },
+};
 
 export const TypographyShowcase = ({ typography }) => {
-  const theme = useTheme()
+  const theme = useTheme();
 
   const definitionToStyle = ([name, value]) => ({
     name,
@@ -24,8 +24,8 @@ export const TypographyShowcase = ({ typography }) => {
           ? { ...styles, [styleName]: value }
           : styles,
       {}
-    )
-  })
+    ),
+  });
 
   return (
     <table>
@@ -46,7 +46,7 @@ export const TypographyShowcase = ({ typography }) => {
                 <span
                   style={{
                     ...styles.value,
-                    color: theme.palette.text.secondary
+                    color: theme.palette.text.secondary,
                   }}
                 >
                   {value}
@@ -61,5 +61,5 @@ export const TypographyShowcase = ({ typography }) => {
           ))}
       </tbody>
     </table>
-  )
-}
+  );
+};

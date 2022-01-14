@@ -1,65 +1,65 @@
-import * as React from 'react'
-import { styled, useTheme } from '@mui/material'
-import { Box } from '~/box'
-import { Drawer } from '~/drawer'
-import { AppBar as MuiAppBar } from '~/app-bar'
-import { AppBarProps as MuiAppBarProps } from '@mui/material'
-import { Toolbar } from '@mui/material'
-import { CssBaseline } from '@mui/material'
-import { List } from '~/list'
-import { Typography } from '~/typography'
-import { Divider } from '~/divider'
-import { IconButton } from '@mui/material'
-import { Menu as MenuIcon } from '@mui/icons-material'
-import { ChevronLeft as ChevronLeftIcon } from '@mui/icons-material'
-import { ChevronRight as ChevronRightIcon } from '@mui/icons-material'
-import { ListItem } from '@mui/material'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { MoveToInbox as InboxIcon } from '@mui/icons-material'
-import { Mail as MailIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { styled, useTheme } from '@mui/material';
+import { Box } from '~/box';
+import { Drawer } from '~/drawer';
+import { AppBar as MuiAppBar } from '~/app-bar';
+import { AppBarProps as MuiAppBarProps } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { CssBaseline } from '@mui/material';
+import { List } from '~/list';
+import { Typography } from '~/typography';
+import { Divider } from '~/divider';
+import { IconButton } from '@mui/material';
+import { Menu as MenuIcon } from '@mui/icons-material';
+import { ChevronLeft as ChevronLeftIcon } from '@mui/icons-material';
+import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
+import { ListItem } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { MoveToInbox as InboxIcon } from '@mui/icons-material';
+import { Mail as MailIcon } from '@mui/icons-material';
 
-const drawerWidth = 240
+const drawerWidth = 240;
 
-const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
-  open?: boolean
+const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
+  open?: boolean;
 }>(({ theme, open }) => ({
   flexGrow: 1,
   padding: theme.spacing(3),
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
+    duration: theme.transitions.duration.leavingScreen,
   }),
   marginRight: -drawerWidth,
   ...(open && {
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
+      duration: theme.transitions.duration.enteringScreen,
     }),
-    marginRight: 0
-  })
-}))
+    marginRight: 0,
+  }),
+}));
 
 interface AppBarProps extends MuiAppBarProps {
-  open?: boolean
+  open?: boolean;
 }
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: prop => prop !== 'open'
+  shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
+    duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
+      duration: theme.transitions.duration.enteringScreen,
     }),
-    marginRight: drawerWidth
-  })
-}))
+    marginRight: drawerWidth,
+  }),
+}));
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -67,20 +67,20 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: 'flex-start'
-}))
+  justifyContent: 'flex-start',
+}));
 
 function PersistentDrawerRight_() {
-  const theme = useTheme()
-  const [open, setOpen] = React.useState(false)
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleDrawerClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -138,8 +138,8 @@ function PersistentDrawerRight_() {
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: drawerWidth
-          }
+            width: drawerWidth,
+          },
         }}
         variant="persistent"
         anchor="right"
@@ -178,7 +178,7 @@ function PersistentDrawerRight_() {
         </List>
       </Drawer>
     </Box>
-  )
+  );
 }
 
-export const PersistentDrawerRight = () => <PersistentDrawerRight_ />
+export const PersistentDrawerRight = () => <PersistentDrawerRight_ />;

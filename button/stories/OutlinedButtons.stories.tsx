@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Button } from '~/button';
+import { Stack } from '~/stack';
 
 function OutlinedButtons_() {
   return (
@@ -13,7 +13,7 @@ function OutlinedButtons_() {
         Link
       </Button>
     </Stack>
-  )
+  );
 }
 
-export const OutlinedButtons = () => <OutlinedButtons_ />
+export const OutlinedButtons = () => <OutlinedButtons_ />;

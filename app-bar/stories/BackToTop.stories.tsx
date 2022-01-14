@@ -1,47 +1,47 @@
-import * as React from 'react'
-import { AppBar } from '~/app-bar'
-import { Toolbar } from '@mui/material'
-import { Typography } from '~/typography'
-import { CssBaseline } from '@mui/material'
-import { useScrollTrigger } from '@mui/material'
-import { Box } from '~/box'
-import { Container } from '~/container'
-import { Fab } from '~/floating-action-button'
-import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material'
-import { Zoom } from '@mui/material'
+import * as React from 'react';
+import { AppBar } from '~/app-bar';
+import { Toolbar } from '@mui/material';
+import { Typography } from '~/typography';
+import { CssBaseline } from '@mui/material';
+import { useScrollTrigger } from '@mui/material';
+import { Box } from '~/box';
+import { Container } from '~/container';
+import { Fab } from '~/floating-action-button';
+import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@mui/icons-material';
+import { Zoom } from '@mui/material';
 
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window?: () => Window
-  children: React.ReactElement
+  window?: () => Window;
+  children: React.ReactElement;
 }
 
 function ScrollTop(props: Props) {
-  const { children, window } = props
+  const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
     disableHysteresis: true,
-    threshold: 100
-  })
+    threshold: 100,
+  });
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const anchor = (
       (event.target as HTMLDivElement).ownerDocument || document
-    ).querySelector('#back-to-top-anchor')
+    ).querySelector('#back-to-top-anchor');
 
     if (anchor) {
       anchor.scrollIntoView({
         behavior: 'smooth',
-        block: 'center'
-      })
+        block: 'center',
+      });
     }
-  }
+  };
 
   return (
     <Zoom in={trigger}>
@@ -53,7 +53,7 @@ function ScrollTop(props: Props) {
         {children}
       </Box>
     </Zoom>
-  )
+  );
 }
 
 function BackToTop_(props: Props) {
@@ -86,7 +86,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
         </Fab>
       </ScrollTop>
     </React.Fragment>
-  )
+  );
 }
 
-export const BackToTop = () => <BackToTop_ />
+export const BackToTop = () => <BackToTop_ />;

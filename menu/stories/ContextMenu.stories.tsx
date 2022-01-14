@@ -1,32 +1,32 @@
-import * as React from 'react'
-import { Menu } from '~/menu'
-import { MenuItem } from '~/menu'
-import { Typography } from '~/typography'
+import * as React from 'react';
+import { Menu } from '~/menu';
+import { MenuItem } from '~/menu';
+import { Typography } from '~/typography';
 
 function ContextMenu_() {
   const [contextMenu, setContextMenu] = React.useState<{
-    mouseX: number
-    mouseY: number
-  } | null>(null)
+    mouseX: number;
+    mouseY: number;
+  } | null>(null);
 
   const handleContextMenu = (event: React.MouseEvent) => {
-    event.preventDefault()
+    event.preventDefault();
     setContextMenu(
       contextMenu === null
         ? {
             mouseX: event.clientX - 2,
-            mouseY: event.clientY - 4
+            mouseY: event.clientY - 4,
           }
         : // repeated contextmenu when it is already open closes it with Chrome 84 on Ubuntu
           // Other native context menus might behave different.
           // With this behavior we prevent contextmenu from the backdrop to re-locale existing context menus.
           null
-    )
-  }
+    );
+  };
 
   const handleClose = () => {
-    setContextMenu(null)
-  }
+    setContextMenu(null);
+  };
 
   return (
     <div onContextMenu={handleContextMenu} style={{ cursor: 'context-menu' }}>
@@ -57,7 +57,7 @@ function ContextMenu_() {
         <MenuItem onClick={handleClose}>Email</MenuItem>
       </Menu>
     </div>
-  )
+  );
 }
 
-export const ContextMenu = () => <ContextMenu_ />
+export const ContextMenu = () => <ContextMenu_ />;

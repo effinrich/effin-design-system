@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { Drawer } from '~/drawer'
-import { CssBaseline } from '@mui/material'
-import { AppBar } from '~/app-bar'
-import { Toolbar } from '@mui/material'
-import { List } from '~/list'
-import { Typography } from '~/typography'
-import { Divider } from '~/divider'
-import { ListItem } from '@mui/material'
-import { ListItemIcon } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { MoveToInbox as InboxIcon } from '@mui/icons-material'
-import { Mail as MailIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Box } from '~/box';
+import { Drawer } from '~/drawer';
+import { CssBaseline } from '@mui/material';
+import { AppBar } from '~/app-bar';
+import { Toolbar } from '@mui/material';
+import { List } from '~/list';
+import { Typography } from '~/typography';
+import { Divider } from '~/divider';
+import { ListItem } from '@mui/material';
+import { ListItemIcon } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { MoveToInbox as InboxIcon } from '@mui/icons-material';
+import { Mail as MailIcon } from '@mui/icons-material';
 
-const drawerWidth = 240
+const drawerWidth = 240;
 
 function PermanentDrawerRight_() {
   return (
@@ -70,8 +70,8 @@ function PermanentDrawerRight_() {
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            boxSizing: 'border-box'
-          }
+            boxSizing: 'border-box',
+          },
         }}
         variant="permanent"
         anchor="right"
@@ -101,7 +101,7 @@ function PermanentDrawerRight_() {
         </List>
       </Drawer>
     </Box>
-  )
+  );
 }
 
-export const PermanentDrawerRight = () => <PermanentDrawerRight_ />
+export const PermanentDrawerRight = () => <PermanentDrawerRight_ />;

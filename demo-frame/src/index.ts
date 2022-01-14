@@ -1,1 +1,1 @@
-export { DemoFrame } from './DemoFrame'
+export { DemoFrame } from './DemoFrame';

@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { Button } from '~/button'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { Button } from '~/button';
 
 function BasicButtons_() {
   return (
@@ -9,7 +9,7 @@ function BasicButtons_() {
       <Button variant="contained">Contained</Button>
       <Button variant="outlined">Outlined</Button>
     </Stack>
-  )
+  );
 }
 
-export const BasicButtons = () => <BasicButtons_ />
+export const BasicButtons = () => <BasicButtons_ />;

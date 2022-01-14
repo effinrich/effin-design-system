@@ -1,17 +1,17 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { Menu } from '~/menu'
-import { MenuItem } from '~/menu'
+import * as React from 'react';
+import { Button } from '~/button';
+import { Menu } from '~/menu';
+import { MenuItem } from '~/menu';
 
 function PositionedMenu_() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
-  const open = Boolean(anchorEl)
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
   const handleClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
   return (
     <div>
@@ -32,11 +32,11 @@ function PositionedMenu_() {
         onClose={handleClose}
         anchorOrigin={{
           vertical: 'top',
-          horizontal: 'left'
+          horizontal: 'left',
         }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'left'
+          horizontal: 'left',
         }}
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
@@ -44,7 +44,7 @@ function PositionedMenu_() {
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>
-  )
+  );
 }
 
-export const PositionedMenu = () => <PositionedMenu_ />
+export const PositionedMenu = () => <PositionedMenu_ />;

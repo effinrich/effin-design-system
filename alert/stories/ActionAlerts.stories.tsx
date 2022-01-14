@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Alert } from '~/alert'
-import { Button } from '~/button'
-import { Stack } from '~/stack'
+import * as React from 'react';
+import { Alert } from '~/alert';
+import { Button } from '~/button';
+import { Stack } from '~/stack';
 
 function ActionAlerts_() {
   return (
@@ -17,7 +17,7 @@ function ActionAlerts_() {
         This is a success alert — check it out!
       </Alert>
     </Stack>
-  )
+  );
 }
 
-export const ActionAlerts = () => <ActionAlerts_ />
+export const ActionAlerts = () => <ActionAlerts_ />;

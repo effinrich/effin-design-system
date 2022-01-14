@@ -1,21 +1,21 @@
-import * as React from 'react'
-import { Button } from '~/button'
-import { Dialog } from '~/dialog'
-import { DialogActions } from '@mui/material'
-import { DialogContent } from '@mui/material'
-import { DialogContentText } from '@mui/material'
-import { DialogTitle } from '@mui/material'
+import * as React from 'react';
+import { Button } from '~/button';
+import { Dialog } from '~/dialog';
+import { DialogActions } from '@mui/material';
+import { DialogContent } from '@mui/material';
+import { DialogContentText } from '@mui/material';
+import { DialogTitle } from '@mui/material';
 
 function AlertDialog_() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
   const handleClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -45,7 +45,7 @@ function AlertDialog_() {
         </DialogActions>
       </Dialog>
     </div>
-  )
+  );
 }
 
-export const AlertDialog = () => <AlertDialog_ />
+export const AlertDialog = () => <AlertDialog_ />;

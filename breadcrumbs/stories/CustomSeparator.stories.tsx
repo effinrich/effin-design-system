@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Breadcrumbs } from '~/breadcrumbs'
-import { Typography } from '~/typography'
-import { Link } from '~/link'
-import { Stack } from '~/stack'
-import { NavigateNext as NavigateNextIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Breadcrumbs } from '~/breadcrumbs';
+import { Typography } from '~/typography';
+import { Link } from '~/link';
+import { Stack } from '~/stack';
+import { NavigateNext as NavigateNextIcon } from '@mui/icons-material';
 
 function handleClick(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
-  event.preventDefault()
-  console.info('You clicked a breadcrumb.')
+  event.preventDefault();
+  console.info('You clicked a breadcrumb.');
 }
 
 function CustomSeparator_() {
@@ -32,8 +32,8 @@ function CustomSeparator_() {
     </Link>,
     <Typography key="3" color="text.primary">
       Breadcrumb
-    </Typography>
-  ]
+    </Typography>,
+  ];
 
   return (
     <Stack spacing={2}>
@@ -50,7 +50,7 @@ function CustomSeparator_() {
         {breadcrumbs}
       </Breadcrumbs>
     </Stack>
-  )
+  );
 }
 
-export const CustomSeparator = () => <CustomSeparator_ />
+export const CustomSeparator = () => <CustomSeparator_ />;

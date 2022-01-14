@@ -1,1 +1,1 @@
-export { Divider } from '@mui/material'
+export { Divider } from '@mui/material';

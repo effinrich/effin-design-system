@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { Box } from '~/box'
-import { TextField } from '~/text-field'
+import * as React from 'react';
+import { Box } from '~/box';
+import { TextField } from '~/text-field';
 
 function RedBar() {
   return (
     <Box
       sx={{
         height: 20,
-        backgroundColor: theme =>
+        backgroundColor: (theme) =>
           theme.palette.mode === 'light'
             ? 'rgba(255, 0, 0, 0.1)'
-            : 'rgb(255 132 132 / 25%)'
+            : 'rgb(255 132 132 / 25%)',
       }}
     />
-  )
+  );
 }
 
 function LayoutTextFields_() {
@@ -22,7 +22,7 @@ function LayoutTextFields_() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        '& .MuiTextField-root': { width: '25ch' }
+        '& .MuiTextField-root': { width: '25ch' },
       }}
     >
       <RedBar />
@@ -33,7 +33,7 @@ function LayoutTextFields_() {
       <TextField label={'margin="normal"'} id="margin-normal" margin="normal" />
       <RedBar />
     </Box>
-  )
+  );
 }
 
-export const LayoutTextFields = () => <LayoutTextFields_ />
+export const LayoutTextFields = () => <LayoutTextFields_ />;

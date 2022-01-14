@@ -1,1 +1,1 @@
-export { Badge } from '@mui/material'
+export { Badge } from '@mui/material';

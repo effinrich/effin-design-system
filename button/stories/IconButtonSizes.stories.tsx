@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { Stack } from '~/stack'
-import { IconButton } from '@mui/material'
-import { Delete as DeleteIcon } from '@mui/icons-material'
+import * as React from 'react';
+import { Stack } from '~/stack';
+import { IconButton } from '@mui/material';
+import { Delete as DeleteIcon } from '@mui/icons-material';
 
 function IconButtonSizes_() {
   return (
@@ -19,7 +19,7 @@ function IconButtonSizes_() {
         <DeleteIcon fontSize="inherit" />
       </IconButton>
     </Stack>
-  )
+  );
 }
 
-export const IconButtonSizes = () => <IconButtonSizes_ />
+export const IconButtonSizes = () => <IconButtonSizes_ />;

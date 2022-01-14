@@ -1,1 +1,1 @@
-export { Backdrop } from '@mui/material'
+export { Backdrop } from '@mui/material';

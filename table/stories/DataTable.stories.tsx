@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid'
+import * as React from 'react';
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -9,7 +9,7 @@ const columns: GridColDef[] = [
     field: 'age',
     headerName: 'Age',
     type: 'number',
-    width: 90
+    width: 90,
   },
   {
     field: 'fullName',
@@ -20,9 +20,9 @@ const columns: GridColDef[] = [
     valueGetter: (params: GridValueGetterParams) =>
       `${params.getValue(params.id, 'firstName') || ''} ${
         params.getValue(params.id, 'lastName') || ''
-      }`
-  }
-]
+      }`,
+  },
+];
 
 const rows = [
   { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
@@ -33,8 +33,8 @@ const rows = [
   { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
   { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
   { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 }
-]
+  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+];
 
 function DataTable_() {
   return (
@@ -47,7 +47,7 @@ function DataTable_() {
         checkboxSelection
       />
     </div>
-  )
+  );
 }
 
-export const DataTable = () => <DataTable_ />
+export const DataTable = () => <DataTable_ />;

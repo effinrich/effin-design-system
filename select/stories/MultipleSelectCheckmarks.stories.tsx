@@ -1,23 +1,23 @@
-import * as React from 'react'
-import { OutlinedInput } from '@mui/material'
-import { InputLabel } from '@mui/material'
-import { MenuItem } from '~/menu'
-import { FormControl } from '@mui/material'
-import { ListItemText } from '@mui/material'
-import { Select } from '~/select'
-import { SelectChangeEvent } from '@mui/material'
-import { Checkbox } from '~/checkbox'
+import * as React from 'react';
+import { OutlinedInput } from '@mui/material';
+import { InputLabel } from '@mui/material';
+import { MenuItem } from '~/menu';
+import { FormControl } from '@mui/material';
+import { ListItemText } from '@mui/material';
+import { Select } from '~/select';
+import { SelectChangeEvent } from '@mui/material';
+import { Checkbox } from '~/checkbox';
 
-const ITEM_HEIGHT = 48
-const ITEM_PADDING_TOP = 8
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
 const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250
-    }
-  }
-}
+      width: 250,
+    },
+  },
+};
 
 const names = [
   'Oliver Hansen',
@@ -29,21 +29,21 @@ const names = [
   'Miriam Wagner',
   'Bradley Wilkerson',
   'Virginia Andrews',
-  'Kelly Snyder'
-]
+  'Kelly Snyder',
+];
 
 function MultipleSelectCheckmarks_() {
-  const [personName, setPersonName] = React.useState<string[]>([])
+  const [personName, setPersonName] = React.useState<string[]>([]);
 
   const handleChange = (event: SelectChangeEvent<typeof personName>) => {
     const {
-      target: { value }
-    } = event
+      target: { value },
+    } = event;
     setPersonName(
       // On autofill we get a the stringified value.
       typeof value === 'string' ? value.split(',') : value
-    )
-  }
+    );
+  };
 
   return (
     <div>
@@ -56,10 +56,10 @@ function MultipleSelectCheckmarks_() {
           value={personName}
           onChange={handleChange}
           input={<OutlinedInput label="Tag" />}
-          renderValue={selected => selected.join(', ')}
+          renderValue={(selected) => selected.join(', ')}
           MenuProps={MenuProps}
         >
-          {names.map(name => (
+          {names.map((name) => (
             <MenuItem key={name} value={name}>
               <Checkbox checked={personName.indexOf(name) > -1} />
               <ListItemText primary={name} />
@@ -68,7 +68,7 @@ function MultipleSelectCheckmarks_() {
         </Select>
       </FormControl>
     </div>
-  )
+  );
 }
 
-export const MultipleSelectCheckmarks = () => <MultipleSelectCheckmarks_ />
+export const MultipleSelectCheckmarks = () => <MultipleSelectCheckmarks_ />;
