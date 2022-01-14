@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { useInput } from '@mui/base';
-import { styled } from '@mui/system';
+import * as React from 'react'
+import { useInput } from '@mui/base'
+import { styled } from '@mui/system'
 
 const StyledInputElement = styled('input')`
   width: 200px;
@@ -25,25 +25,23 @@ const StyledInputElement = styled('input')`
     width: 220px;
     transition: width 200ms ease-out;
   }
-`;
+`
 
 const CustomInput = React.forwardRef(function CustomInput(
   props: React.InputHTMLAttributes<HTMLInputElement>,
   ref: React.ForwardedRef<HTMLInputElement>
 ) {
-  const { getRootProps, getInputProps } = useInput(props, ref);
+  const { getRootProps, getInputProps } = useInput(props, ref)
 
   return (
     <div {...getRootProps()}>
       <StyledInputElement {...props} {...getInputProps()} />
     </div>
-  );
-});
+  )
+})
 
 function UseInput_() {
-  return (
-    <CustomInput aria-label="Demo input" placeholder="Type something..." />
-  );
+  return <CustomInput aria-label="Demo input" placeholder="Type something..." />
 }
 
-export const UseInput = () => <UseInput_ />;
+export const UseInput = () => <UseInput_ />

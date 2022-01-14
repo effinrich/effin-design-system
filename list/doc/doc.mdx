@@ -1,23 +1,23 @@
-import { List } from '~/list';
-import { BasicList as BasicList } from '../stories/BasicList.stories';
-import { NestedList as NestedList } from '../stories/NestedList.stories';
-import { FolderList as FolderList } from '../stories/FolderList.stories';
-import { InteractiveList as InteractiveList } from '../stories/InteractiveList.stories';
-import { SelectedListItem as SelectedListItem } from '../stories/SelectedListItem.stories';
-import { AlignItemsList as AlignItemsList } from '../stories/AlignItemsList.stories';
-import { CheckboxList as CheckboxList } from '../stories/CheckboxList.stories';
-import { CheckboxListSecondary as CheckboxListSecondary } from '../stories/CheckboxListSecondary.stories';
-import { SwitchListSecondary as SwitchListSecondary } from '../stories/SwitchListSecondary.stories';
-import { PinnedSubheaderList as PinnedSubheaderList } from '../stories/PinnedSubheaderList.stories';
-import { InsetList as InsetList } from '../stories/InsetList.stories';
-import { GutterlessList as GutterlessList } from '../stories/GutterlessList.stories';
-import { VirtualizedList as VirtualizedList } from '../stories/VirtualizedList.stories';
-import { CustomizedList as CustomizedList } from '../stories/CustomizedList.stories';
-import { mdx } from '@mdx-js/react';
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
-import { DemoFrame } from '~/demo-frame';
-import { MdxLayout } from '~/layout';
-export default MdxLayout;
+import { List } from '~/list'
+import { BasicList as BasicList } from '../stories/BasicList.stories'
+import { NestedList as NestedList } from '../stories/NestedList.stories'
+import { FolderList as FolderList } from '../stories/FolderList.stories'
+import { InteractiveList as InteractiveList } from '../stories/InteractiveList.stories'
+import { SelectedListItem as SelectedListItem } from '../stories/SelectedListItem.stories'
+import { AlignItemsList as AlignItemsList } from '../stories/AlignItemsList.stories'
+import { CheckboxList as CheckboxList } from '../stories/CheckboxList.stories'
+import { CheckboxListSecondary as CheckboxListSecondary } from '../stories/CheckboxListSecondary.stories'
+import { SwitchListSecondary as SwitchListSecondary } from '../stories/SwitchListSecondary.stories'
+import { PinnedSubheaderList as PinnedSubheaderList } from '../stories/PinnedSubheaderList.stories'
+import { InsetList as InsetList } from '../stories/InsetList.stories'
+import { GutterlessList as GutterlessList } from '../stories/GutterlessList.stories'
+import { VirtualizedList as VirtualizedList } from '../stories/VirtualizedList.stories'
+import { CustomizedList as CustomizedList } from '../stories/CustomizedList.stories'
+import { mdx } from '@mdx-js/react'
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
+import { DemoFrame } from '~/demo-frame'
+import { MdxLayout } from '~/layout'
+export default MdxLayout
 
 # Lists
 
@@ -140,7 +140,7 @@ When rendering a list within a component that defines its own gutters, `ListItem
 <GutterlessList />
 ```tsx
 <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-  {[1, 2, 3].map((value) => (
+  {[1, 2, 3].map(value => (
     <ListItem
       key={value}
       disableGutters

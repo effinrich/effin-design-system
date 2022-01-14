@@ -1,1 +1,1 @@
-export { AppBar } from '@mui/material';
+export { AppBar } from '@mui/material'

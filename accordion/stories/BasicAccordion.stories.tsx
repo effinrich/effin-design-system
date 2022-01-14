@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Accordion } from '~/accordion';
-import { AccordionSummary } from '@mui/material';
-import { AccordionDetails } from '@mui/material';
-import { Typography } from '~/typography';
-import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Accordion } from '~/accordion'
+import { AccordionSummary } from '@mui/material'
+import { AccordionDetails } from '@mui/material'
+import { Typography } from '~/typography'
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material'
 
 function SimpleAccordion_() {
   return (
@@ -48,7 +48,7 @@ function SimpleAccordion_() {
         </AccordionSummary>
       </Accordion>
     </div>
-  );
+  )
 }
 
-export const SimpleAccordion = () => <SimpleAccordion_ />;
+export const SimpleAccordion = () => <SimpleAccordion_ />

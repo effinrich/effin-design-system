@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { TextField } from '~/text-field';
+import * as React from 'react'
+import { Box } from '~/box'
+import { TextField } from '~/text-field'
 
 function ValidationTextFields_() {
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
+        '& .MuiTextField-root': { m: 1, width: '25ch' }
       }}
       noValidate
       autoComplete="off"
@@ -62,7 +62,7 @@ function ValidationTextFields_() {
         />
       </div>
     </Box>
-  );
+  )
 }
 
-export const ValidationTextFields = () => <ValidationTextFields_ />;
+export const ValidationTextFields = () => <ValidationTextFields_ />

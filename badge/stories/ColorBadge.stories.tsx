@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Badge } from '~/badge';
-import { Stack } from '~/stack';
-import { Mail as MailIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Badge } from '~/badge'
+import { Stack } from '~/stack'
+import { Mail as MailIcon } from '@mui/icons-material'
 
 function ColorBadge_() {
   return (
@@ -13,7 +13,7 @@ function ColorBadge_() {
         <MailIcon color="action" />
       </Badge>
     </Stack>
-  );
+  )
 }
 
-export const ColorBadge = () => <ColorBadge_ />;
+export const ColorBadge = () => <ColorBadge_ />

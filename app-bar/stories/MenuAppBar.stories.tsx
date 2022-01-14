@@ -1,32 +1,32 @@
-import * as React from 'react';
-import { AppBar } from '~/app-bar';
-import { Box } from '~/box';
-import { Toolbar } from '@mui/material';
-import { Typography } from '~/typography';
-import { IconButton } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
-import { AccountCircle } from '@mui/icons-material';
-import { Switch } from '~/switch';
-import { FormControlLabel } from '@mui/material';
-import { FormGroup } from '@mui/material';
-import { MenuItem } from '~/menu';
-import { Menu } from '~/menu';
+import * as React from 'react'
+import { AppBar } from '~/app-bar'
+import { Box } from '~/box'
+import { Toolbar } from '@mui/material'
+import { Typography } from '~/typography'
+import { IconButton } from '@mui/material'
+import { Menu as MenuIcon } from '@mui/icons-material'
+import { AccountCircle } from '@mui/icons-material'
+import { Switch } from '~/switch'
+import { FormControlLabel } from '@mui/material'
+import { FormGroup } from '@mui/material'
+import { MenuItem } from '~/menu'
+import { Menu } from '~/menu'
 
 function MenuAppBar_() {
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [auth, setAuth] = React.useState(true)
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAuth(event.target.checked);
-  };
+    setAuth(event.target.checked)
+  }
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(event.currentTarget)
+  }
 
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -73,12 +73,12 @@ function MenuAppBar_() {
                 anchorEl={anchorEl}
                 anchorOrigin={{
                   vertical: 'top',
-                  horizontal: 'right',
+                  horizontal: 'right'
                 }}
                 keepMounted
                 transformOrigin={{
                   vertical: 'top',
-                  horizontal: 'right',
+                  horizontal: 'right'
                 }}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
@@ -91,7 +91,7 @@ function MenuAppBar_() {
         </Toolbar>
       </AppBar>
     </Box>
-  );
+  )
 }
 
-export const MenuAppBar = () => <MenuAppBar_ />;
+export const MenuAppBar = () => <MenuAppBar_ />

@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Tabs } from '~/tabs';
-import { Tab } from '@mui/material';
-import { Box } from '~/box';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Tabs } from '~/tabs'
+import { Tab } from '@mui/material'
+import { Box } from '~/box'
 
 const AntTabs = styled(Tabs)({
   borderBottom: '1px solid #e8e8e8',
   '& .MuiTabs-indicator': {
-    backgroundColor: '#1890ff',
-  },
-});
+    backgroundColor: '#1890ff'
+  }
+})
 
 const AntTab = styled((props: StyledTabProps) => (
   <Tab disableRipple {...props} />
@@ -17,7 +17,7 @@ const AntTab = styled((props: StyledTabProps) => (
   textTransform: 'none',
   minWidth: 0,
   [theme.breakpoints.up('sm')]: {
-    minWidth: 0,
+    minWidth: 0
   },
   fontWeight: theme.typography.fontWeightRegular,
   marginRight: theme.spacing(1),
@@ -32,25 +32,25 @@ const AntTab = styled((props: StyledTabProps) => (
     'sans-serif',
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
+    '"Segoe UI Symbol"'
   ].join(','),
   '&:hover': {
     color: '#40a9ff',
-    opacity: 1,
+    opacity: 1
   },
   '&.Mui-selected': {
     color: '#1890ff',
-    fontWeight: theme.typography.fontWeightMedium,
+    fontWeight: theme.typography.fontWeightMedium
   },
   '&.Mui-focusVisible': {
-    backgroundColor: '#d1eaff',
-  },
-}));
+    backgroundColor: '#d1eaff'
+  }
+}))
 
 interface StyledTabsProps {
-  children?: React.ReactNode;
-  value: number;
-  onChange: (event: React.SyntheticEvent, newValue: number) => void;
+  children?: React.ReactNode
+  value: number
+  onChange: (event: React.SyntheticEvent, newValue: number) => void
 }
 
 const StyledTabs = styled((props: StyledTabsProps) => (
@@ -62,17 +62,17 @@ const StyledTabs = styled((props: StyledTabsProps) => (
   '& .MuiTabs-indicator': {
     display: 'flex',
     justifyContent: 'center',
-    backgroundColor: 'transparent',
+    backgroundColor: 'transparent'
   },
   '& .MuiTabs-indicatorSpan': {
     maxWidth: 40,
     width: '100%',
-    backgroundColor: '#635ee7',
-  },
-});
+    backgroundColor: '#635ee7'
+  }
+})
 
 interface StyledTabProps {
-  label: string;
+  label: string
 }
 
 const StyledTab = styled((props: StyledTabProps) => (
@@ -84,19 +84,19 @@ const StyledTab = styled((props: StyledTabProps) => (
   marginRight: theme.spacing(1),
   color: 'rgba(255, 255, 255, 0.7)',
   '&.Mui-selected': {
-    color: '#fff',
+    color: '#fff'
   },
   '&.Mui-focusVisible': {
-    backgroundColor: 'rgba(100, 95, 228, 0.32)',
-  },
-}));
+    backgroundColor: 'rgba(100, 95, 228, 0.32)'
+  }
+}))
 
 function CustomizedTabs_() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -121,7 +121,7 @@ function CustomizedTabs_() {
         <Box sx={{ p: 3 }} />
       </Box>
     </Box>
-  );
+  )
 }
 
-export const CustomizedTabs = () => <CustomizedTabs_ />;
+export const CustomizedTabs = () => <CustomizedTabs_ />

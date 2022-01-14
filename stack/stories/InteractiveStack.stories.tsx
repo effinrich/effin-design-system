@@ -1,21 +1,21 @@
-import * as React from 'react';
-import { FormControl } from '@mui/material';
-import { FormLabel } from '@mui/material';
-import { FormControlLabel } from '@mui/material';
-import { Grid } from '~/grid';
+import * as React from 'react'
+import { FormControl } from '@mui/material'
+import { FormLabel } from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import { Grid } from '~/grid'
 
-import { Paper } from '~/paper';
-import { RadioGroup } from '@mui/material';
-import { Radio } from '~/radio-button';
-import { Stack } from '~/stack';
-import { StackProps } from '@mui/material';
+import { Paper } from '~/paper'
+import { RadioGroup } from '@mui/material'
+import { Radio } from '~/radio-button'
+import { Stack } from '~/stack'
+import { StackProps } from '@mui/material'
 
 function InteractiveStack_() {
   const [direction, setDirection] =
-    React.useState<StackProps['direction']>('row');
-  const [justifyContent, setJustifyContent] = React.useState('center');
-  const [alignItems, setAlignItems] = React.useState('center');
-  const [spacing, setSpacing] = React.useState(2);
+    React.useState<StackProps['direction']>('row')
+  const [justifyContent, setJustifyContent] = React.useState('center')
+  const [alignItems, setAlignItems] = React.useState('center')
+  const [spacing, setSpacing] = React.useState(2)
 
   const jsx = `
 <Stack
@@ -24,7 +24,7 @@ function InteractiveStack_() {
   alignItems="${alignItems}"
   spacing={${spacing}}
 >
-`;
+`
 
   return (
     <Stack sx={{ flexGrow: 1 }}>
@@ -35,7 +35,7 @@ function InteractiveStack_() {
         spacing={spacing}
         sx={{ height: 240 }}
       >
-        {[0, 1, 2].map((value) => (
+        {[0, 1, 2].map(value => (
           <Paper
             key={value}
             sx={{
@@ -43,7 +43,7 @@ function InteractiveStack_() {
               pt: value + 1,
               pb: value + 1,
               color: 'text.secondary',
-              typography: 'body2',
+              typography: 'body2'
             }}
           >
             {`Item ${value + 1}`}
@@ -60,8 +60,8 @@ function InteractiveStack_() {
                 name="direction"
                 aria-label="direction"
                 value={direction}
-                onChange={(event) => {
-                  setDirection(event.target.value as StackProps['direction']);
+                onChange={event => {
+                  setDirection(event.target.value as StackProps['direction'])
                 }}
               >
                 <FormControlLabel value="row" control={<Radio />} label="row" />
@@ -91,8 +91,8 @@ function InteractiveStack_() {
                 name="alignItems"
                 aria-label="align items"
                 value={alignItems}
-                onChange={(event) => {
-                  setAlignItems(event.target.value);
+                onChange={event => {
+                  setAlignItems(event.target.value)
                 }}
               >
                 <FormControlLabel
@@ -131,8 +131,8 @@ function InteractiveStack_() {
                 name="justifyContent"
                 aria-label="justifyContent"
                 value={justifyContent}
-                onChange={(event) => {
-                  setJustifyContent(event.target.value);
+                onChange={event => {
+                  setJustifyContent(event.target.value)
                 }}
               >
                 <FormControlLabel
@@ -177,10 +177,10 @@ function InteractiveStack_() {
                 aria-label="spacing"
                 value={spacing.toString()}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                  setSpacing(Number((event.target as HTMLInputElement).value));
+                  setSpacing(Number((event.target as HTMLInputElement).value))
                 }}
               >
-                {[0, 0.5, 1, 2, 3, 4, 8, 12].map((value) => (
+                {[0, 0.5, 1, 2, 3, 4, 8, 12].map(value => (
                   <FormControlLabel
                     key={value}
                     value={value.toString()}
@@ -194,7 +194,7 @@ function InteractiveStack_() {
         </Grid>
       </Paper>
     </Stack>
-  );
+  )
 }
 
-export const InteractiveStack = () => <InteractiveStack_ />;
+export const InteractiveStack = () => <InteractiveStack_ />

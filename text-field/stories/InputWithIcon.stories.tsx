@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Input } from '@mui/material';
-import { InputLabel } from '@mui/material';
-import { InputAdornment } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { TextField } from '~/text-field';
-import { AccountCircle } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Input } from '@mui/material'
+import { InputLabel } from '@mui/material'
+import { InputAdornment } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { TextField } from '~/text-field'
+import { AccountCircle } from '@mui/icons-material'
 
 function InputWithIcon_() {
   return (
@@ -31,7 +31,7 @@ function InputWithIcon_() {
             <InputAdornment position="start">
               <AccountCircle />
             </InputAdornment>
-          ),
+          )
         }}
         variant="standard"
       />
@@ -40,7 +40,7 @@ function InputWithIcon_() {
         <TextField id="input-with-sx" label="With sx" variant="standard" />
       </Box>
     </Box>
-  );
+  )
 }
 
-export const InputWithIcon = () => <InputWithIcon_ />;
+export const InputWithIcon = () => <InputWithIcon_ />

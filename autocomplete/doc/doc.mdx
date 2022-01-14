@@ -1,32 +1,32 @@
-import { Autocomplete } from '~/autocomplete';
-import { ComboBox as ComboBox } from '../stories/ComboBox.stories';
-import { Playground as Playground } from '../stories/Playground.stories';
-import { CountrySelect as CountrySelect } from '../stories/CountrySelect.stories';
-import { ControllableStates as ControllableStates } from '../stories/ControllableStates.stories';
-import { FreeSolo as FreeSolo } from '../stories/FreeSolo.stories';
-import { FreeSoloCreateOption as FreeSoloCreateOption } from '../stories/FreeSoloCreateOption.stories';
-import { FreeSoloCreateOptionDialog as FreeSoloCreateOptionDialog } from '../stories/FreeSoloCreateOptionDialog.stories';
-import { Grouped as Grouped } from '../stories/Grouped.stories';
-import { DisabledOptions as DisabledOptions } from '../stories/DisabledOptions.stories';
-import { UseAutocomplete as UseAutocomplete } from '../stories/UseAutocomplete.stories';
-import { CustomizedHook as CustomizedHook } from '../stories/CustomizedHook.stories';
-import { Asynchronous as Asynchronous } from '../stories/Asynchronous.stories';
-import { GoogleMaps as GoogleMaps } from '../stories/GoogleMaps.stories';
-import { Tags as Tags } from '../stories/Tags.stories';
-import { FixedTags as FixedTags } from '../stories/FixedTags.stories';
-import { CheckboxesTags as CheckboxesTags } from '../stories/CheckboxesTags.stories';
-import { LimitTags as LimitTags } from '../stories/LimitTags.stories';
-import { Sizes as Sizes } from '../stories/Sizes.stories';
-import { CustomInputAutocomplete as CustomInputAutocomplete } from '../stories/CustomInputAutocomplete.stories';
-import { GitHubLabel as GitHubLabel } from '../stories/GitHubLabel.stories';
-import { Highlights as Highlights } from '../stories/Highlights.stories';
-import { Filter as Filter } from '../stories/Filter.stories';
-import { Virtualize as Virtualize } from '../stories/Virtualize.stories';
-import { mdx } from '@mdx-js/react';
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
-import { DemoFrame } from '~/demo-frame';
-import { MdxLayout } from '~/layout';
-export default MdxLayout;
+import { Autocomplete } from '~/autocomplete'
+import { ComboBox as ComboBox } from '../stories/ComboBox.stories'
+import { Playground as Playground } from '../stories/Playground.stories'
+import { CountrySelect as CountrySelect } from '../stories/CountrySelect.stories'
+import { ControllableStates as ControllableStates } from '../stories/ControllableStates.stories'
+import { FreeSolo as FreeSolo } from '../stories/FreeSolo.stories'
+import { FreeSoloCreateOption as FreeSoloCreateOption } from '../stories/FreeSoloCreateOption.stories'
+import { FreeSoloCreateOptionDialog as FreeSoloCreateOptionDialog } from '../stories/FreeSoloCreateOptionDialog.stories'
+import { Grouped as Grouped } from '../stories/Grouped.stories'
+import { DisabledOptions as DisabledOptions } from '../stories/DisabledOptions.stories'
+import { UseAutocomplete as UseAutocomplete } from '../stories/UseAutocomplete.stories'
+import { CustomizedHook as CustomizedHook } from '../stories/CustomizedHook.stories'
+import { Asynchronous as Asynchronous } from '../stories/Asynchronous.stories'
+import { GoogleMaps as GoogleMaps } from '../stories/GoogleMaps.stories'
+import { Tags as Tags } from '../stories/Tags.stories'
+import { FixedTags as FixedTags } from '../stories/FixedTags.stories'
+import { CheckboxesTags as CheckboxesTags } from '../stories/CheckboxesTags.stories'
+import { LimitTags as LimitTags } from '../stories/LimitTags.stories'
+import { Sizes as Sizes } from '../stories/Sizes.stories'
+import { CustomInputAutocomplete as CustomInputAutocomplete } from '../stories/CustomInputAutocomplete.stories'
+import { GitHubLabel as GitHubLabel } from '../stories/GitHubLabel.stories'
+import { Highlights as Highlights } from '../stories/Highlights.stories'
+import { Filter as Filter } from '../stories/Filter.stories'
+import { Virtualize as Virtualize } from '../stories/Virtualize.stories'
+import { mdx } from '@mdx-js/react'
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
+import { DemoFrame } from '~/demo-frame'
+import { MdxLayout } from '~/layout'
+export default MdxLayout
 
 # Autocomplete
 
@@ -53,7 +53,7 @@ The value must be chosen from a predefined set of allowed values.
   id="combo-box-demo"
   options={top100Films}
   sx={{ width: 300 }}
-  renderInput={(params) => <TextField {...params} label="Movie" />}
+  renderInput={params => <TextField {...params} label="Movie" />}
 />
 ```
 
@@ -63,10 +63,10 @@ By default, the component accepts the following options structures:
 
 ```ts
 interface AutocompleteOption {
-  label: string;
+  label: string
 }
 // or
-type AutocompleteOption = string;
+type AutocompleteOption = string
 ```
 
 for instance:
@@ -74,10 +74,10 @@ for instance:
 ```js
 const options = [
   { label: 'The Godfather', id: 1 },
-  { label: 'Pulp Fiction', id: 2 },
-];
+  { label: 'Pulp Fiction', id: 2 }
+]
 // or
-const options = ['The Godfather', 'Pulp Fiction'];
+const options = ['The Godfather', 'Pulp Fiction']
 ```
 
 However, you can use different structures by providing a `getOptionLabel` prop.
@@ -159,10 +159,10 @@ otherwise you will notice duplicate headers.
 <Autocomplete
   id="grouped-demo"
   options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
-  groupBy={(option) => option.firstLetter}
-  getOptionLabel={(option) => option.title}
+  groupBy={option => option.firstLetter}
+  getOptionLabel={option => option.title}
   sx={{ width: 300 }}
-  renderInput={(params) => <TextField {...params} label="With categories" />}
+  renderInput={params => <TextField {...params} label="With categories" />}
 />
 ```
 
@@ -173,11 +173,11 @@ otherwise you will notice duplicate headers.
 <Autocomplete
   id="disabled-options-demo"
   options={timeSlots}
-  getOptionDisabled={(option) =>
+  getOptionDisabled={option =>
     option === timeSlots[0] || option === timeSlots[2]
   }
   sx={{ width: 300 }}
-  renderInput={(params) => <TextField {...params} label="Disabled options" />}
+  renderInput={params => <TextField {...params} label="Disabled options" />}
 />
 ```
 
@@ -189,13 +189,13 @@ related to the rendering of JSX.
 The Autocomplete component is built on this hook.
 
 ```tsx
-import { useAutocomplete } from '@mui/base/AutocompleteUnstyled';
+import { useAutocomplete } from '@mui/base/AutocompleteUnstyled'
 ```
 
 The `useAutocomplete` hook is also reexported from @mui/material for convenience and backward compatibility.
 
 ```tsx
-import useAutocomplete from '@mui/material/useAutocomplete';
+import useAutocomplete from '@mui/material/useAutocomplete'
 ```
 
 - 📦 4.5 kB gzipped.
@@ -215,7 +215,6 @@ import useAutocomplete from '@mui/material/useAutocomplete';
   </Listbox>
 ) : null}
 ```
-
 
 ### Customized hook
 
@@ -251,7 +250,7 @@ Additionally, you will need to disable the built-in filtering of the `Autocomple
 overriding the `filterOptions` prop:
 
 ```jsx
-<Autocomplete filterOptions={(x) => x} />
+<Autocomplete filterOptions={x => x} />
 ```
 
 ### Google Maps place
@@ -303,9 +302,9 @@ You can use the `limitTags` prop to limit the number of displayed options when n
   limitTags={2}
   id="multiple-limit-tags"
   options={top100Films}
-  getOptionLabel={(option) => option.title}
+  getOptionLabel={option => option.title}
   defaultValue={[top100Films[13], top100Films[12], top100Films[11]]}
-  renderInput={(params) => (
+  renderInput={params => (
     <TextField {...params} label="limitTags" placeholder="Favorites" />
   )}
 />
@@ -359,7 +358,7 @@ The component exposes a factory to create a filter method that can provided to t
 You can use it to change the default option filter behavior.
 
 ```js
-import { createFilterOptions } from '@mui/material/Autocomplete';
+import { createFilterOptions } from '@mui/material/Autocomplete'
 ```
 
 ### `createFilterOptions(config) => filterOptions`
@@ -384,10 +383,10 @@ In the following demo, the options need to start with the query prefix:
 ```jsx
 const filterOptions = createFilterOptions({
   matchFrom: 'start',
-  stringify: (option) => option.title,
-});
+  stringify: option => option.title
+})
 
-<Autocomplete filterOptions={filterOptions} />;
+;<Autocomplete filterOptions={filterOptions} />
 ```
 
 <Filter />
@@ -395,10 +394,10 @@ const filterOptions = createFilterOptions({
 <Autocomplete
   id="filter-demo"
   options={top100Films}
-  getOptionLabel={(option) => option.title}
+  getOptionLabel={option => option.title}
   filterOptions={filterOptions}
   sx={{ width: 300 }}
-  renderInput={(params) => <TextField {...params} label="Custom filter" />}
+  renderInput={params => <TextField {...params} label="Custom filter" />}
 />
 ```
 
@@ -407,12 +406,12 @@ const filterOptions = createFilterOptions({
 For richer filtering mechanisms, like fuzzy matching, it's recommended to look at match-sorter. For instance:
 
 ```jsx
-import { matchSorter } from 'match-sorter';
+import { matchSorter } from 'match-sorter'
 
 const filterOptions = (options, { inputValue }) =>
-  matchSorter(options, inputValue);
+  matchSorter(options, inputValue)
 
-<Autocomplete filterOptions={filterOptions} />;
+;<Autocomplete filterOptions={filterOptions} />
 ```
 
 ## Virtualization
@@ -428,10 +427,10 @@ Search within 10,000 randomly generated options. The list is virtualized thanks 
   PopperComponent={StyledPopper}
   ListboxComponent={ListboxComponent}
   options={OPTIONS}
-  groupBy={(option) => option[0].toUpperCase()}
-  renderInput={(params) => <TextField {...params} label="10,000 options" />}
+  groupBy={option => option[0].toUpperCase()}
+  renderInput={params => <TextField {...params} label="10,000 options" />}
   renderOption={(props, option) => [props, option]}
-  renderGroup={(params) => params}
+  renderGroup={params => params}
 />
 ```
 
@@ -441,10 +440,10 @@ If you would like to prevent the default key handler behavior, you can set the e
 
 ```jsx
 <Autocomplete
-  onKeyDown={(event) => {
+  onKeyDown={event => {
     if (event.key === 'Enter') {
       // Prevent's default 'Enter' behavior.
-      event.defaultMuiPrevented = true;
+      event.defaultMuiPrevented = true
       // your handler code
     }
   }}
@@ -473,7 +472,7 @@ In the event you want the avoid autofill, you can try the following:
     {...params}
     inputProps={{
       ...params.inputProps,
-      autoComplete: 'new-password',
+      autoComplete: 'new-password'
     }}
   />
   ```

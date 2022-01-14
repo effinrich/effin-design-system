@@ -1,39 +1,39 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { TextField } from '~/text-field';
-import { MenuItem } from '~/menu';
+import * as React from 'react'
+import { Box } from '~/box'
+import { TextField } from '~/text-field'
+import { MenuItem } from '~/menu'
 
 const currencies = [
   {
     value: 'USD',
-    label: '$',
+    label: '$'
   },
   {
     value: 'EUR',
-    label: '€',
+    label: '€'
   },
   {
     value: 'BTC',
-    label: '฿',
+    label: '฿'
   },
   {
     value: 'JPY',
-    label: '¥',
-  },
-];
+    label: '¥'
+  }
+]
 
 function SelectTextFields_() {
-  const [currency, setCurrency] = React.useState('EUR');
+  const [currency, setCurrency] = React.useState('EUR')
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCurrency(event.target.value);
-  };
+    setCurrency(event.target.value)
+  }
 
   return (
     <Box
       component="form"
       sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
+        '& .MuiTextField-root': { m: 1, width: '25ch' }
       }}
       noValidate
       autoComplete="off"
@@ -47,7 +47,7 @@ function SelectTextFields_() {
           onChange={handleChange}
           helperText="Please select your currency"
         >
-          {currencies.map((option) => (
+          {currencies.map(option => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -60,11 +60,11 @@ function SelectTextFields_() {
           value={currency}
           onChange={handleChange}
           SelectProps={{
-            native: true,
+            native: true
           }}
           helperText="Please select your currency"
         >
-          {currencies.map((option) => (
+          {currencies.map(option => (
             <option key={option.value} value={option.value}>
               {option.label}
             </option>
@@ -81,7 +81,7 @@ function SelectTextFields_() {
           helperText="Please select your currency"
           variant="filled"
         >
-          {currencies.map((option) => (
+          {currencies.map(option => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -94,12 +94,12 @@ function SelectTextFields_() {
           value={currency}
           onChange={handleChange}
           SelectProps={{
-            native: true,
+            native: true
           }}
           helperText="Please select your currency"
           variant="filled"
         >
-          {currencies.map((option) => (
+          {currencies.map(option => (
             <option key={option.value} value={option.value}>
               {option.label}
             </option>
@@ -116,7 +116,7 @@ function SelectTextFields_() {
           helperText="Please select your currency"
           variant="standard"
         >
-          {currencies.map((option) => (
+          {currencies.map(option => (
             <MenuItem key={option.value} value={option.value}>
               {option.label}
             </MenuItem>
@@ -129,12 +129,12 @@ function SelectTextFields_() {
           value={currency}
           onChange={handleChange}
           SelectProps={{
-            native: true,
+            native: true
           }}
           helperText="Please select your currency"
           variant="standard"
         >
-          {currencies.map((option) => (
+          {currencies.map(option => (
             <option key={option.value} value={option.value}>
               {option.label}
             </option>
@@ -142,7 +142,7 @@ function SelectTextFields_() {
         </TextField>
       </div>
     </Box>
-  );
+  )
 }
 
-export const SelectTextFields = () => <SelectTextFields_ />;
+export const SelectTextFields = () => <SelectTextFields_ />

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { InputLabel } from '@mui/material';
-import { MenuItem } from '~/menu';
-import { ListSubheader } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { Select } from '~/select';
+import * as React from 'react'
+import { InputLabel } from '@mui/material'
+import { MenuItem } from '~/menu'
+import { ListSubheader } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { Select } from '~/select'
 
 function GroupedSelect_() {
   return (
@@ -42,7 +42,7 @@ function GroupedSelect_() {
         </Select>
       </FormControl>
     </div>
-  );
+  )
 }
 
-export const GroupedSelect = () => <GroupedSelect_ />;
+export const GroupedSelect = () => <GroupedSelect_ />

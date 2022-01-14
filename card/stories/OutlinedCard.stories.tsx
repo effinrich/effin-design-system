@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Card } from '~/card';
-import { CardActions } from '@mui/material';
-import { CardContent } from '@mui/material';
-import { Button } from '~/button';
-import { Typography } from '~/typography';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Card } from '~/card'
+import { CardActions } from '@mui/material'
+import { CardContent } from '@mui/material'
+import { Button } from '~/button'
+import { Typography } from '~/typography'
 
 const bull = (
   <Box
@@ -13,7 +13,7 @@ const bull = (
   >
     •
   </Box>
-);
+)
 
 const card = (
   <React.Fragment>
@@ -37,14 +37,14 @@ const card = (
       <Button size="small">Learn More</Button>
     </CardActions>
   </React.Fragment>
-);
+)
 
 function OutlinedCard_() {
   return (
     <Box sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card}</Card>
     </Box>
-  );
+  )
 }
 
-export const OutlinedCard = () => <OutlinedCard_ />;
+export const OutlinedCard = () => <OutlinedCard_ />

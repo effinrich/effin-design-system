@@ -1,31 +1,31 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { styled } from '@mui/material';
-import { Dialog } from '~/dialog';
-import { DialogTitle } from '@mui/material';
-import { DialogContent } from '@mui/material';
-import { DialogActions } from '@mui/material';
-import { IconButton } from '@mui/material';
-import { Close as CloseIcon } from '@mui/icons-material';
-import { Typography } from '~/typography';
+import * as React from 'react'
+import { Button } from '~/button'
+import { styled } from '@mui/material'
+import { Dialog } from '~/dialog'
+import { DialogTitle } from '@mui/material'
+import { DialogContent } from '@mui/material'
+import { DialogActions } from '@mui/material'
+import { IconButton } from '@mui/material'
+import { Close as CloseIcon } from '@mui/icons-material'
+import { Typography } from '~/typography'
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
+    padding: theme.spacing(2)
   },
   '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
-}));
+    padding: theme.spacing(1)
+  }
+}))
 
 export interface DialogTitleProps {
-  id: string;
-  children?: React.ReactNode;
-  onClose: () => void;
+  id: string
+  children?: React.ReactNode
+  onClose: () => void
 }
 
 const BootstrapDialogTitle = (props: DialogTitleProps) => {
-  const { children, onClose, ...other } = props;
+  const { children, onClose, ...other } = props
 
   return (
     <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
@@ -38,25 +38,25 @@ const BootstrapDialogTitle = (props: DialogTitleProps) => {
             position: 'absolute',
             right: 8,
             top: 8,
-            color: (theme) => theme.palette.grey[500],
+            color: theme => theme.palette.grey[500]
           }}
         >
           <CloseIcon />
         </IconButton>
       ) : null}
     </DialogTitle>
-  );
-};
+  )
+}
 
 function CustomizedDialogs_() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
   const handleClickOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div>
@@ -98,7 +98,7 @@ function CustomizedDialogs_() {
         </DialogActions>
       </BootstrapDialog>
     </div>
-  );
+  )
 }
 
-export const CustomizedDialogs = () => <CustomizedDialogs_ />;
+export const CustomizedDialogs = () => <CustomizedDialogs_ />

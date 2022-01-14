@@ -1,24 +1,24 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { SwipeableDrawer } from '@mui/material';
-import { Button } from '~/button';
-import { List } from '~/list';
-import { Divider } from '~/divider';
-import { ListItem } from '@mui/material';
-import { ListItemIcon } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { MoveToInbox as InboxIcon } from '@mui/icons-material';
-import { Mail as MailIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { SwipeableDrawer } from '@mui/material'
+import { Button } from '~/button'
+import { List } from '~/list'
+import { Divider } from '~/divider'
+import { ListItem } from '@mui/material'
+import { ListItemIcon } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { MoveToInbox as InboxIcon } from '@mui/icons-material'
+import { Mail as MailIcon } from '@mui/icons-material'
 
-type Anchor = 'top' | 'left' | 'bottom' | 'right';
+type Anchor = 'top' | 'left' | 'bottom' | 'right'
 
 function SwipeableTemporaryDrawer_() {
   const [state, setState] = React.useState({
     top: false,
     left: false,
     bottom: false,
-    right: false,
-  });
+    right: false
+  })
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -29,11 +29,11 @@ function SwipeableTemporaryDrawer_() {
         ((event as React.KeyboardEvent).key === 'Tab' ||
           (event as React.KeyboardEvent).key === 'Shift')
       ) {
-        return;
+        return
       }
 
-      setState({ ...state, [anchor]: open });
-    };
+      setState({ ...state, [anchor]: open })
+    }
 
   const list = (anchor: Anchor) => (
     <Box
@@ -64,11 +64,11 @@ function SwipeableTemporaryDrawer_() {
         ))}
       </List>
     </Box>
-  );
+  )
 
   return (
     <div>
-      {(['left', 'right', 'top', 'bottom'] as const).map((anchor) => (
+      {(['left', 'right', 'top', 'bottom'] as const).map(anchor => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <SwipeableDrawer
@@ -82,7 +82,7 @@ function SwipeableTemporaryDrawer_() {
         </React.Fragment>
       ))}
     </div>
-  );
+  )
 }
 
-export const SwipeableTemporaryDrawer = () => <SwipeableTemporaryDrawer_ />;
+export const SwipeableTemporaryDrawer = () => <SwipeableTemporaryDrawer_ />

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Avatar } from '~/avatar';
-import { Stack } from '~/stack';
-import { deepOrange } from '@mui/material/colors';
+import * as React from 'react'
+import { Avatar } from '~/avatar'
+import { Stack } from '~/stack'
+import { deepOrange } from '@mui/material/colors'
 
 function FallbackAvatars_() {
   return (
@@ -20,7 +20,7 @@ function FallbackAvatars_() {
       />
       <Avatar src="/broken-image.jpg" />
     </Stack>
-  );
+  )
 }
 
-export const FallbackAvatars = () => <FallbackAvatars_ />;
+export const FallbackAvatars = () => <FallbackAvatars_ />

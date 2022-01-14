@@ -1,26 +1,26 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { ArrowForwardIosSharp as ArrowForwardIosSharpIcon } from '@mui/icons-material';
-import { Accordion as MuiAccordion } from '~/accordion';
-import { AccordionProps } from '@mui/material';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { ArrowForwardIosSharp as ArrowForwardIosSharpIcon } from '@mui/icons-material'
+import { Accordion as MuiAccordion } from '~/accordion'
+import { AccordionProps } from '@mui/material'
 import {
   AccordionSummary as MuiAccordionSummary,
-  AccordionSummaryProps,
-} from '@mui/material';
-import { AccordionDetails as MuiAccordionDetails } from '@mui/material';
-import { Typography } from '~/typography';
+  AccordionSummaryProps
+} from '@mui/material'
+import { AccordionDetails as MuiAccordionDetails } from '@mui/material'
+import { Typography } from '~/typography'
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
   '&:not(:last-child)': {
-    borderBottom: 0,
+    borderBottom: 0
   },
   '&:before': {
-    display: 'none',
-  },
-}));
+    display: 'none'
+  }
+}))
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary
@@ -34,25 +34,25 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
       : 'rgba(0, 0, 0, .03)',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
+    transform: 'rotate(90deg)'
   },
   '& .MuiAccordionSummary-content': {
-    marginLeft: theme.spacing(1),
-  },
-}));
+    marginLeft: theme.spacing(1)
+  }
+}))
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
+  borderTop: '1px solid rgba(0, 0, 0, .125)'
+}))
 
 function CustomizedAccordions_() {
-  const [expanded, setExpanded] = React.useState<string | false>('panel1');
+  const [expanded, setExpanded] = React.useState<string | false>('panel1')
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-      setExpanded(newExpanded ? panel : false);
-    };
+      setExpanded(newExpanded ? panel : false)
+    }
 
   return (
     <div>
@@ -105,7 +105,7 @@ function CustomizedAccordions_() {
         </AccordionDetails>
       </Accordion>
     </div>
-  );
+  )
 }
 
-export const CustomizedAccordions = () => <CustomizedAccordions_ />;
+export const CustomizedAccordions = () => <CustomizedAccordions_ />

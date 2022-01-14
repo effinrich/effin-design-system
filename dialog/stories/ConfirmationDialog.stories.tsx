@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Button } from '~/button';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { DialogTitle } from '@mui/material';
-import { DialogContent } from '@mui/material';
-import { DialogActions } from '@mui/material';
-import { Dialog } from '~/dialog';
-import { RadioGroup } from '@mui/material';
-import { Radio } from '~/radio-button';
-import { FormControlLabel } from '@mui/material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Button } from '~/button'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { DialogTitle } from '@mui/material'
+import { DialogContent } from '@mui/material'
+import { DialogActions } from '@mui/material'
+import { Dialog } from '~/dialog'
+import { RadioGroup } from '@mui/material'
+import { Radio } from '~/radio-button'
+import { FormControlLabel } from '@mui/material'
 
 const options = [
   'None',
@@ -26,45 +26,45 @@ const options = [
   'Sedna',
   'Titania',
   'Triton',
-  'Umbriel',
-];
+  'Umbriel'
+]
 
 export interface ConfirmationDialogRawProps {
-  id: string;
-  keepMounted: boolean;
-  value: string;
-  open: boolean;
-  onClose: (value?: string) => void;
+  id: string
+  keepMounted: boolean
+  value: string
+  open: boolean
+  onClose: (value?: string) => void
 }
 
 function ConfirmationDialogRaw(props: ConfirmationDialogRawProps) {
-  const { onClose, value: valueProp, open, ...other } = props;
-  const [value, setValue] = React.useState(valueProp);
-  const radioGroupRef = React.useRef<HTMLElement>(null);
+  const { onClose, value: valueProp, open, ...other } = props
+  const [value, setValue] = React.useState(valueProp)
+  const radioGroupRef = React.useRef<HTMLElement>(null)
 
   React.useEffect(() => {
     if (!open) {
-      setValue(valueProp);
+      setValue(valueProp)
     }
-  }, [valueProp, open]);
+  }, [valueProp, open])
 
   const handleEntering = () => {
     if (radioGroupRef.current != null) {
-      radioGroupRef.current.focus();
+      radioGroupRef.current.focus()
     }
-  };
+  }
 
   const handleCancel = () => {
-    onClose();
-  };
+    onClose()
+  }
 
   const handleOk = () => {
-    onClose(value);
-  };
+    onClose(value)
+  }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue((event.target as HTMLInputElement).value);
-  };
+    setValue((event.target as HTMLInputElement).value)
+  }
 
   return (
     <Dialog
@@ -83,7 +83,7 @@ function ConfirmationDialogRaw(props: ConfirmationDialogRawProps) {
           value={value}
           onChange={handleChange}
         >
-          {options.map((option) => (
+          {options.map(option => (
             <FormControlLabel
               value={option}
               key={option}
@@ -100,24 +100,24 @@ function ConfirmationDialogRaw(props: ConfirmationDialogRawProps) {
         <Button onClick={handleOk}>Ok</Button>
       </DialogActions>
     </Dialog>
-  );
+  )
 }
 
 function ConfirmationDialog_() {
-  const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState('Dione');
+  const [open, setOpen] = React.useState(false)
+  const [value, setValue] = React.useState('Dione')
 
   const handleClickListItem = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = (newValue?: string) => {
-    setOpen(false);
+    setOpen(false)
 
     if (newValue) {
-      setValue(newValue);
+      setValue(newValue)
     }
-  };
+  }
 
   return (
     <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
@@ -150,7 +150,7 @@ function ConfirmationDialog_() {
         />
       </List>
     </Box>
-  );
+  )
 }
 
-export const ConfirmationDialog = () => <ConfirmationDialog_ />;
+export const ConfirmationDialog = () => <ConfirmationDialog_ />

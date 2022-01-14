@@ -1,41 +1,41 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { Avatar } from '~/avatar';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemAvatar } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { DialogTitle } from '@mui/material';
-import { Dialog } from '~/dialog';
-import { Person as PersonIcon } from '@mui/icons-material';
-import { Add as AddIcon } from '@mui/icons-material';
-import { Typography } from '~/typography';
-import { blue } from '@mui/material/colors';
+import * as React from 'react'
+import { Button } from '~/button'
+import { Avatar } from '~/avatar'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemAvatar } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { DialogTitle } from '@mui/material'
+import { Dialog } from '~/dialog'
+import { Person as PersonIcon } from '@mui/icons-material'
+import { Add as AddIcon } from '@mui/icons-material'
+import { Typography } from '~/typography'
+import { blue } from '@mui/material/colors'
 
-const emails = ['username@gmail.com', 'user02@gmail.com'];
+const emails = ['username@gmail.com', 'user02@gmail.com']
 
 export interface SimpleDialogProps {
-  open: boolean;
-  selectedValue: string;
-  onClose: (value: string) => void;
+  open: boolean
+  selectedValue: string
+  onClose: (value: string) => void
 }
 
 function SimpleDialog(props: SimpleDialogProps) {
-  const { onClose, selectedValue, open } = props;
+  const { onClose, selectedValue, open } = props
 
   const handleClose = () => {
-    onClose(selectedValue);
-  };
+    onClose(selectedValue)
+  }
 
   const handleListItemClick = (value: string) => {
-    onClose(value);
-  };
+    onClose(value)
+  }
 
   return (
     <Dialog onClose={handleClose} open={open}>
       <DialogTitle>Set backup account</DialogTitle>
       <List sx={{ pt: 0 }}>
-        {emails.map((email) => (
+        {emails.map(email => (
           <ListItem
             button
             onClick={() => handleListItemClick(email)}
@@ -63,21 +63,21 @@ function SimpleDialog(props: SimpleDialogProps) {
         </ListItem>
       </List>
     </Dialog>
-  );
+  )
 }
 
 function SimpleDialogDemo_() {
-  const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+  const [open, setOpen] = React.useState(false)
+  const [selectedValue, setSelectedValue] = React.useState(emails[1])
 
   const handleClickOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleClose = (value: string) => {
-    setOpen(false);
-    setSelectedValue(value);
-  };
+    setOpen(false)
+    setSelectedValue(value)
+  }
 
   return (
     <div>
@@ -94,7 +94,7 @@ function SimpleDialogDemo_() {
         onClose={handleClose}
       />
     </div>
-  );
+  )
 }
 
-export const SimpleDialogDemo = () => <SimpleDialogDemo_ />;
+export const SimpleDialogDemo = () => <SimpleDialogDemo_ />

@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
-import { Breadcrumbs } from '~/breadcrumbs';
-import { Typography } from '~/typography';
-import { Link } from '~/link';
+import * as React from 'react'
+import { Breadcrumbs } from '~/breadcrumbs'
+import { Typography } from '~/typography'
+import { Link } from '~/link'
 
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
+  event.preventDefault()
+  console.info('You clicked a breadcrumb.')
 }
 
 function CollapsedBreadcrumbs_() {
@@ -28,7 +28,7 @@ function CollapsedBreadcrumbs_() {
         <Typography color="text.primary">Belts</Typography>
       </Breadcrumbs>
     </div>
-  );
+  )
 }
 
-export const CollapsedBreadcrumbs = () => <CollapsedBreadcrumbs_ />;
+export const CollapsedBreadcrumbs = () => <CollapsedBreadcrumbs_ />

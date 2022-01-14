@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Alert } from '~/alert';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Alert } from '~/alert'
+import { Stack } from '~/stack'
 
 function BasicAlerts_() {
   return (
@@ -10,7 +10,7 @@ function BasicAlerts_() {
       <Alert severity="info">This is an info alert — check it out!</Alert>
       <Alert severity="success">This is a success alert — check it out!</Alert>
     </Stack>
-  );
+  )
 }
 
-export const BasicAlerts = () => <BasicAlerts_ />;
+export const BasicAlerts = () => <BasicAlerts_ />

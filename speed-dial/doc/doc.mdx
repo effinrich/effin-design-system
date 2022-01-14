@@ -1,14 +1,14 @@
-import { SpeedDial } from '~/speed-dial';
-import { BasicSpeedDial as BasicSpeedDial } from '../stories/BasicSpeedDial.stories';
-import { PlaygroundSpeedDial as PlaygroundSpeedDial } from '../stories/PlaygroundSpeedDial.stories';
-import { ControlledOpenSpeedDial as ControlledOpenSpeedDial } from '../stories/ControlledOpenSpeedDial.stories';
-import { OpenIconSpeedDial as OpenIconSpeedDial } from '../stories/OpenIconSpeedDial.stories';
-import { SpeedDialTooltipOpen as SpeedDialTooltipOpen } from '../stories/SpeedDialTooltipOpen.stories';
-import { mdx } from '@mdx-js/react';
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
-import { DemoFrame } from '~/demo-frame';
-import { MdxLayout } from '~/layout';
-export default MdxLayout;
+import { SpeedDial } from '~/speed-dial'
+import { BasicSpeedDial as BasicSpeedDial } from '../stories/BasicSpeedDial.stories'
+import { PlaygroundSpeedDial as PlaygroundSpeedDial } from '../stories/PlaygroundSpeedDial.stories'
+import { ControlledOpenSpeedDial as ControlledOpenSpeedDial } from '../stories/ControlledOpenSpeedDial.stories'
+import { OpenIconSpeedDial as OpenIconSpeedDial } from '../stories/OpenIconSpeedDial.stories'
+import { SpeedDialTooltipOpen as SpeedDialTooltipOpen } from '../stories/SpeedDialTooltipOpen.stories'
+import { mdx } from '@mdx-js/react'
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
+import { DemoFrame } from '~/demo-frame'
+import { MdxLayout } from '~/layout'
+export default MdxLayout
 
 # Speed Dial
 
@@ -30,7 +30,7 @@ The floating action button can display related actions.
   sx={{ position: 'absolute', bottom: 16, right: 16 }}
   icon={<SpeedDialIcon />}
 >
-  {actions.map((action) => (
+  {actions.map(action => (
     <SpeedDialAction
       key={action.name}
       icon={action.icon}
@@ -68,7 +68,7 @@ of the `SpeedDialIcon` component.
   sx={{ position: 'absolute', bottom: 16, right: 16 }}
   icon={<SpeedDialIcon openIcon={<EditIcon />} />}
 >
-  {actions.map((action) => (
+  {actions.map(action => (
     <SpeedDialAction
       key={action.name}
       icon={action.icon}

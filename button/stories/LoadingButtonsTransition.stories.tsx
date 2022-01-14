@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { LoadingButton } from '@mui/lab';
-import { Box } from '~/box';
-import { FormControlLabel } from '@mui/material';
-import { Switch } from '~/switch';
-import { Save as SaveIcon } from '@mui/icons-material';
-import { Send as SendIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { LoadingButton } from '@mui/lab'
+import { Box } from '~/box'
+import { FormControlLabel } from '@mui/material'
+import { Switch } from '~/switch'
+import { Save as SaveIcon } from '@mui/icons-material'
+import { Send as SendIcon } from '@mui/icons-material'
 
 function LoadingButtonsTransition_() {
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(false)
   function handleClick() {
-    setLoading(true);
+    setLoading(true)
   }
 
   return (
     <Box sx={{ '& > button': { m: 1 } }}>
       <FormControlLabel
         sx={{
-          display: 'block',
+          display: 'block'
         }}
         control={
           <Switch
@@ -64,7 +64,7 @@ function LoadingButtonsTransition_() {
         Save
       </LoadingButton>
     </Box>
-  );
+  )
 }
 
-export const LoadingButtonsTransition = () => <LoadingButtonsTransition_ />;
+export const LoadingButtonsTransition = () => <LoadingButtonsTransition_ />

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { CircularProgress } from '~/progress';
-import { CircularProgressProps } from '@mui/material';
-import { Typography } from '~/typography';
-import { Box } from '~/box';
+import * as React from 'react'
+import { CircularProgress } from '~/progress'
+import { CircularProgressProps } from '@mui/material'
+import { Typography } from '~/typography'
+import { Box } from '~/box'
 
 function CircularProgressWithLabel(
   props: CircularProgressProps & { value: number }
@@ -19,7 +19,7 @@ function CircularProgressWithLabel(
           position: 'absolute',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'center'
         }}
       >
         <Typography
@@ -29,24 +29,22 @@ function CircularProgressWithLabel(
         >{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>
-  );
+  )
 }
 
 function CircularStatic_() {
-  const [progress, setProgress] = React.useState(10);
+  const [progress, setProgress] = React.useState(10)
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 10
-      );
-    }, 800);
+      setProgress(prevProgress => (prevProgress >= 100 ? 0 : prevProgress + 10))
+    }, 800)
     return () => {
-      clearInterval(timer);
-    };
-  }, []);
+      clearInterval(timer)
+    }
+  }, [])
 
-  return <CircularProgressWithLabel value={progress} />;
+  return <CircularProgressWithLabel value={progress} />
 }
 
-export const CircularStatic = () => <CircularStatic_ />;
+export const CircularStatic = () => <CircularStatic_ />

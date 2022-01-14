@@ -1,1 +1,1 @@
-export { Checkbox } from '@mui/material';
+export { Checkbox } from '@mui/material'

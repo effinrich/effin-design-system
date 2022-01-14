@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { Typography } from '~/typography';
-import { Breadcrumbs } from '~/breadcrumbs';
-import { Link } from '~/link';
+import * as React from 'react'
+import { Typography } from '~/typography'
+import { Breadcrumbs } from '~/breadcrumbs'
+import { Link } from '~/link'
 
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
+  event.preventDefault()
+  console.info('You clicked a breadcrumb.')
 }
 
 function BasicBreadcrumbs_() {
@@ -25,7 +25,7 @@ function BasicBreadcrumbs_() {
         <Typography color="text.primary">Breadcrumbs</Typography>
       </Breadcrumbs>
     </div>
-  );
+  )
 }
 
-export const BasicBreadcrumbs = () => <BasicBreadcrumbs_ />;
+export const BasicBreadcrumbs = () => <BasicBreadcrumbs_ />

@@ -1,38 +1,34 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Stepper } from '~/stepper';
-import { Step } from '@mui/material';
-import { StepButton } from '@mui/material';
-import { Button } from '~/button';
-import { Typography } from '~/typography';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Stepper } from '~/stepper'
+import { Step } from '@mui/material'
+import { StepButton } from '@mui/material'
+import { Button } from '~/button'
+import { Typography } from '~/typography'
 
-const steps = [
-  'Select campaign settings',
-  'Create an ad group',
-  'Create an ad',
-];
+const steps = ['Select campaign settings', 'Create an ad group', 'Create an ad']
 
 function HorizontalNonLinearStepper_() {
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(0)
   const [completed, setCompleted] = React.useState<{
-    [k: number]: boolean;
-  }>({});
+    [k: number]: boolean
+  }>({})
 
   const totalSteps = () => {
-    return steps.length;
-  };
+    return steps.length
+  }
 
   const completedSteps = () => {
-    return Object.keys(completed).length;
-  };
+    return Object.keys(completed).length
+  }
 
   const isLastStep = () => {
-    return activeStep === totalSteps() - 1;
-  };
+    return activeStep === totalSteps() - 1
+  }
 
   const allStepsCompleted = () => {
-    return completedSteps() === totalSteps();
-  };
+    return completedSteps() === totalSteps()
+  }
 
   const handleNext = () => {
     const newActiveStep =
@@ -40,29 +36,29 @@ function HorizontalNonLinearStepper_() {
         ? // It's the last step, but not all steps have been completed,
           // find the first step that has been completed
           steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
-    setActiveStep(newActiveStep);
-  };
+        : activeStep + 1
+    setActiveStep(newActiveStep)
+  }
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
+    setActiveStep(prevActiveStep => prevActiveStep - 1)
+  }
 
   const handleStep = (step: number) => () => {
-    setActiveStep(step);
-  };
+    setActiveStep(step)
+  }
 
   const handleComplete = () => {
-    const newCompleted = completed;
-    newCompleted[activeStep] = true;
-    setCompleted(newCompleted);
-    handleNext();
-  };
+    const newCompleted = completed
+    newCompleted[activeStep] = true
+    setCompleted(newCompleted)
+    handleNext()
+  }
 
   const handleReset = () => {
-    setActiveStep(0);
-    setCompleted({});
-  };
+    setActiveStep(0)
+    setCompleted({})
+  }
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -122,7 +118,7 @@ function HorizontalNonLinearStepper_() {
         )}
       </div>
     </Box>
-  );
+  )
 }
 
-export const HorizontalNonLinearStepper = () => <HorizontalNonLinearStepper_ />;
+export const HorizontalNonLinearStepper = () => <HorizontalNonLinearStepper_ />

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Skeleton } from '~/skeleton';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Skeleton } from '~/skeleton'
 
 function Animations_() {
   return (
@@ -9,7 +9,7 @@ function Animations_() {
       <Skeleton animation="wave" />
       <Skeleton animation={false} />
     </Box>
-  );
+  )
 }
 
-export const Animations = () => <Animations_ />;
+export const Animations = () => <Animations_ />

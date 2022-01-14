@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Avatar } from '~/avatar';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Avatar } from '~/avatar'
+import { Stack } from '~/stack'
 
 function ImageAvatars_() {
   return (
@@ -18,7 +18,7 @@ function ImageAvatars_() {
         src="https://mui.com/static/images/avatar/3.jpg"
       />
     </Stack>
-  );
+  )
 }
 
-export const ImageAvatars = () => <ImageAvatars_ />;
+export const ImageAvatars = () => <ImageAvatars_ />

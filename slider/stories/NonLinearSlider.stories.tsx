@@ -1,34 +1,34 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Typography } from '~/typography';
-import { Slider } from '~/slider';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Typography } from '~/typography'
+import { Slider } from '~/slider'
 
 function valueLabelFormat(value: number) {
-  const units = ['KB', 'MB', 'GB', 'TB'];
+  const units = ['KB', 'MB', 'GB', 'TB']
 
-  let unitIndex = 0;
-  let scaledValue = value;
+  let unitIndex = 0
+  let scaledValue = value
 
   while (scaledValue >= 1024 && unitIndex < units.length - 1) {
-    unitIndex += 1;
-    scaledValue /= 1024;
+    unitIndex += 1
+    scaledValue /= 1024
   }
 
-  return `${scaledValue} ${units[unitIndex]}`;
+  return `${scaledValue} ${units[unitIndex]}`
 }
 
 function calculateValue(value: number) {
-  return 2 ** value;
+  return 2 ** value
 }
 
 function NonLinearSlider_() {
-  const [value, setValue] = React.useState<number>(10);
+  const [value, setValue] = React.useState<number>(10)
 
   const handleChange = (event: Event, newValue: number | number[]) => {
     if (typeof newValue === 'number') {
-      setValue(newValue);
+      setValue(newValue)
     }
-  };
+  }
 
   return (
     <Box sx={{ width: 250 }}>
@@ -48,7 +48,7 @@ function NonLinearSlider_() {
         aria-labelledby="non-linear-slider"
       />
     </Box>
-  );
+  )
 }
 
-export const NonLinearSlider = () => <NonLinearSlider_ />;
+export const NonLinearSlider = () => <NonLinearSlider_ />

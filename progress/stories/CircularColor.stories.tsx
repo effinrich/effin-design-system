@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Stack } from '~/stack';
-import { CircularProgress } from '~/progress';
+import * as React from 'react'
+import { Stack } from '~/stack'
+import { CircularProgress } from '~/progress'
 
 function CircularColor_() {
   return (
@@ -9,7 +9,7 @@ function CircularColor_() {
       <CircularProgress color="success" />
       <CircularProgress color="inherit" />
     </Stack>
-  );
+  )
 }
 
-export const CircularColor = () => <CircularColor_ />;
+export const CircularColor = () => <CircularColor_ />

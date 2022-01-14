@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Stack } from '~/stack';
-import { Button } from '~/button';
+import * as React from 'react'
+import { Stack } from '~/stack'
+import { Button } from '~/button'
 
 function ColorButtons_() {
   return (
@@ -13,7 +13,7 @@ function ColorButtons_() {
         Error
       </Button>
     </Stack>
-  );
+  )
 }
 
-export const ColorButtons = () => <ColorButtons_ />;
+export const ColorButtons = () => <ColorButtons_ />

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Fab } from '~/floating-action-button';
-import { Navigation as NavigationIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Fab } from '~/floating-action-button'
+import { Navigation as NavigationIcon } from '@mui/icons-material'
 
 function FloatingActionButtonExtendedSize_() {
   return (
@@ -19,9 +19,9 @@ function FloatingActionButtonExtendedSize_() {
         Extended
       </Fab>
     </Box>
-  );
+  )
 }
 
 export const FloatingActionButtonExtendedSize = () => (
   <FloatingActionButtonExtendedSize_ />
-);
+)

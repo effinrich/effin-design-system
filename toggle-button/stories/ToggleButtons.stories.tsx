@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { FormatAlignLeft as FormatAlignLeftIcon } from '@mui/icons-material';
-import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material';
-import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material';
-import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material';
-import { ToggleButton } from '~/toggle-button';
-import { ToggleButtonGroup } from '@mui/material';
+import * as React from 'react'
+import { FormatAlignLeft as FormatAlignLeftIcon } from '@mui/icons-material'
+import { FormatAlignCenter as FormatAlignCenterIcon } from '@mui/icons-material'
+import { FormatAlignRight as FormatAlignRightIcon } from '@mui/icons-material'
+import { FormatAlignJustify as FormatAlignJustifyIcon } from '@mui/icons-material'
+import { ToggleButton } from '~/toggle-button'
+import { ToggleButtonGroup } from '@mui/material'
 
 function ToggleButtons_() {
-  const [alignment, setAlignment] = React.useState<string | null>('left');
+  const [alignment, setAlignment] = React.useState<string | null>('left')
 
   const handleAlignment = (
     event: React.MouseEvent<HTMLElement>,
     newAlignment: string | null
   ) => {
-    setAlignment(newAlignment);
-  };
+    setAlignment(newAlignment)
+  }
 
   return (
     <ToggleButtonGroup
@@ -36,7 +36,7 @@ function ToggleButtons_() {
         <FormatAlignJustifyIcon />
       </ToggleButton>
     </ToggleButtonGroup>
-  );
+  )
 }
 
-export const ToggleButtons = () => <ToggleButtons_ />;
+export const ToggleButtons = () => <ToggleButtons_ />

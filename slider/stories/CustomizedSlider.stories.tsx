@@ -1,43 +1,43 @@
-import * as React from 'react';
-import { Slider } from '~/slider';
-import { SliderThumb } from '@mui/material';
-import { styled } from '@mui/material';
-import { Typography } from '~/typography';
-import { Tooltip } from '~/tooltip';
-import { Box } from '~/box';
+import * as React from 'react'
+import { Slider } from '~/slider'
+import { SliderThumb } from '@mui/material'
+import { styled } from '@mui/material'
+import { Typography } from '~/typography'
+import { Tooltip } from '~/tooltip'
+import { Box } from '~/box'
 
 interface Props {
-  children: React.ReactElement;
-  value: number;
+  children: React.ReactElement
+  value: number
 }
 
 function ValueLabelComponent(props: Props) {
-  const { children, value } = props;
+  const { children, value } = props
 
   return (
     <Tooltip enterTouchDelay={0} placement="top" title={value}>
       {children}
     </Tooltip>
-  );
+  )
 }
 
 const iOSBoxShadow =
-  '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)';
+  '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)'
 
 const marks = [
   {
-    value: 0,
+    value: 0
   },
   {
-    value: 20,
+    value: 20
   },
   {
-    value: 37,
+    value: 37
   },
   {
-    value: 100,
-  },
-];
+    value: 100
+  }
+]
 
 const IOSSlider = styled(Slider)(({ theme }) => ({
   color: theme.palette.mode === 'dark' ? '#3880ff' : '#3880ff',
@@ -53,9 +53,9 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
         '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
       // Reset on touch devices, it doesn't add specificity
       '@media (hover: none)': {
-        boxShadow: iOSBoxShadow,
-      },
-    },
+        boxShadow: iOSBoxShadow
+      }
+    }
   },
   '& .MuiSlider-valueLabel': {
     fontSize: 12,
@@ -64,19 +64,19 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
     backgroundColor: 'unset',
     color: theme.palette.text.primary,
     '&:before': {
-      display: 'none',
+      display: 'none'
     },
     '& *': {
       background: 'transparent',
-      color: theme.palette.mode === 'dark' ? '#fff' : '#000',
-    },
+      color: theme.palette.mode === 'dark' ? '#fff' : '#000'
+    }
   },
   '& .MuiSlider-track': {
-    border: 'none',
+    border: 'none'
   },
   '& .MuiSlider-rail': {
     opacity: 0.5,
-    backgroundColor: '#bfbfbf',
+    backgroundColor: '#bfbfbf'
   },
   '& .MuiSlider-mark': {
     backgroundColor: '#bfbfbf',
@@ -84,16 +84,16 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
     width: 1,
     '&.MuiSlider-markActive': {
       opacity: 1,
-      backgroundColor: 'currentColor',
-    },
-  },
-}));
+      backgroundColor: 'currentColor'
+    }
+  }
+}))
 
 const PrettoSlider = styled(Slider)({
   color: '#52af77',
   height: 8,
   '& .MuiSlider-track': {
-    border: 'none',
+    border: 'none'
   },
   '& .MuiSlider-thumb': {
     height: 24,
@@ -101,11 +101,11 @@ const PrettoSlider = styled(Slider)({
     backgroundColor: '#fff',
     border: '2px solid currentColor',
     '&:focus, &:hover, &.Mui-active, &.Mui-focusVisible': {
-      boxShadow: 'inherit',
+      boxShadow: 'inherit'
     },
     '&:before': {
-      display: 'none',
-    },
+      display: 'none'
+    }
   },
   '& .MuiSlider-valueLabel': {
     lineHeight: 1.2,
@@ -120,13 +120,13 @@ const PrettoSlider = styled(Slider)({
     transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
     '&:before': { display: 'none' },
     '&.MuiSlider-valueLabelOpen': {
-      transform: 'translate(50%, -100%) rotate(-45deg) scale(1)',
+      transform: 'translate(50%, -100%) rotate(-45deg) scale(1)'
     },
     '& > *': {
-      transform: 'rotate(45deg)',
-    },
-  },
-});
+      transform: 'rotate(45deg)'
+    }
+  }
+})
 
 const AirbnbSlider = styled(Slider)(({ theme }) => ({
   color: '#3a8589',
@@ -138,30 +138,30 @@ const AirbnbSlider = styled(Slider)(({ theme }) => ({
     backgroundColor: '#fff',
     border: '1px solid currentColor',
     '&:hover': {
-      boxShadow: '0 0 0 8px rgba(58, 133, 137, 0.16)',
+      boxShadow: '0 0 0 8px rgba(58, 133, 137, 0.16)'
     },
     '& .airbnb-bar': {
       height: 9,
       width: 1,
       backgroundColor: 'currentColor',
       marginLeft: 1,
-      marginRight: 1,
-    },
+      marginRight: 1
+    }
   },
   '& .MuiSlider-track': {
-    height: 3,
+    height: 3
   },
   '& .MuiSlider-rail': {
     color: theme.palette.mode === 'dark' ? '#bfbfbf' : '#d8d8d8',
     opacity: theme.palette.mode === 'dark' ? undefined : 1,
-    height: 3,
-  },
-}));
+    height: 3
+  }
+}))
 
 interface AirbnbThumbComponentProps extends React.HTMLAttributes<unknown> {}
 
 function AirbnbThumbComponent(props: AirbnbThumbComponentProps) {
-  const { children, ...other } = props;
+  const { children, ...other } = props
   return (
     <SliderThumb {...other}>
       {children}
@@ -169,7 +169,7 @@ function AirbnbThumbComponent(props: AirbnbThumbComponentProps) {
       <span className="airbnb-bar" />
       <span className="airbnb-bar" />
     </SliderThumb>
-  );
+  )
 }
 
 function CustomizedSlider_() {
@@ -194,7 +194,7 @@ function CustomizedSlider_() {
       <Slider
         valueLabelDisplay="auto"
         components={{
-          ValueLabel: ValueLabelComponent,
+          ValueLabel: ValueLabelComponent
         }}
         aria-label="custom thumb label"
         defaultValue={20}
@@ -203,13 +203,13 @@ function CustomizedSlider_() {
       <Typography gutterBottom>Airbnb</Typography>
       <AirbnbSlider
         components={{ Thumb: AirbnbThumbComponent }}
-        getAriaLabel={(index) =>
+        getAriaLabel={index =>
           index === 0 ? 'Minimum price' : 'Maximum price'
         }
         defaultValue={[20, 40]}
       />
     </Box>
-  );
+  )
 }
 
-export const CustomizedSlider = () => <CustomizedSlider_ />;
+export const CustomizedSlider = () => <CustomizedSlider_ />

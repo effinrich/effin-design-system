@@ -1,34 +1,34 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { Dialog } from '~/dialog';
-import { DialogProps } from '@mui/material';
-import { DialogActions } from '@mui/material';
-import { DialogContent } from '@mui/material';
-import { DialogContentText } from '@mui/material';
-import { DialogTitle } from '@mui/material';
+import * as React from 'react'
+import { Button } from '~/button'
+import { Dialog } from '~/dialog'
+import { DialogProps } from '@mui/material'
+import { DialogActions } from '@mui/material'
+import { DialogContent } from '@mui/material'
+import { DialogContentText } from '@mui/material'
+import { DialogTitle } from '@mui/material'
 
 function ScrollDialog_() {
-  const [open, setOpen] = React.useState(false);
-  const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper');
+  const [open, setOpen] = React.useState(false)
+  const [scroll, setScroll] = React.useState<DialogProps['scroll']>('paper')
 
   const handleClickOpen = (scrollType: DialogProps['scroll']) => () => {
-    setOpen(true);
-    setScroll(scrollType);
-  };
+    setOpen(true)
+    setScroll(scrollType)
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
-  const descriptionElementRef = React.useRef<HTMLElement>(null);
+  const descriptionElementRef = React.useRef<HTMLElement>(null)
   React.useEffect(() => {
     if (open) {
-      const { current: descriptionElement } = descriptionElementRef;
+      const { current: descriptionElement } = descriptionElementRef
       if (descriptionElement !== null) {
-        descriptionElement.focus();
+        descriptionElement.focus()
       }
     }
-  }, [open]);
+  }, [open])
 
   return (
     <div>
@@ -64,7 +64,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
         </DialogActions>
       </Dialog>
     </div>
-  );
+  )
 }
 
-export const ScrollDialog = () => <ScrollDialog_ />;
+export const ScrollDialog = () => <ScrollDialog_ />

@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { TextField } from '~/text-field';
-import { Autocomplete } from '~/autocomplete';
+import * as React from 'react'
+import { TextField } from '~/text-field'
+import { Autocomplete } from '~/autocomplete'
 
 function ComboBox_() {
   return (
@@ -9,9 +9,9 @@ function ComboBox_() {
       id="combo-box-demo"
       options={top100Films}
       sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Movie" />}
+      renderInput={params => <TextField {...params} label="Movie" />}
     />
-  );
+  )
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
@@ -25,23 +25,23 @@ const top100Films = [
   { label: 'Pulp Fiction', year: 1994 },
   {
     label: 'The Lord of the Rings: The Return of the King',
-    year: 2003,
+    year: 2003
   },
   { label: 'The Good, the Bad and the Ugly', year: 1966 },
   { label: 'Fight Club', year: 1999 },
   {
     label: 'The Lord of the Rings: The Fellowship of the Ring',
-    year: 2001,
+    year: 2001
   },
   {
     label: 'Star Wars: Episode V - The Empire Strikes Back',
-    year: 1980,
+    year: 1980
   },
   { label: 'Forrest Gump', year: 1994 },
   { label: 'Inception', year: 2010 },
   {
     label: 'The Lord of the Rings: The Two Towers',
-    year: 2002,
+    year: 2002
   },
   { label: "One Flew Over the Cuckoo's Nest", year: 1975 },
   { label: 'Goodfellas', year: 1990 },
@@ -49,7 +49,7 @@ const top100Films = [
   { label: 'Seven Samurai', year: 1954 },
   {
     label: 'Star Wars: Episode IV - A New Hope',
-    year: 1977,
+    year: 1977
   },
   { label: 'City of God', year: 2002 },
   { label: 'Se7en', year: 1995 },
@@ -86,7 +86,7 @@ const top100Films = [
   {
     label:
       'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
-    year: 1964,
+    year: 1964
   },
   { label: 'The Great Dictator', year: 1940 },
   { label: 'Cinema Paradiso', year: 1988 },
@@ -109,7 +109,7 @@ const top100Films = [
   { label: 'Vertigo', year: 1958 },
   {
     label: 'Star Wars: Episode VI - Return of the Jedi',
-    year: 1983,
+    year: 1983
   },
   { label: 'Reservoir Dogs', year: 1992 },
   { label: 'Braveheart', year: 1995 },
@@ -123,7 +123,7 @@ const top100Films = [
   { label: 'Double Indemnity', year: 1944 },
   {
     label: 'Eternal Sunshine of the Spotless Mind',
-    year: 2004,
+    year: 2004
   },
   { label: 'Amadeus', year: 1984 },
   { label: 'To Kill a Mockingbird', year: 1962 },
@@ -140,7 +140,7 @@ const top100Films = [
   { label: 'Inglourious Basterds', year: 2009 },
   { label: 'Snatch', year: 2000 },
   { label: '3 Idiots', year: 2009 },
-  { label: 'Monty Python and the Holy Grail', year: 1975 },
-];
+  { label: 'Monty Python and the Holy Grail', year: 1975 }
+]
 
-export const ComboBox = () => <ComboBox_ />;
+export const ComboBox = () => <ComboBox_ />

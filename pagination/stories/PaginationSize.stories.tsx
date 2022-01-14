@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Pagination } from '~/pagination';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Pagination } from '~/pagination'
+import { Stack } from '~/stack'
 
 function PaginationSize_() {
   return (
@@ -9,7 +9,7 @@ function PaginationSize_() {
       <Pagination count={10} />
       <Pagination count={10} size="large" />
     </Stack>
-  );
+  )
 }
 
-export const PaginationSize = () => <PaginationSize_ />;
+export const PaginationSize = () => <PaginationSize_ />

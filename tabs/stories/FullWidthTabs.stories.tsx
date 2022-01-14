@@ -1,21 +1,21 @@
-import * as React from 'react';
-import SwipeableViews from 'react-swipeable-views';
-import { useTheme } from '@mui/material';
-import { AppBar } from '~/app-bar';
-import { Tabs } from '~/tabs';
-import { Tab } from '@mui/material';
-import { Typography } from '~/typography';
-import { Box } from '~/box';
+import * as React from 'react'
+import SwipeableViews from 'react-swipeable-views'
+import { useTheme } from '@mui/material'
+import { AppBar } from '~/app-bar'
+import { Tabs } from '~/tabs'
+import { Tab } from '@mui/material'
+import { Typography } from '~/typography'
+import { Box } from '~/box'
 
 interface TabPanelProps {
-  children?: React.ReactNode;
-  dir?: string;
-  index: number;
-  value: number;
+  children?: React.ReactNode
+  dir?: string
+  index: number
+  value: number
 }
 
 function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, ...other } = props
 
   return (
     <div
@@ -31,27 +31,27 @@ function TabPanel(props: TabPanelProps) {
         </Box>
       )}
     </div>
-  );
+  )
 }
 
 function a11yProps(index: number) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  };
+    'aria-controls': `full-width-tabpanel-${index}`
+  }
 }
 
 function FullWidthTabs_() {
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
+  const theme = useTheme()
+  const [value, setValue] = React.useState(0)
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   const handleChangeIndex = (index: number) => {
-    setValue(index);
-  };
+    setValue(index)
+  }
 
   return (
     <Box sx={{ bgcolor: 'background.paper', width: 500 }}>
@@ -85,7 +85,7 @@ function FullWidthTabs_() {
         </TabPanel>
       </SwipeableViews>
     </Box>
-  );
+  )
 }
 
-export const FullWidthTabs = () => <FullWidthTabs_ />;
+export const FullWidthTabs = () => <FullWidthTabs_ />

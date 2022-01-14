@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Pagination } from '~/pagination';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Pagination } from '~/pagination'
+import { Stack } from '~/stack'
 
 function BasicPagination_() {
   return (
@@ -10,7 +10,7 @@ function BasicPagination_() {
       <Pagination count={10} color="secondary" />
       <Pagination count={10} disabled />
     </Stack>
-  );
+  )
 }
 
-export const BasicPagination = () => <BasicPagination_ />;
+export const BasicPagination = () => <BasicPagination_ />

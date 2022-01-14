@@ -2,5 +2,5 @@ export {
   DateTimePicker,
   DesktopDateTimePicker,
   MobileDateTimePicker,
-  StaticDateTimePicker,
-} from '@mui/lab';
+  StaticDateTimePicker
+} from '@mui/lab'

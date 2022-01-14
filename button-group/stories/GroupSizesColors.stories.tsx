@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { Box } from '~/box';
-import { ButtonGroup } from '~/button-group';
+import * as React from 'react'
+import { Button } from '~/button'
+import { Box } from '~/box'
+import { ButtonGroup } from '~/button-group'
 
 const buttons = [
   <Button key="one">One</Button>,
   <Button key="two">Two</Button>,
-  <Button key="three">Three</Button>,
-];
+  <Button key="three">Three</Button>
+]
 
 function GroupSizesColors_() {
   return (
@@ -17,8 +17,8 @@ function GroupSizesColors_() {
         flexDirection: 'column',
         alignItems: 'center',
         '& > *': {
-          m: 1,
-        },
+          m: 1
+        }
       }}
     >
       <ButtonGroup size="small" aria-label="small button group">
@@ -31,7 +31,7 @@ function GroupSizesColors_() {
         {buttons}
       </ButtonGroup>
     </Box>
-  );
+  )
 }
 
-export const GroupSizesColors = () => <GroupSizesColors_ />;
+export const GroupSizesColors = () => <GroupSizesColors_ />

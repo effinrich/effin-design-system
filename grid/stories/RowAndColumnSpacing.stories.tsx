@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Grid } from '~/grid';
-import { Paper } from '~/paper';
-import { Box } from '~/box';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Grid } from '~/grid'
+import { Paper } from '~/paper'
+import { Box } from '~/box'
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+  color: theme.palette.text.secondary
+}))
 
 function RowAndColumnSpacing_() {
   return (
@@ -29,7 +29,7 @@ function RowAndColumnSpacing_() {
         </Grid>
       </Grid>
     </Box>
-  );
+  )
 }
 
-export const RowAndColumnSpacing = () => <RowAndColumnSpacing_ />;
+export const RowAndColumnSpacing = () => <RowAndColumnSpacing_ />

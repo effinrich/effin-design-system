@@ -1,12 +1,12 @@
-import * as React from 'react';
-import { Switch } from '~/switch';
+import * as React from 'react'
+import { Switch } from '~/switch'
 
 function ControlledSwitches_() {
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(true)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(event.target.checked);
-  };
+    setChecked(event.target.checked)
+  }
 
   return (
     <Switch
@@ -14,7 +14,7 @@ function ControlledSwitches_() {
       onChange={handleChange}
       inputProps={{ 'aria-label': 'controlled' }}
     />
-  );
+  )
 }
 
-export const ControlledSwitches = () => <ControlledSwitches_ />;
+export const ControlledSwitches = () => <ControlledSwitches_ />

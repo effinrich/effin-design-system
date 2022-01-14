@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Typography } from '~/typography';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Typography } from '~/typography'
 
 function Types_() {
   return (
@@ -53,7 +53,7 @@ function Types_() {
         overline text
       </Typography>
     </Box>
-  );
+  )
 }
 
-export const Types = () => <Types_ />;
+export const Types = () => <Types_ />

@@ -1,1 +1,1 @@
-export { Slider } from '@mui/material';
+export { Slider } from '@mui/material'

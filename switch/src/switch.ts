@@ -1,1 +1,1 @@
-export { Switch } from '@mui/material';
+export { Switch } from '@mui/material'

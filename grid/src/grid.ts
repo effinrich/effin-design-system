@@ -1,1 +1,1 @@
-export { Grid } from '@mui/material';
+export { Grid } from '@mui/material'

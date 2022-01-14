@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { List } from '~/list';
-import { ListItem } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { ListItemAvatar } from '@mui/material';
-import { Avatar } from '~/avatar';
-import { Image as ImageIcon } from '@mui/icons-material';
-import { Work as WorkIcon } from '@mui/icons-material';
-import { BeachAccess as BeachAccessIcon } from '@mui/icons-material';
-import { Divider } from '~/divider';
+import * as React from 'react'
+import { List } from '~/list'
+import { ListItem } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { ListItemAvatar } from '@mui/material'
+import { Avatar } from '~/avatar'
+import { Image as ImageIcon } from '@mui/icons-material'
+import { Work as WorkIcon } from '@mui/icons-material'
+import { BeachAccess as BeachAccessIcon } from '@mui/icons-material'
+import { Divider } from '~/divider'
 
 function InsetDividers_() {
   return (
@@ -15,7 +15,7 @@ function InsetDividers_() {
       sx={{
         width: '100%',
         maxWidth: 360,
-        bgcolor: 'background.paper',
+        bgcolor: 'background.paper'
       }}
     >
       <ListItem>
@@ -45,7 +45,7 @@ function InsetDividers_() {
         <ListItemText primary="Vacation" secondary="July 20, 2014" />
       </ListItem>
     </List>
-  );
+  )
 }
 
-export const InsetDividers = () => <InsetDividers_ />;
+export const InsetDividers = () => <InsetDividers_ />

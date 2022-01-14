@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { Grid } from '~/grid';
-import { GridDirection } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { FormLabel } from '@mui/material';
-import { FormControlLabel } from '@mui/material';
-import { RadioGroup } from '@mui/material';
-import { Radio } from '~/radio-button';
-import { Paper } from '~/paper';
+import * as React from 'react'
+import { Grid } from '~/grid'
+import { GridDirection } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { FormLabel } from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import { RadioGroup } from '@mui/material'
+import { Radio } from '~/radio-button'
+import { Paper } from '~/paper'
 
 type GridItemsAlignment =
   | 'flex-start'
   | 'center'
   | 'flex-end'
   | 'stretch'
-  | 'baseline';
+  | 'baseline'
 
 type GridJustification =
   | 'flex-start'
@@ -21,14 +21,14 @@ type GridJustification =
   | 'flex-end'
   | 'space-between'
   | 'space-around'
-  | 'space-evenly';
+  | 'space-evenly'
 
 function InteractiveGrid_() {
-  const [direction, setDirection] = React.useState<GridDirection>('row');
+  const [direction, setDirection] = React.useState<GridDirection>('row')
   const [justifyContent, setJustifyContent] =
-    React.useState<GridJustification>('center');
+    React.useState<GridJustification>('center')
   const [alignItems, setAlignItems] =
-    React.useState<GridItemsAlignment>('center');
+    React.useState<GridItemsAlignment>('center')
 
   const jsx = `
 <Grid
@@ -37,7 +37,7 @@ function InteractiveGrid_() {
   justifyContent="${justifyContent}"
   alignItems="${alignItems}"
 >
-`;
+`
 
   return (
     <Grid sx={{ flexGrow: 1 }} container>
@@ -50,7 +50,7 @@ function InteractiveGrid_() {
           direction={direction}
           justifyContent={justifyContent}
         >
-          {[0, 1, 2].map((value) => (
+          {[0, 1, 2].map(value => (
             <Grid key={value} item>
               <Paper
                 sx={{
@@ -58,7 +58,7 @@ function InteractiveGrid_() {
                   height: '100%',
                   color: 'text.secondary',
                   pt: `${(value + 1) * 10}px`,
-                  pb: `${(value + 1) * 10}px`,
+                  pb: `${(value + 1) * 10}px`
                 }}
               >
                 {`Cell ${value + 1}`}
@@ -78,10 +78,10 @@ function InteractiveGrid_() {
                   name="direction"
                   aria-label="direction"
                   value={direction}
-                  onChange={(event) => {
+                  onChange={event => {
                     setDirection(
                       (event.target as HTMLInputElement).value as GridDirection
-                    );
+                    )
                   }}
                 >
                   <FormControlLabel
@@ -115,11 +115,11 @@ function InteractiveGrid_() {
                   name="justifyContent"
                   aria-label="justifyContent"
                   value={justifyContent}
-                  onChange={(event) => {
+                  onChange={event => {
                     setJustifyContent(
                       (event.target as HTMLInputElement)
                         .value as GridJustification
-                    );
+                    )
                   }}
                 >
                   <FormControlLabel
@@ -163,11 +163,11 @@ function InteractiveGrid_() {
                   name="alignItems"
                   aria-label="align items"
                   value={alignItems}
-                  onChange={(event) => {
+                  onChange={event => {
                     setAlignItems(
                       (event.target as HTMLInputElement)
                         .value as GridItemsAlignment
-                    );
+                    )
                   }}
                 >
                   <FormControlLabel
@@ -203,7 +203,7 @@ function InteractiveGrid_() {
       </Grid>
       <Grid item xs={12}></Grid>
     </Grid>
-  );
+  )
 }
 
-export const InteractiveGrid = () => <InteractiveGrid_ />;
+export const InteractiveGrid = () => <InteractiveGrid_ />

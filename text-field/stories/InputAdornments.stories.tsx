@@ -1,23 +1,23 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { IconButton } from '@mui/material';
-import { Input } from '@mui/material';
-import { FilledInput } from '@mui/material';
-import { OutlinedInput } from '@mui/material';
-import { InputLabel } from '@mui/material';
-import { InputAdornment } from '@mui/material';
-import { FormHelperText } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { TextField } from '~/text-field';
-import { Visibility } from '@mui/icons-material';
-import { VisibilityOff } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { IconButton } from '@mui/material'
+import { Input } from '@mui/material'
+import { FilledInput } from '@mui/material'
+import { OutlinedInput } from '@mui/material'
+import { InputLabel } from '@mui/material'
+import { InputAdornment } from '@mui/material'
+import { FormHelperText } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { TextField } from '~/text-field'
+import { Visibility } from '@mui/icons-material'
+import { VisibilityOff } from '@mui/icons-material'
 
 interface State {
-  amount: string;
-  password: string;
-  weight: string;
-  weightRange: string;
-  showPassword: boolean;
+  amount: string
+  password: string
+  weight: string
+  weightRange: string
+  showPassword: boolean
 }
 
 function InputAdornments_() {
@@ -26,26 +26,26 @@ function InputAdornments_() {
     password: '',
     weight: '',
     weightRange: '',
-    showPassword: false,
-  });
+    showPassword: false
+  })
 
   const handleChange =
     (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValues({ ...values, [prop]: event.target.value });
-    };
+      setValues({ ...values, [prop]: event.target.value })
+    }
 
   const handleClickShowPassword = () => {
     setValues({
       ...values,
-      showPassword: !values.showPassword,
-    });
-  };
+      showPassword: !values.showPassword
+    })
+  }
 
   const handleMouseDownPassword = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -55,9 +55,7 @@ function InputAdornments_() {
           id="outlined-start-adornment"
           sx={{ m: 1, width: '25ch' }}
           InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
-            ),
+            startAdornment: <InputAdornment position="start">kg</InputAdornment>
           }}
         />
         <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
@@ -68,7 +66,7 @@ function InputAdornments_() {
             endAdornment={<InputAdornment position="end">kg</InputAdornment>}
             aria-describedby="outlined-weight-helper-text"
             inputProps={{
-              'aria-label': 'weight',
+              'aria-label': 'weight'
             }}
           />
           <FormHelperText id="outlined-weight-helper-text">
@@ -116,9 +114,7 @@ function InputAdornments_() {
           id="filled-start-adornment"
           sx={{ m: 1, width: '25ch' }}
           InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
-            ),
+            startAdornment: <InputAdornment position="start">kg</InputAdornment>
           }}
           variant="filled"
         />
@@ -130,7 +126,7 @@ function InputAdornments_() {
             endAdornment={<InputAdornment position="end">kg</InputAdornment>}
             aria-describedby="filled-weight-helper-text"
             inputProps={{
-              'aria-label': 'weight',
+              'aria-label': 'weight'
             }}
           />
           <FormHelperText id="filled-weight-helper-text">Weight</FormHelperText>
@@ -172,9 +168,7 @@ function InputAdornments_() {
           id="standard-start-adornment"
           sx={{ m: 1, width: '25ch' }}
           InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">kg</InputAdornment>
-            ),
+            startAdornment: <InputAdornment position="start">kg</InputAdornment>
           }}
           variant="standard"
         />
@@ -186,7 +180,7 @@ function InputAdornments_() {
             endAdornment={<InputAdornment position="end">kg</InputAdornment>}
             aria-describedby="standard-weight-helper-text"
             inputProps={{
-              'aria-label': 'weight',
+              'aria-label': 'weight'
             }}
           />
           <FormHelperText id="standard-weight-helper-text">
@@ -226,7 +220,7 @@ function InputAdornments_() {
         </FormControl>
       </div>
     </Box>
-  );
+  )
 }
 
-export const InputAdornments = () => <InputAdornments_ />;
+export const InputAdornments = () => <InputAdornments_ />

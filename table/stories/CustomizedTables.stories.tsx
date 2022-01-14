@@ -1,32 +1,32 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Table } from '~/table';
-import { TableBody } from '@mui/material';
-import { TableCell, tableCellClasses } from '@mui/material';
-import { TableContainer } from '@mui/material';
-import { TableHead } from '@mui/material';
-import { TableRow } from '@mui/material';
-import { Paper } from '~/paper';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Table } from '~/table'
+import { TableBody } from '@mui/material'
+import { TableCell, tableCellClasses } from '@mui/material'
+import { TableContainer } from '@mui/material'
+import { TableHead } from '@mui/material'
+import { TableRow } from '@mui/material'
+import { Paper } from '~/paper'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
+    color: theme.palette.common.white
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
-  },
-}));
+    fontSize: 14
+  }
+}))
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.action.hover,
+    backgroundColor: theme.palette.action.hover
   },
   // hide last border
   '&:last-child td, &:last-child th': {
-    border: 0,
-  },
-}));
+    border: 0
+  }
+}))
 
 function createData(
   name: string,
@@ -35,7 +35,7 @@ function createData(
   carbs: number,
   protein: number
 ) {
-  return { name, calories, fat, carbs, protein };
+  return { name, calories, fat, carbs, protein }
 }
 
 const rows = [
@@ -43,8 +43,8 @@ const rows = [
   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
   createData('Eclair', 262, 16.0, 24, 6.0),
   createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
+  createData('Gingerbread', 356, 16.0, 49, 3.9)
+]
 
 function CustomizedTables_() {
   return (
@@ -60,7 +60,7 @@ function CustomizedTables_() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rows.map(row => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">
                 {row.name}
@@ -74,7 +74,7 @@ function CustomizedTables_() {
         </TableBody>
       </Table>
     </TableContainer>
-  );
+  )
 }
 
-export const CustomizedTables = () => <CustomizedTables_ />;
+export const CustomizedTables = () => <CustomizedTables_ />

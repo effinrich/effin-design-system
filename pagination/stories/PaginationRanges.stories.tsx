@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Pagination } from '~/pagination';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Pagination } from '~/pagination'
+import { Stack } from '~/stack'
 
 function PaginationRanges_() {
   return (
@@ -15,7 +15,7 @@ function PaginationRanges_() {
       />
       <Pagination count={11} defaultPage={6} boundaryCount={2} />
     </Stack>
-  );
+  )
 }
 
-export const PaginationRanges = () => <PaginationRanges_ />;
+export const PaginationRanges = () => <PaginationRanges_ />

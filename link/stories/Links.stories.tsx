@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import * as React from 'react';
-import { Box } from '~/box';
-import { Link } from '~/link';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Link } from '~/link'
 
-const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
+const preventDefault = (event: React.SyntheticEvent) => event.preventDefault()
 
 function Links_() {
   return (
@@ -11,8 +11,8 @@ function Links_() {
       sx={{
         typography: 'body1',
         '& > :not(style) + :not(style)': {
-          ml: 2,
-        },
+          ml: 2
+        }
       }}
       onClick={preventDefault}
     >
@@ -24,7 +24,7 @@ function Links_() {
         {'variant="body2"'}
       </Link>
     </Box>
-  );
+  )
 }
 
-export const Links = () => <Links_ />;
+export const Links = () => <Links_ />

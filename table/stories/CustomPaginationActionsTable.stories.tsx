@@ -1,57 +1,57 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material';
-import { Box } from '~/box';
-import { Table } from '~/table';
-import { TableBody } from '@mui/material';
-import { TableCell } from '@mui/material';
-import { TableContainer } from '@mui/material';
-import { TableFooter } from '@mui/material';
-import { TablePagination } from '@mui/material';
-import { TableRow } from '@mui/material';
-import { Paper } from '~/paper';
-import { IconButton } from '@mui/material';
-import { FirstPage as FirstPageIcon } from '@mui/icons-material';
-import { KeyboardArrowLeft } from '@mui/icons-material';
-import { KeyboardArrowRight } from '@mui/icons-material';
-import { LastPage as LastPageIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { useTheme } from '@mui/material'
+import { Box } from '~/box'
+import { Table } from '~/table'
+import { TableBody } from '@mui/material'
+import { TableCell } from '@mui/material'
+import { TableContainer } from '@mui/material'
+import { TableFooter } from '@mui/material'
+import { TablePagination } from '@mui/material'
+import { TableRow } from '@mui/material'
+import { Paper } from '~/paper'
+import { IconButton } from '@mui/material'
+import { FirstPage as FirstPageIcon } from '@mui/icons-material'
+import { KeyboardArrowLeft } from '@mui/icons-material'
+import { KeyboardArrowRight } from '@mui/icons-material'
+import { LastPage as LastPageIcon } from '@mui/icons-material'
 
 interface TablePaginationActionsProps {
-  count: number;
-  page: number;
-  rowsPerPage: number;
+  count: number
+  page: number
+  rowsPerPage: number
   onPageChange: (
     event: React.MouseEvent<HTMLButtonElement>,
     newPage: number
-  ) => void;
+  ) => void
 }
 
 function TablePaginationActions(props: TablePaginationActionsProps) {
-  const theme = useTheme();
-  const { count, page, rowsPerPage, onPageChange } = props;
+  const theme = useTheme()
+  const { count, page, rowsPerPage, onPageChange } = props
 
   const handleFirstPageButtonClick = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
-    onPageChange(event, 0);
-  };
+    onPageChange(event, 0)
+  }
 
   const handleBackButtonClick = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
-    onPageChange(event, page - 1);
-  };
+    onPageChange(event, page - 1)
+  }
 
   const handleNextButtonClick = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
-    onPageChange(event, page + 1);
-  };
+    onPageChange(event, page + 1)
+  }
 
   const handleLastPageButtonClick = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
-    onPageChange(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
-  };
+    onPageChange(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1))
+  }
 
   return (
     <Box sx={{ flexShrink: 0, ml: 2.5 }}>
@@ -92,11 +92,11 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
         {theme.direction === 'rtl' ? <FirstPageIcon /> : <LastPageIcon />}
       </IconButton>
     </Box>
-  );
+  )
 }
 
 function createData(name: string, calories: number, fat: number) {
-  return { name, calories, fat };
+  return { name, calories, fat }
 }
 
 const rows = [
@@ -112,30 +112,30 @@ const rows = [
   createData('Lollipop', 392, 0.2),
   createData('Marshmallow', 318, 0),
   createData('Nougat', 360, 19.0),
-  createData('Oreo', 437, 18.0),
-].sort((a, b) => (a.calories < b.calories ? -1 : 1));
+  createData('Oreo', 437, 18.0)
+].sort((a, b) => (a.calories < b.calories ? -1 : 1))
 
 function CustomPaginationActionsTable_() {
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [page, setPage] = React.useState(0)
+  const [rowsPerPage, setRowsPerPage] = React.useState(5)
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0
 
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,
     newPage: number
   ) => {
-    setPage(newPage);
-  };
+    setPage(newPage)
+  }
 
   const handleChangeRowsPerPage = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
+    setRowsPerPage(parseInt(event.target.value, 10))
+    setPage(0)
+  }
 
   return (
     <TableContainer component={Paper}>
@@ -144,7 +144,7 @@ function CustomPaginationActionsTable_() {
           {(rowsPerPage > 0
             ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
             : rows
-          ).map((row) => (
+          ).map(row => (
             <TableRow key={row.name}>
               <TableCell component="th" scope="row">
                 {row.name}
@@ -173,9 +173,9 @@ function CustomPaginationActionsTable_() {
               page={page}
               SelectProps={{
                 inputProps: {
-                  'aria-label': 'rows per page',
+                  'aria-label': 'rows per page'
                 },
-                native: true,
+                native: true
               }}
               onPageChange={handleChangePage}
               onRowsPerPageChange={handleChangeRowsPerPage}
@@ -185,9 +185,9 @@ function CustomPaginationActionsTable_() {
         </TableFooter>
       </Table>
     </TableContainer>
-  );
+  )
 }
 
 export const CustomPaginationActionsTable = () => (
   <CustomPaginationActionsTable_ />
-);
+)

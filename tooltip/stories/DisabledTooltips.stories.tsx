@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Button } from '~/button';
-import { Tooltip } from '~/tooltip';
+import * as React from 'react'
+import { Button } from '~/button'
+import { Tooltip } from '~/tooltip'
 
 function DisabledTooltips_() {
   return (
@@ -9,7 +9,7 @@ function DisabledTooltips_() {
         <Button disabled>A Disabled Button</Button>
       </span>
     </Tooltip>
-  );
+  )
 }
 
-export const DisabledTooltips = () => <DisabledTooltips_ />;
+export const DisabledTooltips = () => <DisabledTooltips_ />

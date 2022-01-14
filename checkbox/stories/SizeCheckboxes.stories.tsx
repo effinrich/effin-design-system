@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Checkbox } from '~/checkbox';
+import * as React from 'react'
+import { Checkbox } from '~/checkbox'
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } }
 
 function SizeCheckboxes_() {
   return (
@@ -14,7 +14,7 @@ function SizeCheckboxes_() {
         sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
       />
     </div>
-  );
+  )
 }
 
-export const SizeCheckboxes = () => <SizeCheckboxes_ />;
+export const SizeCheckboxes = () => <SizeCheckboxes_ />

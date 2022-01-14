@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { TextField } from '~/text-field';
+import * as React from 'react'
+import { Box } from '~/box'
+import { TextField } from '~/text-field'
 
 function ColorTextFields_() {
   return (
     <Box
       component="form"
       sx={{
-        '& > :not(style)': { m: 1, width: '25ch' },
+        '& > :not(style)': { m: 1, width: '25ch' }
       }}
       noValidate
       autoComplete="off"
@@ -26,7 +26,7 @@ function ColorTextFields_() {
         focused
       />
     </Box>
-  );
+  )
 }
 
-export const ColorTextFields = () => <ColorTextFields_ />;
+export const ColorTextFields = () => <ColorTextFields_ />

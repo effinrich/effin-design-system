@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Box } from '~/box';
-import { Paper } from '~/paper';
-import { Grid } from '~/grid';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Box } from '~/box'
+import { Paper } from '~/paper'
+import { Grid } from '~/grid'
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+  color: theme.palette.text.secondary
+}))
 
 function BasicGrid_() {
   return (
@@ -29,7 +29,7 @@ function BasicGrid_() {
         </Grid>
       </Grid>
     </Box>
-  );
+  )
 }
 
-export const BasicGrid = () => <BasicGrid_ />;
+export const BasicGrid = () => <BasicGrid_ />

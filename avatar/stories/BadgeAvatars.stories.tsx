@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Badge } from '~/badge';
-import { Avatar } from '~/avatar';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Badge } from '~/badge'
+import { Avatar } from '~/avatar'
+import { Stack } from '~/stack'
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -18,26 +18,26 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
       borderRadius: '50%',
       animation: 'ripple 1.2s infinite ease-in-out',
       border: '1px solid currentColor',
-      content: '""',
-    },
+      content: '""'
+    }
   },
   '@keyframes ripple': {
     '0%': {
       transform: 'scale(.8)',
-      opacity: 1,
+      opacity: 1
     },
     '100%': {
       transform: 'scale(2.4)',
-      opacity: 0,
-    },
-  },
-}));
+      opacity: 0
+    }
+  }
+}))
 
 const SmallAvatar = styled(Avatar)(({ theme }) => ({
   width: 22,
   height: 22,
-  border: `2px solid ${theme.palette.background.paper}`,
-}));
+  border: `2px solid ${theme.palette.background.paper}`
+}))
 
 function BadgeAvatars_() {
   return (
@@ -68,7 +68,7 @@ function BadgeAvatars_() {
         />
       </Badge>
     </Stack>
-  );
+  )
 }
 
-export const BadgeAvatars = () => <BadgeAvatars_ />;
+export const BadgeAvatars = () => <BadgeAvatars_ />

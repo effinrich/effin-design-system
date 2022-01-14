@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Fab } from '~/floating-action-button';
-import { Add as AddIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Fab } from '~/floating-action-button'
+import { Add as AddIcon } from '@mui/icons-material'
 
 function FloatingActionButtonSize_() {
   return (
@@ -16,7 +16,7 @@ function FloatingActionButtonSize_() {
         <AddIcon />
       </Fab>
     </Box>
-  );
+  )
 }
 
-export const FloatingActionButtonSize = () => <FloatingActionButtonSize_ />;
+export const FloatingActionButtonSize = () => <FloatingActionButtonSize_ />

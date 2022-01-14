@@ -1,16 +1,16 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { Grid } from '~/grid';
-import { Paper } from '~/paper';
-import { Typography } from '~/typography';
-import { ButtonBase } from '@mui/material';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { Grid } from '~/grid'
+import { Paper } from '~/paper'
+import { Typography } from '~/typography'
+import { ButtonBase } from '@mui/material'
 
 const Img = styled('img')({
   margin: 'auto',
   display: 'block',
   maxWidth: '100%',
-  maxHeight: '100%',
-});
+  maxHeight: '100%'
+})
 
 function ComplexGrid_() {
   return (
@@ -51,7 +51,7 @@ function ComplexGrid_() {
         </Grid>
       </Grid>
     </Paper>
-  );
+  )
 }
 
-export const ComplexGrid = () => <ComplexGrid_ />;
+export const ComplexGrid = () => <ComplexGrid_ />

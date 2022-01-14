@@ -1,1 +1,1 @@
-export { Avatar } from '@mui/material';
+export { Avatar } from '@mui/material'

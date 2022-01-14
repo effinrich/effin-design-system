@@ -1,1 +1,1 @@
-export { Chip } from '@mui/material';
+export { Chip } from '@mui/material'

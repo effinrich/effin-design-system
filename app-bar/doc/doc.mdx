@@ -1,21 +1,21 @@
-import { AppBar } from '~/app-bar';
-import { ButtonAppBar as ButtonAppBar } from '../stories/ButtonAppBar.stories';
-import { MenuAppBar as MenuAppBar } from '../stories/MenuAppBar.stories';
-import { ResponsiveAppBar as ResponsiveAppBar } from '../stories/ResponsiveAppBar.stories';
-import { SearchAppBar as SearchAppBar } from '../stories/SearchAppBar.stories';
-import { PrimarySearchAppBar as PrimarySearchAppBar } from '../stories/PrimarySearchAppBar.stories';
-import { DenseAppBar as DenseAppBar } from '../stories/DenseAppBar.stories';
-import { ProminentAppBar as ProminentAppBar } from '../stories/ProminentAppBar.stories';
-import { BottomAppBar as BottomAppBar } from '../stories/BottomAppBar.stories';
-import { HideAppBar as HideAppBar } from '../stories/HideAppBar.stories';
-import { ElevateAppBar as ElevateAppBar } from '../stories/ElevateAppBar.stories';
-import { BackToTop as BackToTop } from '../stories/BackToTop.stories';
-import { EnableColorOnDarkAppBar as EnableColorOnDarkAppBar } from '../stories/EnableColorOnDarkAppBar.stories';
-import { mdx } from '@mdx-js/react';
-import { Playground as BklPlayground } from '@divriots/dockit-react/playground';
-import { DemoFrame } from '~/demo-frame';
-import { MdxLayout } from '~/layout';
-export default MdxLayout;
+import { AppBar } from '~/app-bar'
+import { ButtonAppBar as ButtonAppBar } from '../stories/ButtonAppBar.stories'
+import { MenuAppBar as MenuAppBar } from '../stories/MenuAppBar.stories'
+import { ResponsiveAppBar as ResponsiveAppBar } from '../stories/ResponsiveAppBar.stories'
+import { SearchAppBar as SearchAppBar } from '../stories/SearchAppBar.stories'
+import { PrimarySearchAppBar as PrimarySearchAppBar } from '../stories/PrimarySearchAppBar.stories'
+import { DenseAppBar as DenseAppBar } from '../stories/DenseAppBar.stories'
+import { ProminentAppBar as ProminentAppBar } from '../stories/ProminentAppBar.stories'
+import { BottomAppBar as BottomAppBar } from '../stories/BottomAppBar.stories'
+import { HideAppBar as HideAppBar } from '../stories/HideAppBar.stories'
+import { ElevateAppBar as ElevateAppBar } from '../stories/ElevateAppBar.stories'
+import { BackToTop as BackToTop } from '../stories/BackToTop.stories'
+import { EnableColorOnDarkAppBar as EnableColorOnDarkAppBar } from '../stories/EnableColorOnDarkAppBar.stories'
+import { mdx } from '@mdx-js/react'
+import { Playground as BklPlayground } from '@divriots/dockit-react/playground'
+import { DemoFrame } from '~/demo-frame'
+import { MdxLayout } from '~/layout'
+export default MdxLayout
 
 # App Bar
 
@@ -116,14 +116,14 @@ function App() {
       </AppBar>
       <Toolbar />
     </React.Fragment>
-  );
+  )
 }
 ```
 
 3. You can use `theme.mixins.toolbar` CSS:
 
 ```jsx
-const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar)
 
 function App() {
   return (
@@ -133,7 +133,7 @@ function App() {
       </AppBar>
       <Offset />
     </React.Fragment>
-  );
+  )
 }
 ```
 
@@ -191,15 +191,15 @@ A floating action buttons appears on scroll to make it easy to get back to the t
 #### Examples
 
 ```jsx
-import useScrollTrigger from '@mui/material/useScrollTrigger';
+import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 function HideOnScroll(props) {
-  const trigger = useScrollTrigger();
+  const trigger = useScrollTrigger()
   return (
     <Slide in={!trigger}>
       <div>Hello</div>
     </Slide>
-  );
+  )
 }
 ```
 

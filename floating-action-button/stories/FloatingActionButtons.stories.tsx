@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { Fab } from '~/floating-action-button';
-import { Add as AddIcon } from '@mui/icons-material';
-import { Edit as EditIcon } from '@mui/icons-material';
-import { Favorite as FavoriteIcon } from '@mui/icons-material';
-import { Navigation as NavigationIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { Fab } from '~/floating-action-button'
+import { Add as AddIcon } from '@mui/icons-material'
+import { Edit as EditIcon } from '@mui/icons-material'
+import { Favorite as FavoriteIcon } from '@mui/icons-material'
+import { Navigation as NavigationIcon } from '@mui/icons-material'
 
 function FloatingActionButtons_() {
   return (
@@ -23,7 +23,7 @@ function FloatingActionButtons_() {
         <FavoriteIcon />
       </Fab>
     </Box>
-  );
+  )
 }
 
-export const FloatingActionButtons = () => <FloatingActionButtons_ />;
+export const FloatingActionButtons = () => <FloatingActionButtons_ />

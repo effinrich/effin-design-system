@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { ButtonGroup } from '~/button-group';
-import { Button } from '~/button';
+import * as React from 'react'
+import { ButtonGroup } from '~/button-group'
+import { Button } from '~/button'
 
 function DisableElevation_() {
   return (
@@ -8,7 +8,7 @@ function DisableElevation_() {
       <Button>One</Button>
       <Button>Two</Button>
     </ButtonGroup>
-  );
+  )
 }
 
-export const DisableElevation = () => <DisableElevation_ />;
+export const DisableElevation = () => <DisableElevation_ />

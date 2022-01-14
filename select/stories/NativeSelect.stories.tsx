@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Box } from '~/box';
-import { InputLabel } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { NativeSelect } from '@mui/material';
+import * as React from 'react'
+import { Box } from '~/box'
+import { InputLabel } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { NativeSelect } from '@mui/material'
 
 function NativeSelectDemo_() {
   return (
@@ -15,7 +15,7 @@ function NativeSelectDemo_() {
           defaultValue={30}
           inputProps={{
             name: 'age',
-            id: 'uncontrolled-native',
+            id: 'uncontrolled-native'
           }}
         >
           <option value={10}>Ten</option>
@@ -24,7 +24,7 @@ function NativeSelectDemo_() {
         </NativeSelect>
       </FormControl>
     </Box>
-  );
+  )
 }
 
-export const NativeSelectDemo = () => <NativeSelectDemo_ />;
+export const NativeSelectDemo = () => <NativeSelectDemo_ />

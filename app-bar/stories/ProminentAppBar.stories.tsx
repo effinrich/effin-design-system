@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { styled } from '@mui/material';
-import { AppBar } from '~/app-bar';
-import { Box } from '~/box';
-import { Toolbar } from '@mui/material';
-import { IconButton } from '@mui/material';
-import { Typography } from '~/typography';
-import { Menu as MenuIcon } from '@mui/icons-material';
-import { Search as SearchIcon } from '@mui/icons-material';
-import { MoreVert as MoreIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { styled } from '@mui/material'
+import { AppBar } from '~/app-bar'
+import { Box } from '~/box'
+import { Toolbar } from '@mui/material'
+import { IconButton } from '@mui/material'
+import { Typography } from '~/typography'
+import { Menu as MenuIcon } from '@mui/icons-material'
+import { Search as SearchIcon } from '@mui/icons-material'
+import { MoreVert as MoreIcon } from '@mui/icons-material'
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: 'flex-start',
@@ -15,9 +15,9 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   paddingBottom: theme.spacing(2),
   // Override media queries injected by theme.mixins.toolbar
   '@media all': {
-    minHeight: 128,
-  },
-}));
+    minHeight: 128
+  }
+}))
 
 function ProminentAppBar_() {
   return (
@@ -55,7 +55,7 @@ function ProminentAppBar_() {
         </StyledToolbar>
       </AppBar>
     </Box>
-  );
+  )
 }
 
-export const ProminentAppBar = () => <ProminentAppBar_ />;
+export const ProminentAppBar = () => <ProminentAppBar_ />

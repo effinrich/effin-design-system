@@ -1,46 +1,46 @@
-import * as React from 'react';
-import { styled, useTheme, Theme, CSSObject } from '@mui/material';
-import { Box } from '~/box';
-import { Drawer as MuiDrawer } from '~/drawer';
-import { AppBar as MuiAppBar } from '~/app-bar';
-import { AppBarProps as MuiAppBarProps } from '@mui/material';
-import { Toolbar } from '@mui/material';
-import { List } from '~/list';
-import { CssBaseline } from '@mui/material';
-import { Typography } from '~/typography';
-import { Divider } from '~/divider';
-import { IconButton } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
-import { ChevronLeft as ChevronLeftIcon } from '@mui/icons-material';
-import { ChevronRight as ChevronRightIcon } from '@mui/icons-material';
-import { ListItem } from '@mui/material';
-import { ListItemIcon } from '@mui/material';
-import { ListItemText } from '@mui/material';
-import { MoveToInbox as InboxIcon } from '@mui/icons-material';
-import { Mail as MailIcon } from '@mui/icons-material';
+import * as React from 'react'
+import { styled, useTheme, Theme, CSSObject } from '@mui/material'
+import { Box } from '~/box'
+import { Drawer as MuiDrawer } from '~/drawer'
+import { AppBar as MuiAppBar } from '~/app-bar'
+import { AppBarProps as MuiAppBarProps } from '@mui/material'
+import { Toolbar } from '@mui/material'
+import { List } from '~/list'
+import { CssBaseline } from '@mui/material'
+import { Typography } from '~/typography'
+import { Divider } from '~/divider'
+import { IconButton } from '@mui/material'
+import { Menu as MenuIcon } from '@mui/icons-material'
+import { ChevronLeft as ChevronLeftIcon } from '@mui/icons-material'
+import { ChevronRight as ChevronRightIcon } from '@mui/icons-material'
+import { ListItem } from '@mui/material'
+import { ListItemIcon } from '@mui/material'
+import { ListItemText } from '@mui/material'
+import { MoveToInbox as InboxIcon } from '@mui/icons-material'
+import { Mail as MailIcon } from '@mui/icons-material'
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.enteringScreen,
+    duration: theme.transitions.duration.enteringScreen
   }),
-  overflowX: 'hidden',
-});
+  overflowX: 'hidden'
+})
 
 const closedMixin = (theme: Theme): CSSObject => ({
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+    duration: theme.transitions.duration.leavingScreen
   }),
   overflowX: 'hidden',
   width: `calc(${theme.spacing(7)} + 1px)`,
   [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(9)} + 1px)`,
-  },
-});
+    width: `calc(${theme.spacing(9)} + 1px)`
+  }
+})
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -48,33 +48,33 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-}));
+  ...theme.mixins.toolbar
+}))
 
 interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
+  open?: boolean
 }
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: prop => prop !== 'open'
 })<AppBarProps>(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(['width', 'margin'], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
+    duration: theme.transitions.duration.leavingScreen
   }),
   ...(open && {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
+      duration: theme.transitions.duration.enteringScreen
+    })
+  })
+}))
 
 const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== 'open',
+  shouldForwardProp: prop => prop !== 'open'
 })(({ theme, open }) => ({
   width: drawerWidth,
   flexShrink: 0,
@@ -82,25 +82,25 @@ const Drawer = styled(MuiDrawer, {
   boxSizing: 'border-box',
   ...(open && {
     ...openedMixin(theme),
-    '& .MuiDrawer-paper': openedMixin(theme),
+    '& .MuiDrawer-paper': openedMixin(theme)
   }),
   ...(!open && {
     ...closedMixin(theme),
-    '& .MuiDrawer-paper': closedMixin(theme),
-  }),
-}));
+    '& .MuiDrawer-paper': closedMixin(theme)
+  })
+}))
 
 function MiniDrawer_() {
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const theme = useTheme()
+  const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -114,7 +114,7 @@ function MiniDrawer_() {
             edge="start"
             sx={{
               marginRight: '36px',
-              ...(open && { display: 'none' }),
+              ...(open && { display: 'none' })
             }}
           >
             <MenuIcon />
@@ -190,7 +190,7 @@ function MiniDrawer_() {
         </Typography>
       </Box>
     </Box>
-  );
+  )
 }
 
-export const MiniDrawer = () => <MiniDrawer_ />;
+export const MiniDrawer = () => <MiniDrawer_ />

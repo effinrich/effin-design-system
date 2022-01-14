@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Alert } from '~/alert';
-import { AlertTitle } from '@mui/material';
-import { Stack } from '~/stack';
+import * as React from 'react'
+import { Alert } from '~/alert'
+import { AlertTitle } from '@mui/material'
+import { Stack } from '~/stack'
 
 function DescriptionAlerts_() {
   return (
@@ -23,7 +23,7 @@ function DescriptionAlerts_() {
         This is a success alert — <strong>check it out!</strong>
       </Alert>
     </Stack>
-  );
+  )
 }
 
-export const DescriptionAlerts = () => <DescriptionAlerts_ />;
+export const DescriptionAlerts = () => <DescriptionAlerts_ />

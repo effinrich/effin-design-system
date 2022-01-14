@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Radio } from '~/radio-button';
-import { RadioGroup } from '@mui/material';
-import { FormControlLabel } from '@mui/material';
-import { FormControl } from '@mui/material';
-import { FormLabel } from '@mui/material';
+import * as React from 'react'
+import { Radio } from '~/radio-button'
+import { RadioGroup } from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import { FormControl } from '@mui/material'
+import { FormLabel } from '@mui/material'
 
 function FormControlLabelPlacement_() {
   return (
@@ -31,7 +31,7 @@ function FormControlLabelPlacement_() {
         <FormControlLabel value="end" control={<Radio />} label="End" />
       </RadioGroup>
     </FormControl>
-  );
+  )
 }
 
-export const FormControlLabelPlacement = () => <FormControlLabelPlacement_ />;
+export const FormControlLabelPlacement = () => <FormControlLabelPlacement_ />

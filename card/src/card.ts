@@ -1,1 +1,1 @@
-export { Card } from '@mui/material';
+export { Card } from '@mui/material'
